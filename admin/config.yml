@@ -5,8 +5,8 @@ backend:
   name: github # Use the GitHub backend
   repo: Czaruno/LarryVelez # Your private source repository
   branch: main # Branch to update
-  base_url: https://api.netlify.com
-  site_domain: czaruno.github.io
+  base_url: https://decap-cms-auth.netlify.app # Free OAuth proxy for GitHub Pages
+  auth_endpoint: api/auth # OAuth endpoint
 
 # Media files will be stored in the repo and deployed with the site
 media_folder: "assets/images"
