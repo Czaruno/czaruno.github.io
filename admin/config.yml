@@ -5,8 +5,8 @@ backend:
   name: github # Use the GitHub backend
   repo: Czaruno/LarryVelez # Your private source repository
   branch: main # Branch to update
-  auth_type: implicit # Use implicit grant flow
-  app_id: Ov23libA9mteuYtlAscH # Your GitHub OAuth App Client ID
+  # Note: Production CMS on GitHub Pages requires complex OAuth setup
+  # Use local development with ./serve-with-cms.sh for best experience
 
 # Media files will be stored in the repo and deployed with the site
 media_folder: "assets/images"
