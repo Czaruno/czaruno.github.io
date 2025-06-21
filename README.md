@@ -8,14 +8,25 @@ To set up and run this site locally, you'll need Ruby, Bundler, and Jekyll.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd larryvelez.com # Or your repository's directory name
+    git clone https://github.com/Czaruno/LarryVelez.git
+    cd LarryVelez
     ```
 
 2.  **Install Ruby and Bundler:**
-    Make sure you have Ruby installed (version 3.0 or as specified in `.github/workflows/deploy.yml` is a good reference).
-    If you don't have Bundler, install it:
+    The site requires Ruby 3.1+ (matching the GitHub Actions workflow).
+    
+    **For macOS users:**
     ```bash
+    # Install Ruby via Homebrew
+    brew install ruby@3.1
+    
+    # Add Ruby to your PATH
+    export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
+    
+    # Verify Ruby version
+    ruby -v  # Should show 3.1.x
+    
+    # Install Bundler
     gem install bundler
     ```
 
@@ -24,18 +35,39 @@ To set up and run this site locally, you'll need Ruby, Bundler, and Jekyll.
     ```bash
     bundle install
     ```
+    
+    **Note:** If you encounter platform-specific Gemfile.lock errors, delete it and run `bundle install` again.
 
 4.  **Serve the site locally:**
+    
+    **Quick method (recommended):**
     ```bash
+    ./serve.sh
+    ```
+    
+    **Manual method:**
+    ```bash
+    export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"  # If using Homebrew Ruby
     bundle exec jekyll serve --livereload
     ```
-    This will start a local development server. Open your web browser and go to `http://localhost:4000` (or the address shown in your terminal, which will include the baseurl, e.g., `http://localhost:4000/larryvelez.com/`).
+    
+    This will start a local development server at `http://localhost:4000`.
 
-    *   The `--livereload` flag automatically refreshes the page when you make changes to the site's files.
+    *   The `--livereload` flag automatically refreshes the page when you make changes.
+    *   The `serve.sh` script handles Ruby path setup automatically.
 
 ## Deployment
 
-Deployment to GitHub Pages is automated via a GitHub Actions workflow (`.github/workflows/deploy.yml`). Any push to the `main` branch will trigger a build and deploy the site to the `gh-pages` branch.
+Deployment is automated via GitHub Actions. The workflow:
+
+1. Triggers on push to the `main` branch of the private `Czaruno/LarryVelez` repository
+2. Builds the Jekyll site using Ruby 3.1
+3. Deploys the built site to the public `Czaruno/czaruno.github.io` repository
+
+**Key Configuration:**
+- The workflow uses `peaceiris/actions-gh-pages@v3.9.3` action
+- Authentication is done via a Personal Access Token (PAT)
+- The PAT must be stored as a repository secret named `GH_PAGES_PAT`
 
 ## Project Structure
 
@@ -46,6 +78,8 @@ Deployment to GitHub Pages is automated via a GitHub Actions workflow (`.github/
 *   `admin/`: Decap CMS configuration and entry point.
 *   `Gemfile`: Ruby gem dependencies.
 *   `.github/workflows/`: GitHub Actions workflows for CI/CD.
+*   `serve.sh`: Convenience script for running local development server.
+*   `CLAUDE.md`: Development guidelines for Claude Code AI assistant.
 
 ---
 ## Decap CMS Setup (GitHub Backend)
@@ -100,6 +134,7 @@ To enable the workflow to push to your public repository, you need to create a P
     *   **Expiration:** Choose an appropriate expiration period.
     *   **Scopes:** Select the `repo` scope. This will grant full control of public and private repositories. *Be careful with this token as it's powerful.*
         *   If you use Fine-grained tokens, you can restrict it more precisely to only the `Czaruno/czaruno.github.io` repository with "Contents: Read & Write" permissions.
+        *   **Important:** The workflow uses the `personal_token` parameter (not `personal_access_token`)
     *   Click "Generate token". **Copy the token immediately. You will not be able to see it again.**
 
 2.  **Add the PAT as a Secret in the `Czaruno/LarryVelez` Repository:**

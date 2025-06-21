@@ -10,10 +10,16 @@ This is a personal portfolio website for larryvelez.com built as a Jekyll static
 
 ### Development
 ```bash
+# Set Ruby path (if using Homebrew Ruby)
+export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
+
 # Install dependencies (run once or when Gemfile changes)
 bundle install
 
-# Run local development server with live reload
+# Run local development server with live reload (recommended)
+./serve.sh
+
+# Or manually:
 bundle exec jekyll serve --livereload
 # Site runs on http://localhost:4000
 ```
@@ -22,6 +28,16 @@ bundle exec jekyll serve --livereload
 ```bash
 # Deployment is automatic via GitHub Actions on push to main
 git push
+```
+
+### Troubleshooting
+```bash
+# If you encounter Gemfile.lock platform issues
+rm Gemfile.lock
+bundle install
+
+# Check Ruby version (should be 3.1.x)
+ruby --version
 ```
 
 ## Architecture
@@ -33,8 +49,10 @@ git push
 
 ### Key Components
 - **Jekyll**: Static site generator (v4.2+)
+- **Ruby**: Version 3.1+ (installed via Homebrew on macOS)
 - **Tailwind CSS**: Styling framework (loaded via CDN in _layouts/default.html)
 - **Decap CMS**: Content management at /admin/ with GitHub backend
+- **GitHub Actions**: Automated deployment using peaceiris/actions-gh-pages@v3.9.3
 
 ### Important Files
 - `_config.yml`: Jekyll configuration (site title, URL, build settings)
@@ -48,12 +66,25 @@ git push
 
 ## Development Notes
 
-When modifying content:
+### Ruby Setup
+- Use Ruby 3.1+ (matching GitHub Actions)
+- On macOS: `brew install ruby@3.1`
+- Always set PATH: `export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"`
+- Or use the `serve.sh` script which handles this automatically
+
+### Content Management
 - Hero section and intro text are CMS-managed via front matter in index.md
 - Styling uses Tailwind CSS utility classes
 - Custom styles go in assets/css/style.css (currently empty)
 
-When working with the CMS:
-- Access at http://localhost:4000/admin/ during local development
+### CMS Access
+- Local: http://localhost:4000/admin/ (uses local_backend)
+- Production: https://czaruno.github.io/admin/ (requires GitHub OAuth)
 - Content changes update the front matter in index.md
 - The CMS is configured for the "home" collection with hero and intro fields
+
+### GitHub Actions Deployment
+- Requires PAT stored as `GH_PAGES_PAT` repository secret
+- Uses `personal_token` parameter (not `personal_access_token`)
+- Deploys from private repo to public czaruno.github.io repo
+- Ruby version must match between local and CI (3.1)
