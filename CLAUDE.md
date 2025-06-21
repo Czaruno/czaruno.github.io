@@ -72,24 +72,47 @@ ruby --version
 ### Ruby Setup
 - Use Ruby 3.1+ (matching GitHub Actions)
 - On macOS: `brew install ruby@3.1`
-- Always set PATH: `export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"`
-- Or use the `serve.sh` script which handles this automatically
+- Add to PATH: `export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"`
+- Consider adding to ~/.zshrc for persistence
+- Use convenience scripts that handle PATH automatically
 
-### Content Management
-- Hero section and intro text are CMS-managed via front matter in index.md
-- Styling uses Tailwind CSS utility classes
-- Custom styles go in assets/css/style.css (currently empty)
+### Content Management Workflow
+1. **Local Editing (Recommended)**:
+   - Run `./serve-with-cms.sh` 
+   - Edit content at http://localhost:4000/admin/
+   - Changes are committed to local Git repository
+   - Push with `git push` to deploy
 
-### CMS Access
-- Local: http://localhost:4000/admin/ (requires running `npx decap-server`)
-  - Use `./serve-with-cms.sh` to run both Jekyll and CMS servers
-  - Or run `npx decap-server` in a separate terminal
-- Production: https://czaruno.github.io/admin/ (requires GitHub OAuth)
-- Content changes update the front matter in index.md
-- The CMS is configured for the "home" collection with hero and intro fields
+2. **Direct File Editing**:
+   - Edit `index.md` directly in your editor or on GitHub
+   - Hero section and intro text are in the front matter
+
+3. **Production CMS**: 
+   - Available at https://czaruno.github.io/admin/ but has authentication limitations
+   - Shows helpful notice directing users to local development
+
+### CMS Configuration
+- Local backend enabled with `local_backend: true`
+- Requires `npx decap-server` for local proxy
+- Content stored as front matter in index.md
+- Configured for "homepage" collection with hero and intro fields
+- Media files stored in assets/images/
+
+### Styling
+- Uses Tailwind CSS utility classes (loaded via CDN)
+- Custom styles can be added to assets/css/style.css (currently empty)
+- Layout template: _layouts/default.html
 
 ### GitHub Actions Deployment
+- Triggers on push to main branch
+- Uses Ruby 3.1 (matching local development)
 - Requires PAT stored as `GH_PAGES_PAT` repository secret
-- Uses `personal_token` parameter (not `personal_access_token`)
-- Deploys from private repo to public czaruno.github.io repo
-- Ruby version must match between local and CI (3.1)
+- Uses `personal_token` parameter for peaceiris/actions-gh-pages@v3.9.3
+- Deploys from private Czaruno/LarryVelez to public czaruno.github.io
+- Cross-platform Gemfile.lock supports multiple architectures
+
+### Troubleshooting
+- If Gemfile.lock platform issues: `rm Gemfile.lock && bundle install`
+- If CMS login fails locally: ensure `npx decap-server` is running
+- If deployment fails: check Ruby versions match between local and CI
+- If GitHub Actions fails: verify PAT has `repo` scope and is named `GH_PAGES_PAT`

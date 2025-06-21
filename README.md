@@ -1,6 +1,16 @@
 # Personal Homepage for larryvelez.com
 
-This is a personal homepage built with Jekyll, styled with Tailwind CSS (via CDN), and managed with Decap CMS. It's designed to be hosted on GitHub Pages.
+This is a personal homepage built with Jekyll, styled with Tailwind CSS (via CDN), and managed with Decap CMS. It's designed to be hosted on GitHub Pages with automated deployment.
+
+## ✨ Features
+
+- **Jekyll Static Site**: Fast, secure static site generation
+- **Tailwind CSS**: Modern utility-first CSS framework
+- **Decap CMS**: User-friendly content management system
+- **Automated Deployment**: GitHub Actions deploy to GitHub Pages
+- **Local Development**: Full CMS functionality for local editing
+- **Cross-Platform**: Works on macOS, Linux, and Windows
+- **Ruby 3.1**: Modern Ruby version with reliable dependencies
 
 ## Local Development
 
@@ -20,7 +30,7 @@ To set up and run this site locally, you'll need Ruby, Bundler, and Jekyll.
     # Install Ruby via Homebrew
     brew install ruby@3.1
     
-    # Add Ruby to your PATH
+    # Add Ruby to your PATH (add to ~/.zshrc for persistence)
     export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
     
     # Verify Ruby version
@@ -36,13 +46,25 @@ To set up and run this site locally, you'll need Ruby, Bundler, and Jekyll.
     bundle install
     ```
     
-    **Note:** If you encounter platform-specific Gemfile.lock errors, delete it and run `bundle install` again.
+    **Troubleshooting:** If you encounter platform-specific Gemfile.lock errors:
+    ```bash
+    rm Gemfile.lock
+    bundle install
+    ```
 
-4.  **Serve the site locally:**
+4.  **Choose your development mode:**
     
-    **Quick method (recommended):**
+    **For Jekyll development only:**
     ```bash
     ./serve.sh
+    # Site available at http://localhost:4000
+    ```
+    
+    **For Jekyll + CMS editing (recommended):**
+    ```bash
+    ./serve-with-cms.sh
+    # Site: http://localhost:4000
+    # CMS: http://localhost:4000/admin/
     ```
     
     **Manual method:**
@@ -50,11 +72,13 @@ To set up and run this site locally, you'll need Ruby, Bundler, and Jekyll.
     export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"  # If using Homebrew Ruby
     bundle exec jekyll serve --livereload
     ```
-    
-    This will start a local development server at `http://localhost:4000`.
 
-    *   The `--livereload` flag automatically refreshes the page when you make changes.
-    *   The `serve.sh` script handles Ruby path setup automatically.
+### Development Workflow
+
+1. **Content Editing:** Use the local CMS at `http://localhost:4000/admin/` for easy content editing
+2. **Code Changes:** Edit files directly and Jekyll will auto-reload
+3. **Deploy:** Push changes with `git push` to trigger automatic deployment
+4. **Live Site:** Changes appear at `https://czaruno.github.io` within 1-2 minutes
 
 ## Deployment
 
@@ -111,13 +135,13 @@ To enable this, you need to set up a GitHub OAuth Application:
     *   You generally **do not** need to embed the Client ID or Secret directly into your `admin/config.yml` or site files when using this standard callback URL.
 
     *   **Local Development with `local_backend`:**
-        *   To simplify local content editing and bypass the GitHub OAuth flow when running the CMS locally, the `admin/config.yml` file has been pre-configured with `local_backend: true`.
-        *   **Important:** You must run a local proxy server for this to work. Use the provided script:
+        *   The CMS is configured for local development with `local_backend: true`, which bypasses GitHub OAuth when running locally.
+        *   **Quick Start:** Use the provided script to run both Jekyll and CMS servers:
             ```bash
             ./serve-with-cms.sh
             ```
-            This script runs both the Jekyll server and the Decap CMS local backend server.
-        *   Alternatively, run both servers manually in separate terminals:
+            This starts both the Jekyll development server and the Decap CMS local backend server.
+        *   **Manual Setup:** Alternatively, run both servers in separate terminals:
             ```bash
             # Terminal 1: Decap CMS backend
             npx decap-server
@@ -125,10 +149,14 @@ To enable this, you need to set up a GitHub OAuth Application:
             # Terminal 2: Jekyll server
             ./serve.sh
             ```
-        *   When you access the CMS from your local Jekyll server (`http://localhost:4000/admin/`), you'll see a login button. Click it and you'll be logged in automatically without GitHub OAuth.
-        *   Changes made in the CMS will be committed to your local Git repository.
-        *   This `local_backend: true` setting is ignored when the CMS is accessed from your public site, which will use the standard GitHub OAuth flow.
-        *   After making local changes via the CMS, remember to `git push` them to trigger deployment.
+        *   **Usage:** Access the CMS at `http://localhost:4000/admin/` and click the login button for automatic authentication.
+        *   **Workflow:** Changes made in the CMS are committed to your local Git repository. Push changes with `git push` to trigger automatic deployment.
+        
+    *   **Production CMS Limitations:**
+        *   The CMS interface at `https://czaruno.github.io/admin/` has authentication limitations due to GitHub Pages hosting constraints.
+        *   **Recommended Workflow:** Use local development for content editing, then push changes to deploy.
+        *   **Alternative:** Edit the `index.md` file directly on GitHub for quick changes.
+        *   A helpful notice is displayed on the production CMS explaining these limitations (hidden on localhost).
 
 Access the CMS by navigating to `/admin/` on your site (e.g., when deployed, `https://czaruno.github.io/admin/` or locally `http://localhost:4000/admin/`).
 ---
