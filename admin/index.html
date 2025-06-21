@@ -31,7 +31,7 @@
   </style>
 </head>
 <body>
-  <div class="notice">
+  <div class="notice" id="production-notice" style="display: none;">
     <h3>⚠️ Production CMS Notice</h3>
     <p><strong>The CMS interface on GitHub Pages has authentication limitations.</strong></p>
     <p>For the best editing experience, please use the local development environment:</p>
@@ -48,5 +48,12 @@
     <!-- Include the Decap CMS script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </div>
+
+  <script>
+    // Only show the production notice when not on localhost
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      document.getElementById('production-notice').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
