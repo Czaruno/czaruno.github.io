@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <div class="bg-black text-white min-h-screen flex flex-col">
+
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('/assets/images/hero.svg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 p-8">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">NICE BOLD HEADLINE GOES HERE</h1>
+            
+            <p class="text-xl md:text-2xl mb-8">A compelling subheadline to draw visitors in.</p>
+            
+            <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded text-lg uppercase">
+                TAKE ACTION
+            </a>
+        </div>
+    </section>
+
+    <!-- Two-Column Content Section -->
+    <section class="py-16 px-8 bg-white text-black">
+        <div class="container mx-auto">
+            <div class="md:flex md:space-x-12 items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Welcome</h2>
+                    <div class="prose lg:prose-xl">
+                        <p>This is the introductory copy for the left column. It explains more about what you do or what this page is about. It should be engaging and informative, encouraging visitors to learn more or take the next step.</p>
+
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="/assets/images/column-image.svg" alt="Introduction image" class="rounded-lg shadow-lg w-full" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Ensure Netlify Identity script is in default.html for CMS login -->
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+local_backend: true
+
+# Configuration for Decap CMS (formerly Netlify CMS)
+backend:
+  name: github # Use the GitHub backend
+  repo: Czaruno/LarryVelez # Your private source repository
+  branch: main # Branch to update
+
+# Media files will be stored in the repo and deployed with the site
+media_folder: "assets/images"
+public_folder: "/assets/images" # Path for CMS previews, Jekyll handles baseurl for live site
+
+collections:
+  - name: "homepage"
+    label: "Homepage Content"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.md"
+        fields:
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Subheadline", name: "hero_subheadline", widget: "string", required: false }
+          - { label: "Hero Image URL", name: "hero_image_url", widget: "image" }
+          - { label: "Hero CTA Text", name: "hero_cta_text", widget: "string" }
+          - { label: "Hero CTA Link", name: "hero_cta_link", widget: "string" }
+          - { label: "Introduction Text", name: "intro_text", widget: "markdown" }
+          - { label: "Introduction Image URL", name: "intro_image_url", widget: "image" }
