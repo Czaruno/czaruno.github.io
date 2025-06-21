@@ -79,6 +79,7 @@ Deployment is automated via GitHub Actions. The workflow:
 *   `Gemfile`: Ruby gem dependencies.
 *   `.github/workflows/`: GitHub Actions workflows for CI/CD.
 *   `serve.sh`: Convenience script for running local development server.
+*   `serve-with-cms.sh`: Script to run both Jekyll and Decap CMS local backend.
 *   `CLAUDE.md`: Development guidelines for Claude Code AI assistant.
 
 ---
@@ -111,9 +112,23 @@ To enable this, you need to set up a GitHub OAuth Application:
 
     *   **Local Development with `local_backend`:**
         *   To simplify local content editing and bypass the GitHub OAuth flow when running the CMS locally, the `admin/config.yml` file has been pre-configured with `local_backend: true`.
-        *   When you access the CMS from your local Jekyll server (e.g., `http://localhost:4000/admin/`), Decap CMS will use your local Git repository directly. Changes made in the CMS will be committed to your local branch. Note the port change from 4000 to 4020 was not requested, sticking to 4000.
-        *   This `local_backend: true` setting is generally ignored when the CMS is accessed from a non-localhost URL (like your public `https://czaruno.github.io/admin/` site), which will use the standard GitHub OAuth flow.
-        *   After making local changes via the CMS, remember to `git push` them from your local machine to the `Czaruno/LarryVelez` repository on GitHub to trigger the deployment to your live site.
+        *   **Important:** You must run a local proxy server for this to work. Use the provided script:
+            ```bash
+            ./serve-with-cms.sh
+            ```
+            This script runs both the Jekyll server and the Decap CMS local backend server.
+        *   Alternatively, run both servers manually in separate terminals:
+            ```bash
+            # Terminal 1: Decap CMS backend
+            npx decap-server
+            
+            # Terminal 2: Jekyll server
+            ./serve.sh
+            ```
+        *   When you access the CMS from your local Jekyll server (`http://localhost:4000/admin/`), you'll see a login button. Click it and you'll be logged in automatically without GitHub OAuth.
+        *   Changes made in the CMS will be committed to your local Git repository.
+        *   This `local_backend: true` setting is ignored when the CMS is accessed from your public site, which will use the standard GitHub OAuth flow.
+        *   After making local changes via the CMS, remember to `git push` them to trigger deployment.
 
 Access the CMS by navigating to `/admin/` on your site (e.g., when deployed, `https://czaruno.github.io/admin/` or locally `http://localhost:4000/admin/`).
 ---

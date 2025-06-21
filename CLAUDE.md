@@ -16,8 +16,11 @@ export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
 # Install dependencies (run once or when Gemfile changes)
 bundle install
 
-# Run local development server with live reload (recommended)
+# Run local development server with live reload
 ./serve.sh
+
+# Run Jekyll + Decap CMS local backend (for CMS editing)
+./serve-with-cms.sh
 
 # Or manually:
 bundle exec jekyll serve --livereload
@@ -78,7 +81,9 @@ ruby --version
 - Custom styles go in assets/css/style.css (currently empty)
 
 ### CMS Access
-- Local: http://localhost:4000/admin/ (uses local_backend)
+- Local: http://localhost:4000/admin/ (requires running `npx decap-server`)
+  - Use `./serve-with-cms.sh` to run both Jekyll and CMS servers
+  - Or run `npx decap-server` in a separate terminal
 - Production: https://czaruno.github.io/admin/ (requires GitHub OAuth)
 - Content changes update the front matter in index.md
 - The CMS is configured for the "home" collection with hero and intro fields
