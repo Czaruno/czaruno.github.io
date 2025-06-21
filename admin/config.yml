@@ -5,8 +5,8 @@ backend:
   name: github # Use the GitHub backend
   repo: Czaruno/LarryVelez # Your private source repository
   branch: main # Branch to update
-  base_url: https://sveltia-cms-auth.netlify.app # Alternative OAuth proxy
-  site_id: czaruno.github.io
+  auth_type: implicit # Use implicit grant flow
+  app_id: Ov23libA9mteuYtlAscH # Your GitHub OAuth App Client ID
 
 # Media files will be stored in the repo and deployed with the site
 media_folder: "assets/images"
