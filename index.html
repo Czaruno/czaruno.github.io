@@ -61,20 +61,17 @@
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
   }
   
-  /* Match width of name lines */
-  .hero-name {
-    position: relative;
+  /* Hero name table - equal width cells for perfect alignment */
+  .hero-name-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 800px;
   }
-  .hero-name .name-line-1,
-  .hero-name .name-line-2 {
-    display: block;
-  }
-  /* VELEZ has same character count as LARRY (5 chars each)
-     But VELEZ's letters are narrower (V, E, L, E, Z vs L, A, R, R, Y)
-     Use transform scaleX to stretch VELEZ to match LARRY's width exactly */
-  .hero-name .name-line-2 {
-    transform-origin: left center;
-    transform: scaleX(1.15);
+  .hero-name-table td {
+    text-align: center;
+    padding: 0;
+    width: 20%; /* 5 columns = 20% each */
   }
 </style>
 
@@ -90,9 +87,23 @@
         Technology Entrepreneur • Motoring Enthusiast
       </div>
       
-      <h1 class="hero-name text-7xl md:text-9xl font-bold leading-none mb-8 tracking-tight">
-        <div class="name-line-1">LARRY</div>
-        <div class="name-line-2">VELEZ</div>
+      <h1 class="text-7xl md:text-9xl font-bold leading-none mb-8">
+        <table class="hero-name-table">
+          <tr>
+            <td>L</td>
+            <td>A</td>
+            <td>R</td>
+            <td>R</td>
+            <td>Y</td>
+          </tr>
+          <tr>
+            <td>V</td>
+            <td>E</td>
+            <td>L</td>
+            <td>E</td>
+            <td>Z</td>
+          </tr>
+        </table>
       </h1>
       
       <div class="w-24 h-1 bg-red-600 mb-12"></div>
