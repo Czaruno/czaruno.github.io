@@ -60,6 +60,11 @@
   .sharp-corner {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
   }
+  
+  /* Match width of name lines */
+  .hero-name .name-line-2 {
+    letter-spacing: 0.18em;
+  }
 </style>
 
 <!-- Hero: Precision Brutalism -->
@@ -74,9 +79,9 @@
         Technology Entrepreneur • Motoring Enthusiast
       </div>
       
-      <h1 class="text-7xl md:text-9xl font-bold leading-none mb-8 tracking-tight">
-        LARRY<br />
-        VELEZ
+      <h1 class="hero-name text-7xl md:text-9xl font-bold leading-none mb-8 tracking-tight">
+        <div class="name-line-1">LARRY</div>
+        <div class="name-line-2">VELEZ</div>
       </h1>
       
       <div class="w-24 h-1 bg-red-600 mb-12"></div>
