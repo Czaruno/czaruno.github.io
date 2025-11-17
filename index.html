@@ -62,8 +62,19 @@
   }
   
   /* Match width of name lines */
+  .hero-name {
+    position: relative;
+  }
+  .hero-name .name-line-1,
   .hero-name .name-line-2 {
-    letter-spacing: 0.25em;
+    display: inline-block;
+  }
+  /* VELEZ has same character count as LARRY (5 chars each)
+     But VELEZ's letters are narrower (V, E, L, E, Z vs L, A, R, R, Y)
+     Use transform scaleX to stretch VELEZ to match LARRY's width exactly */
+  .hero-name .name-line-2 {
+    transform-origin: left center;
+    transform: scaleX(1.15);
   }
 </style>
 
