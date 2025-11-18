@@ -1,7 +1,7 @@
 # Session State - LarryVelez.com Redesign
 
-**Last Updated:** 2025-11-17 23:30 EST
-**Current Phase:** Writing Archive Complete - Ready for Team Review
+**Last Updated:** 2025-11-18 14:45 EST
+**Current Phase:** Article Pages Redesigned - CMS Features Enhanced
 
 ---
 
@@ -86,62 +86,80 @@
   - All changes deployed to https://larryvelez.com
   - Ready for team review
 
+### Article Page Redesign & CMS Enhancements (Session 2025-11-18)
+- [x] Complete redesign of article pages (`_layouts/post.html`):
+  - Implemented Precision Brutalism aesthetic (Space Grotesk + IBM Plex Mono)
+  - Centered white article container on gray background (900px max-width)
+  - Moved "Back to Archive" button to header with right alignment
+  - Added year-based anchor navigation (#year-2019, #year-2020, etc.)
+  - CSS fix to hide duplicate italic content from SquareSpace exports
+  - Monospace metadata, large bold titles, red accent divider
+  - Geometric category tags with clip-path styling
+  - Responsive design with adjusted padding for mobile
+- [x] Homepage layout optimization:
+  - Reduced hero section font sizes to bring CTAs above the fold
+  - Hero name: text-7xl → text-5xl (mobile: text-9xl → text-7xl)
+  - Description: text-2xl → text-lg (mobile: text-3xl → text-xl)
+  - Adjusted spacing throughout (py-16 → py-12, mb-12 → mb-8, etc.)
+- [x] CMS-editable featured articles:
+  - Added relation widget in admin/config.yml for article selection
+  - Homepage featured articles now dynamically pull from CMS
+  - Users can select exactly 3 articles to feature via CMS interface
+  - Articles display with proper links, year, category, title, and excerpt
+  - Fixed Liquid matching logic to use post.path for reliable lookups
+- [x] Writing Archive improvements:
+  - Moved "Back to Home" button to top right corner
+  - Removed redundant Call to Action section at bottom
+  - Added year-specific anchors to timeline sections
+- [x] Committed and pushed to GitHub (commits 3826df0, d82d773, 59675dc)
+  - All changes deployed to https://larryvelez.com
+
 ---
 
 ## 🚧 In Progress
 
-### Current Task: Team Review & Feedback
-- Status: ✅ Writing Archive complete and deployed
+### Current Status: Core Site Complete
+- Status: ✅ Homepage, Writing Archive, and Article Pages complete
 - Live URLs:
   - Homepage: https://larryvelez.com
   - Writing Archive: https://larryvelez.com/writing
   - Sample article: https://larryvelez.com/2019/09/16/are-we-teaching-ai-to-be-racist.html
 - CMS Access: Available locally at http://localhost:4000/admin/ (run `./serve-with-cms.sh`)
-- Next: Gather team feedback, make adjustments, then build remaining pages
+- Featured Articles: Now editable via CMS (select 3 articles to feature on homepage)
+- Next: Build Functional Excellence and Press Kit pages
 
 ---
 
 ## 📋 Pending Tasks
 
 ### High Priority
-1. **Redesign article page layout** (`_layouts/post.html`)
-   - Update to match Precision Brutalism aesthetic
-   - Sharp geometric shapes, monospace metadata, red accents
-   - Better typography hierarchy
-   - Currently using basic layout
-
-2. **Create Functional Excellence page** (`/functional-excellence`)
+1. **Create Functional Excellence page** (`/functional-excellence`)
    - Personal museum layout
    - Influences section (Naval, Matt Moreman, Elon, Gary Vee)
    - Books section (Guns Germs & Steel, Innovator's Dilemma, Seven Powers)
    - Interests (cars, garage design, prefab architecture, Colombian culture)
 
-3. **Create Press Kit page** (`/press`)
+2. **Create Press Kit page** (`/press`)
    - Multiple bio lengths (25/100/250 words)
    - Downloadable press materials
    - Copyable text fields
    - Placeholder for headshots
 
 ### Medium Priority
-4. **Write press kit content**
+3. **Write press kit content**
    - Short bio (25 words)
    - Medium bio (100 words)
    - Long bio (250 words)
    - Key achievements list
    - Speaking topics
 
-5. **Curate featured articles**
-   - Run `scripts/curate-articles.py`
-   - Select 10-15 articles for launch
-   - Copy to `_posts/` directory
-
 ### Low Priority
-6. **Additional pages**
+4. **Additional pages**
    - About page (if needed beyond homepage)
    - Contact page
    - Speaking/consulting info
 
-7. **Optimizations**
+5. **Optimizations**
    - Image optimization
    - SEO meta tags
    - Social sharing cards
@@ -204,13 +222,12 @@ LarryVelez/
 
 ---
 
-## 🔄 Next Session Priorities (After IDE Update)
+## 🔄 Next Session Priorities
 
-1. **Complete any remaining small homepage changes** - User mentioned more changes before tackling Writing page
-2. **Build Writing Archive page** (`/writing`) - Year-based organization, timeline visualization, featured articles
-3. **Build Press Kit page** (`/press`) - Bios (25/100/250 words), achievements, speaking topics
-4. **Build Functional Excellence page** (`/functional-excellence`) - Influences, books, obsessions, Colombian heritage
-5. **Curate first 10-15 articles** - Use `scripts/curate-articles.py`
+1. **Build Functional Excellence page** (`/functional-excellence`) - Personal museum, influences, books, obsessions, Colombian heritage
+2. **Build Press Kit page** (`/press`) - Bios (25/100/250 words), achievements, speaking topics, downloadable materials
+3. **Write press kit content** - Create bios at multiple lengths, key achievements, speaking topics
+4. **Additional content refinements** - Based on user feedback and testing
 
 ---
 
