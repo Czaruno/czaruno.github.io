@@ -23,13 +23,22 @@ collections:
         name: "home"
         file: "index.md"
         fields:
-          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
-          - { label: "Hero Subheadline", name: "hero_subheadline", widget: "string", required: false }
-          - { label: "Hero Image URL", name: "hero_image_url", widget: "image" }
-          - { label: "Hero CTA Text", name: "hero_cta_text", widget: "string" }
-          - { label: "Hero CTA Link", name: "hero_cta_link", widget: "string" }
-          - { label: "Introduction Text", name: "intro_text", widget: "markdown" }
-          - { label: "Introduction Image URL", name: "intro_image_url", widget: "image" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Featured Articles"
+            name: "featured_articles"
+            widget: "list"
+            max: 3
+            min: 3
+            hint: "Select exactly 3 articles to feature on the homepage"
+            fields:
+              - label: "Article"
+                name: "post"
+                widget: "relation"
+                collection: "blog"
+                search_fields: ["title"]
+                value_field: "{{slug}}"
+                display_fields: ["title"]
   
   - name: "blog"
     label: "Blog Posts"
