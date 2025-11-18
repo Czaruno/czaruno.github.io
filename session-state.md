@@ -1,7 +1,7 @@
 # Session State - LarryVelez.com Redesign
 
-**Last Updated:** 2025-11-17 21:15 EST
-**Current Phase:** Homepage Finalized - Building Writing Archive Page
+**Last Updated:** 2025-11-17 23:30 EST
+**Current Phase:** Writing Archive Complete - Ready for Team Review
 
 ---
 
@@ -64,31 +64,52 @@
 - [x] Verified auto-deployment pipeline working
 - [x] Site live at https://larryvelez.com
 
+### Writing Archive & Content Management (Session 2025-11-17)
+- [x] Created dynamic Writing Archive page (`writing.html`):
+  - Timeline-based design with year markers
+  - Dynamically pulls from Jekyll posts in `_posts/`
+  - Precision Brutalism aesthetic matching homepage
+  - Shows dynamic stats (article count, years covered)
+  - Articles grouped by year with up to 12 per year displayed
+- [x] Enabled Decap CMS editorial workflow:
+  - Added `publish_mode: editorial_workflow` to admin/config.yml
+  - Configured date-based sorting in article list
+  - Disabled preview pane for cleaner editing experience
+  - Shows article dates in list view (YYYY-MM-DD - Title format)
+- [x] Curated and published 117 articles (2012-2020):
+  - Ran `scripts/curate-articles.py` to copy articles from data/ to _posts/
+  - Added `layout: post` field to all articles for Jekyll compatibility
+  - Cleaned up 46 attachment files and 143 .bak duplicates
+  - Removed 3 articles with malformed YAML
+  - Final clean set of 117 high-quality articles
+- [x] Committed and pushed to GitHub (commit e187def)
+  - All changes deployed to https://larryvelez.com
+  - Ready for team review
+
 ---
 
 ## 🚧 In Progress
 
-### Current Task: Building Writing Archive Page (`/writing`)
-- Status: 🚧 Starting development
-- Requirements:
-  - Year-based organization (2012-2023)
-  - Timeline visualization
-  - Featured articles from homepage teaser
-  - Filter by theme capability
-  - Precision Brutalism design aesthetic
-- Data source: 555 articles in `data/articles/markdown/`
-- Next: Design and implement Writing Archive page
+### Current Task: Team Review & Feedback
+- Status: ✅ Writing Archive complete and deployed
+- Live URLs:
+  - Homepage: https://larryvelez.com
+  - Writing Archive: https://larryvelez.com/writing
+  - Sample article: https://larryvelez.com/2019/09/16/are-we-teaching-ai-to-be-racist.html
+- CMS Access: Available locally at http://localhost:4000/admin/ (run `./serve-with-cms.sh`)
+- Next: Gather team feedback, make adjustments, then build remaining pages
 
 ---
 
 ## 📋 Pending Tasks
 
 ### High Priority
-1. **Create Writing Archive page** (`/writing`)
-   - Organize by year with featured pieces
-   - Timeline visualization
-   - Filter by theme
-   
+1. **Redesign article page layout** (`_layouts/post.html`)
+   - Update to match Precision Brutalism aesthetic
+   - Sharp geometric shapes, monospace metadata, red accents
+   - Better typography hierarchy
+   - Currently using basic layout
+
 2. **Create Functional Excellence page** (`/functional-excellence`)
    - Personal museum layout
    - Influences section (Naval, Matt Moreman, Elon, Gary Vee)
