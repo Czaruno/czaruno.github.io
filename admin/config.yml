@@ -1,5 +1,8 @@
 local_backend: true
 
+# Enable editorial workflow for draft/review/publish
+publish_mode: editorial_workflow
+
 # Configuration for Decap CMS (formerly Netlify CMS)
 backend:
   name: github # Use the GitHub backend
@@ -33,6 +36,10 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date | date('YYYY-MM-DD')}} - {{title}}"
+    sortable_fields: ['date', 'title']
+    editor:
+      preview: false
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
