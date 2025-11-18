@@ -27,7 +27,7 @@
     <style>
   /* Precision Brutalism Typography */
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
-  
+
   :root {
     --font-display: 'Space Grotesk', -apple-system, sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
@@ -51,9 +51,17 @@
     transform: translateY(0);
   }
 
-  .delay-100 { transition-delay: 0.1s; }
-  .delay-200 { transition-delay: 0.2s; }
-  .delay-300 { transition-delay: 0.3s; }
+  .delay-100 {
+    transition-delay: 0.1s;
+  }
+
+  .delay-200 {
+    transition-delay: 0.2s;
+  }
+
+  .delay-300 {
+    transition-delay: 0.3s;
+  }
 
   /* Sticky Layout */
   .timeline-section {
@@ -76,6 +84,57 @@
     box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
   }
 
+  /* Accordion Styles */
+  .accordion-item {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 1rem;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: background 0.2s ease;
+  }
+
+  .accordion-header:hover {
+    background: #f9f9f9;
+  }
+
+  .accordion-icon {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+    color: var(--accent);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .accordion-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
   /* Media Grid */
   .media-grid {
     display: grid;
@@ -94,22 +153,23 @@
   .media-item:hover {
     border-color: var(--accent);
     transform: translateY(-4px);
-    box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .media-item img, .media-item iframe {
+  .media-item img,
+  .media-item iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
-  
+
   .media-caption {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 0.5rem 1rem;
     font-family: var(--font-mono);
@@ -124,22 +184,24 @@
 </style>
 
 <div class="bg-white min-h-screen">
-  
+
   <!-- Hero Section -->
   <header class="bg-black text-white py-32 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-red-600 opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-    
+    <div
+      class="absolute top-0 right-0 w-64 h-64 bg-red-600 opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2">
+    </div>
+
     <div class="container mx-auto px-8 relative z-10">
       <div class="max-w-5xl">
         <div class="font-mono text-xs uppercase tracking-widest text-gray-400 mb-6 reveal-on-scroll">
           Career Timeline
         </div>
         <h1 class="text-6xl md:text-8xl font-bold leading-none mb-8 reveal-on-scroll delay-100">
-          Building<br/>The Future
+          Building<br />The Future
         </h1>
         <div class="w-24 h-1 bg-red-600 mb-8 reveal-on-scroll delay-200"></div>
         <p class="text-xl md:text-2xl font-light max-w-3xl leading-relaxed text-gray-300 reveal-on-scroll delay-300">
-          From the early days of internet streaming to the AI revolution. 
+          From the early days of internet streaming to the AI revolution.
           A history of zero-to-one innovation.
         </p>
       </div>
@@ -149,10 +211,95 @@
   <!-- Timeline -->
   <main class="container mx-auto px-8 py-24">
     <div class="max-w-6xl mx-auto">
-      
+
       
       <div class="grid md:grid-cols-12 gap-12 mb-32 relative timeline-row reveal-on-scroll">
-        
+
+        <!-- Left Column: Sticky Year & Company -->
+        <div class="md:col-span-4 md:sticky md:top-8 h-fit">
+          <div class="timeline-section pl-8 border-l-2 border-gray-200">
+            <div class="timeline-marker"></div>
+            <div class="font-mono text-sm text-red-600 mb-2 font-bold tracking-wider">
+              2023 — Present
+            </div>
+            <h2 class="text-5xl font-bold leading-tight mb-4">
+              AI Consulting
+            </h2>
+            <div class="font-mono text-sm text-gray-500 uppercase tracking-widest">
+              Consultant
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Content & Media -->
+        <div class="md:col-span-8">
+          <div class="prose prose-lg max-w-none text-gray-700 mb-12 leading-relaxed">
+            <p>Delivering high-impact AI solutions for enterprise clients. Specializing in agentic workflows, multi-modal analysis, and AI-driven crisis management.</p>
+
+          </div>
+
+          <!-- Accordion for Projects -->
+          
+          <div class="accordion-container mb-12">
+            
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Serviceaide: Enterprise AI Agents</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  Architected AI conversation agents and change management workflows for the energy sector and regulated industries. Focused on compliance, reliability, and seamless human-in-the-loop integration.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Crisis Response: AI-Generated PR Infrastructure</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  Built a real-time crisis response platform for a top PR firm. The system deploys AI-generated microsites instantly and coordinates hybrid teams of AI agents and human responders for rapid information control.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>EdTech: Multi-Speaker Audio Analysis</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  Developed an audio processing pipeline to analyze classroom discussions. The solution isolates dozens of student voices from a single room recording, performing theme extraction and precise quote attribution to generate actionable feedback reports.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>EdTech: Whiteboard-to-Report Vision Pipeline</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  Created a computer vision solution that transforms single images of teacher whiteboard notes into comprehensive, structured reports, automating documentation and lesson review.
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+
+          
+        </div>
+
+      </div>
+      
+      <div class="grid md:grid-cols-12 gap-12 mb-32 relative timeline-row reveal-on-scroll">
+
         <!-- Left Column: Sticky Year & Company -->
         <div class="md:col-span-4 md:sticky md:top-8 h-fit">
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
@@ -176,20 +323,23 @@
 
           </div>
 
+          <!-- Accordion for Projects -->
+          
+
           
           <div class="media-grid">
             
-              <div class="media-item aspect-video group">
-                
-                  <img src="/assets/images/work/kogi-animation.webp" alt="Kogi.ai 3D Animation (Preview)" loading="lazy">
-                
-                
-                
-                <div class="media-caption">
-                  Kogi.ai 3D Animation (Preview)
-                </div>
-                
+            <div class="media-item aspect-video group">
+              
+              <img src="/assets/images/work/kogi-animation.webp" alt="Kogi.ai 3D Animation (Preview)" loading="lazy">
+              
+
+              
+              <div class="media-caption">
+                Kogi.ai 3D Animation (Preview)
               </div>
+              
+            </div>
             
           </div>
           
@@ -198,7 +348,7 @@
       </div>
       
       <div class="grid md:grid-cols-12 gap-12 mb-32 relative timeline-row reveal-on-scroll">
-        
+
         <!-- Left Column: Sticky Year & Company -->
         <div class="md:col-span-4 md:sticky md:top-8 h-fit">
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
@@ -222,44 +372,64 @@
 
           </div>
 
+          <!-- Accordion for Projects -->
+          
+
           
           <div class="media-grid">
             
-              <div class="media-item aspect-video group">
+            <div class="media-item aspect-video group">
+              
+              <a href="https://www.electric.ai/blog/electric-acquires-sinu-one-of-new-yorks-top-managed-it-service-providers" target="_blank"
+                class="block w-full h-full bg-gray-900 flex items-center justify-center group-hover:bg-red-600 transition-colors relative overflow-hidden">
+                <!-- Optional background image for link -->
                 
-                  <img src="/assets/images/work/zenu_2007.gif" alt="Zenu 2007 Design" loading="lazy">
-                
-                
-                
-                <div class="media-caption">
-                  Zenu 2007 Design
+                <div class="relative z-10 text-center p-4">
+                  <span class="text-white font-bold text-xl block mb-2">Acquired by Electric.ai</span>
+                  <span class="text-white text-sm uppercase tracking-widest border-b border-white pb-1">Visit Link
+                    &rarr;</span>
                 </div>
-                
-              </div>
+              </a>
+              
+
+              
+            </div>
             
-              <div class="media-item aspect-video group">
-                
-                  <img src="/assets/images/work/zenu_2006.gif" alt="Zenu 2006 Design" loading="lazy">
-                
-                
-                
-                <div class="media-caption">
-                  Zenu 2006 Design
-                </div>
-                
+            <div class="media-item aspect-video group">
+              
+              <img src="/assets/images/work/zenu_2007.gif" alt="Zenu 2007 Design" loading="lazy">
+              
+
+              
+              <div class="media-caption">
+                Zenu 2007 Design
               </div>
+              
+            </div>
             
-              <div class="media-item aspect-video group">
-                
-                  <img src="/assets/images/work/zenu_2004.gif" alt="Zenu 2004 Design" loading="lazy">
-                
-                
-                
-                <div class="media-caption">
-                  Zenu 2004 Design
-                </div>
-                
+            <div class="media-item aspect-video group">
+              
+              <img src="/assets/images/work/zenu_2006.gif" alt="Zenu 2006 Design" loading="lazy">
+              
+
+              
+              <div class="media-caption">
+                Zenu 2006 Design
               </div>
+              
+            </div>
+            
+            <div class="media-item aspect-video group">
+              
+              <img src="/assets/images/work/zenu_2004.gif" alt="Zenu 2004 Design" loading="lazy">
+              
+
+              
+              <div class="media-caption">
+                Zenu 2004 Design
+              </div>
+              
+            </div>
             
           </div>
           
@@ -268,7 +438,7 @@
       </div>
       
       <div class="grid md:grid-cols-12 gap-12 mb-32 relative timeline-row reveal-on-scroll">
-        
+
         <!-- Left Column: Sticky Year & Company -->
         <div class="md:col-span-4 md:sticky md:top-8 h-fit">
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
@@ -280,7 +450,7 @@
               Alltrue
             </h2>
             <div class="font-mono text-sm text-gray-500 uppercase tracking-widest">
-              Technology Lead
+              Director of Information Technology
             </div>
           </div>
         </div>
@@ -292,20 +462,25 @@
 
           </div>
 
+          <!-- Accordion for Projects -->
+          
+
           
           <div class="media-grid">
             
-              <div class="media-item aspect-video group">
-                
-                  <iframe src="https://www.youtube.com/embed/PLACEHOLDER_ALLTRUE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
-                
-                
-                
-                <div class="media-caption">
-                  Alltrue Video
-                </div>
-                
+            <div class="media-item aspect-video group">
+              
+              <iframe src="https://www.youtube.com/embed/PLACEHOLDER_ALLTRUE" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen class="w-full h-full"></iframe>
+              
+
+              
+              <div class="media-caption">
+                Alltrue Video
               </div>
+              
+            </div>
             
           </div>
           
@@ -314,7 +489,7 @@
       </div>
       
       <div class="grid md:grid-cols-12 gap-12 mb-32 relative timeline-row reveal-on-scroll">
-        
+
         <!-- Left Column: Sticky Year & Company -->
         <div class="md:col-span-4 md:sticky md:top-8 h-fit">
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
@@ -326,7 +501,7 @@
               Pseudo
             </h2>
             <div class="font-mono text-sm text-gray-500 uppercase tracking-widest">
-              Systems Architect
+              Director of Information Technology
             </div>
           </div>
         </div>
@@ -338,20 +513,25 @@
 
           </div>
 
+          <!-- Accordion for Projects -->
+          
+
           
           <div class="media-grid">
             
-              <div class="media-item aspect-video group">
-                
-                  <iframe src="https://www.youtube.com/embed/PLACEHOLDER_PSEUDO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
-                
-                
-                
-                <div class="media-caption">
-                  Pseudo Programs
-                </div>
-                
+            <div class="media-item aspect-video group">
+              
+              <iframe src="https://www.youtube.com/embed/_XSTwfdFwIY" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen class="w-full h-full"></iframe>
+              
+
+              
+              <div class="media-caption">
+                Pseudo Programs
               </div>
+              
+            </div>
             
           </div>
           
@@ -367,7 +547,8 @@
   <section class="bg-gray-100 py-24">
     <div class="container mx-auto px-8 text-center">
       <h2 class="text-4xl font-bold mb-8">Ready for what's next?</h2>
-      <a href="/" class="inline-block bg-black text-white px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 transition-colors">
+      <a href="/"
+        class="inline-block bg-black text-white px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 transition-colors">
         Back to Home
       </a>
     </div>
@@ -388,8 +569,6 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          // Optional: Stop observing once revealed
-          // observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
@@ -397,9 +576,27 @@
     document.querySelectorAll('.reveal-on-scroll').forEach(el => {
       observer.observe(el);
     });
+
+    // Accordion Logic
+    const accordions = document.querySelectorAll('.accordion-header');
+    accordions.forEach(acc => {
+      acc.addEventListener('click', function () {
+        const item = this.parentElement;
+        const content = this.nextElementSibling;
+
+        // Toggle active class
+        item.classList.toggle('active');
+
+        // Toggle max-height for smooth animation
+        if (item.classList.contains('active')) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = null;
+        }
+      });
+    });
   });
 </script>
-
 
 </body>
 </html>
