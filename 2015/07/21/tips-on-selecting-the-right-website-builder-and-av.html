@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips on selecting the right website builder (and avoiding costly custom coding)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>July 21, 2015</span>
+            
+              <span>• Sinu</span>
+            
+          </div>
+          <a href="/writing#year-2015" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">Tips on selecting the right website builder (and avoiding costly custom coding)</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p><em>While we are not web developers, Sinu strives to be a source of info for all things tech for our customers, and many ask our advice about website development and design. Since we started our business over 10 years ago, we have always recommended using custom website builder services.</em></p>
+
+<hr />
+
+<p>While we are not web developers, Sinu strives to be a source of info for all things tech for our customers, and many ask our advice about website development and design. Since we started our business over 10 years ago, we have always recommended using custom website builder services. Back then, there were fewer options and they were hard to customize unless a developer inserted quite a bit of custom code. Today, there are several options that can provide all of the most often-used elements of web design built right into customizable templates – complete with a variety of content management system (CMS), design, and developer functions. We have always believed that you should not spend time and money for someone to write custom code to build what thousands have already built, instead, start with a proven website building platform that can be customized to meet the unique needs of your company.</p>
+
+<p>Website builders are tools that allow the construction of websites without manual code editing (<a href="https://en.wikipedia.org/wiki/Website_builder">Wikipedia</a>). There are a number of excellent web builder services available today, and you will want to first determine the basic look and functionality of your website or blogsite to help you select the one that will work best for your company.</p>
+
+<p>Each platform offers a different degree of ease of design and development. If you need more complex page designs, then you may want a platform that provides your designer a bit more flexibility. A few years ago, some robust website functions (such as solutions for e-commerce, polling, and mobile-responsive) would have required costly custom coding by a developer, today hundreds of plug-in options or themes are available that provide advanced website features for little to no cost, saving your developer time and your business money. If you are looking to get a basic one-to-five page website up quickly, there’s a platform for that too!</p>
+
+<p>A few other considerations when selecting a custom website builder:</p>
+
+<p>Does it offer hosting and how much storage space does it include? (Make sure you are comfortable with the web hosting policy and that it is hosted under the name of your business and you get all the login information from your developer when the website goes live.)</p>
+<ul>
+  <li>Is the site mobile-friendly – does it offer responsive design? (Google ranks websites higher if they are mobile-friendly.)</li>
+  <li>What level of SEO does it provide?  (They typically offer some level, but you may need to consult with an SEO specialist to identify keywords in your industry to ensure good search rankings.)</li>
+  <li>Can it easily push your updates out to your social media sites? (This can be especially important for bloggers or online storefronts.)</li>
+  <li>How does it handle video and other media file storage? (You do not want your website to load slowly or you will lose visitors.)  </li>
+</ul>
+
+<p>There are a number of website builders to choose from, and it can overwhelming to sort through them all, so we’ve compiled a few of the leaders in the field and summarized features below. We also included information from performance reviews from a number of sources, including <a href="http://www.digitaltrends.com/computing/best-website-build-websites-free/">Digital Trends</a>,<a href="http://www.sitebuilderreport.com/">Site Builder Report</a>, and <a href="http://www.websitebuilderexpert.com/">Website Builder Expert</a>.</p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">CRM,</span>
+          
+            <span class="category-tag">CSS,</span>
+          
+            <span class="category-tag">Squarespace,</span>
+          
+            <span class="category-tag">Website</span>
+          
+            <span class="category-tag">builder,</span>
+          
+            <span class="category-tag">Weebly</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>

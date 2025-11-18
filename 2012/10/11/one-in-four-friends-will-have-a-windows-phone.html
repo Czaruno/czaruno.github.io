@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One in four friends will have a Windows Phone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>October 11, 2012</span>
+            
+              <span>• Sinu</span>
+            
+          </div>
+          <a href="/writing#year-2012" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">One in four friends will have a Windows Phone</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p><em>In the next few weeks we are all going to experience the ‘shock and awe’ of <a href="http://www.microsoft.com/en-us/default.aspx">Microsoft’s</a> billion dollar marketing engine as it tries to convince us all that we should buy a Windows Phone. Some here at the Sinu office have been hearing me rant all year about the upcoming Windows Phones and how Microsoft will be going all in this year on Mobile and Windows 8.</em></p>
+
+<hr />
+
+<p>In the next few weeks we are all going to experience the ‘shock and awe’ of <a href="http://www.microsoft.com/en-us/default.aspx">Microsoft’s</a> billion dollar marketing engine as it tries to convince us all that we should buy a Windows Phone. Some here at the Sinu office have been hearing me rant all year about the upcoming Windows Phones and how Microsoft will be going all in this year on Mobile and Windows 8. </p>
+
+<p>As I am sure many people have said before, never underestimate someone who has nothing to lose. I would add that a company that faces the real chance of losing everything it has left is even more desperate and focused. Microsoft has always been at its best when it is up against the ropes. <a href="http://www.apple.com/">Apple</a>, <a href="http://www.google.com/">Google</a> and the Cloud movement have all put Microsoft in a place where they had to slap themselves in the face and have a long hard look in the mirror. The result is a focus on the cloud and mobile like we have never seen before. Once Microsoft turns its planet-like machine onto another target, you do not want to be on the receiving side of that. </p>
+
+<p>While I may be coming off as a Microsoft fan here, now that they are down and out maybe it is ok to root for them again. Apple and Google are at the top of their game and I think it is great that they have moved the whole industry forward so quickly and given companies permission to do things that Microsoft could never have been able to pull off.  Apple has trained the world to get a new device yearly and both Apple and Google have made the world comfortable with closed incompatible systems that are vertically integrated and fed from The Cloud. Try to export a Google Map and you’ll see what I mean.</p>
+
+<p>Now let’s get back to why one in four of your friends will have a Windows Phone in the next couple of years: </p>
+
+<ul>
+  <li>
+    <p>Microsoft has done away with a dated concept of icons and folders. This is long overdue and many companies have been trying to get away from this concept and its limitations.  Microsoft may have finally succeeded with its new UI concept code named Metro.</p>
+  </li>
+  <li>
+    <p>Microsoft is basically running <a href="http://www.nokia.com/us-en/">Nokia</a> now, having implanted one of its own as its CEO. This is a great way to match up Google’s acquisition of Motorola without all the messiness of a real acquisition. Nokia has dropped all its own mobile OS initiatives and is now all Windows Phone from what I can tell.</p>
+  </li>
+  <li>
+    <p>Apple has peaked and while they will continue to dominate and have 50% of the market share of the mobile market, I see that market share holding steady.</p>
+  </li>
+  <li>
+    <p>Android is too clumsy for most people. While it is great for technical folk, it is not buttoned up enough for the average person who likes the ease of use of iOS. Windows Phone will be even more buttoned up and easy to use than iOS and many people frustrated with Apple for various reasons will jump ship.</p>
+  </li>
+  <li>
+    <p>Microsoft will put on a marketing blitz like you have not seen in a long time.  Look at what they did with Windows 95, XBox and IE, tools for tech people. Now imagine what they can do for a consumer device.  Every top agency in the world is salivating to get these campaigns. And soon you will see them everywhere.</p>
+  </li>
+</ul>
+
+<p>So in the end I see Apple 50%, Android 25% and Windows Phone 25% in the new couple of years.  This will be a good foothold on the billions needed to find their next big thing. This game is moving fast now.</p>
+
+<p>Seems strange right now that people will use Windows Phones right? Let’s see how this all pans out.</p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">Internet</span>
+          
+            <span class="category-tag">of</span>
+          
+            <span class="category-tag">Things,</span>
+          
+            <span class="category-tag">Business</span>
+          
+            <span class="category-tag">and</span>
+          
+            <span class="category-tag">Technology</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>

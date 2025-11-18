@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the rhythm of your technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>April 29, 2013</span>
+            
+              <span>• Sinu</span>
+            
+          </div>
+          <a href="/writing#year-2013" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">Understanding the rhythm of your technology</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p><em>An interesting <a href="http://blogs.smithsonianmag.com/ideas/2013/04/eight-new-things-weve-learned-about-music">article</a> on <a href="http://www.smithsonianmag.com/">Smithsonian.com</a> has pointers to a lot of compelling information about why people like music and what benefits humans have from feeling better when they hear music they recognize.</em></p>
+
+<hr />
+
+<p>An interesting <a href="http://blogs.smithsonianmag.com/ideas/2013/04/eight-new-things-weve-learned-about-music">article</a> on <a href="http://www.smithsonianmag.com/">Smithsonian.com</a> has pointers to a lot of compelling information about why people like music and what benefits humans have from feeling better when they hear music they recognize.</p>
+
+<p>One of the theories highlighted in this article is that the repeating patterns in music create a mental game in the brain where it tries to predict what will come next and the brain rewards itself for being right. A well-known or catchy tune is easy to predict, especially if it sounds just like all the other tunes like it.</p>
+
+<p>From my music theory studies in college, I can confirm that music is highly repetitive and when masterfully composed is beautiful in your brain. Beethoven’s Fifth can be arguably reduced to being the repetition of just two notes. That is mastery at the highest level and a pleasure to <a href="https://www.youtube.com/watch?v=2nBmmFNBT7A">listen</a> to.  <a href="https://www.youtube.com/watch?v=2nBmmFNBT7A"></a></p>
+
+<p>Apparently the human brain has developed this reward system over hundreds of thousands of years to survive. I guess seeing a tiger and being able to successfully predict that it might kill you is good for survival.</p>
+
+<p>So what does this have to do with IT? (You know I would have to try to related it to what we do here at Sinu…we see everything we learn as an opportunity to help our customer’s businesses be better.) I think most of the stress and dissatisfaction from technology that businesses feel is their inability to predict how it will behave.</p>
+
+<p>Without good knowledge about how their technology works, some businesses tend to close their eyes and pray…ignoring the rhythm of the product cycle. Businesses are in a better position when they can predict how their technology will change and how it might be disrupted. This might seem hard to do, but doesn’t have to be if consistent long-term effort is made across a few areas:</p>
+
+<ul>
+  <li>
+    <p><strong>Simplify:</strong> Reduce the number of solutions you have in your business. Are there any redundant solutions? Can a solution in one area expand to add value in another area being handled manually today? We work with our customers to explore this with the software companies they trust for business solutions.</p>
+  </li>
+  <li>
+    <p><strong>Embrace the natural cycle of Business Solutions:</strong> There was a time when <em>Smokey the Bear</em> would encourage everyone to prevent forest fires. More recent research has come to realize that just delaying the change in some ways causes more problems and that 70 years of dry brush can sometimes cause an eventual catastrophic and massive forest fire. The healthier approach has been to introduce controlled burns and to create a replenishing cycle for the land so that new growth is introduced predictably and at a smaller steady rate that does not get out of control. The same can be said about a company’s technology solutions –<strong> <em>do not try to extend the use of a solution beyond its natural cycle</em>.</strong> If that accounting system is a few versions behind, the business is amassing dry brush that could spontaneously combust at the worse time. Most software companies today run on a 1-3 year cycle for new versions. We work with our customers to plan regular upgrades of replacements of all their business solutions and hardware.  With a planned approach any disruption is predictable and appropriate contingency plans can be put in place so that work continues.</p>
+  </li>
+  <li>
+    <p><strong>Create a cyclical budget:</strong> Some companies try to spend “once” and then prevent spending again in an area until something breaks. This creates an unpredictable rhythm to your business that is definitely not pleasurable. Plan to upgrade or replace your hardware and Business Solutions within their natural cycle (2-3 years for hardware and 2-4 years for software). By the time it is 75% through its natural cycle, the replacement planning should start for the next iteration of that solution.</p>
+  </li>
+</ul>
+
+<p>These are just three of the many overarching rhythms we encourage Sinu customers to work within and can advise on. Once you have most of your technology following a predicable frequency, it all starts coming together in harmony to create a beautiful song leading to happy people and efficient processes.</p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">Business</span>
+          
+            <span class="category-tag">and</span>
+          
+            <span class="category-tag">Technology</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>
