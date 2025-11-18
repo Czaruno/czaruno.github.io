@@ -1,0 +1,404 @@
+<?
+$user_email = $_POST['email'];
+
+$from = "From:support@sinu.com\n";
+	$subject = "Company Info Request From A Prospective Client";
+	$message = "To: Sales Dept,\n\r \n\r".
+	"We have received an information request from ".$_POST['fname']." ".$_POST['lname']."\n\r \n\r".
+		"Prefered contact method: ".$_POST['contact_method']."\n\r".
+		"Email address: ".$user_email."\n\r".
+		"Phone #: ".$_POST['phone']."\n\r".
+		"# of employees: ".$_POST['num_employees']."\n\r".
+		"Business description and technology issues: \n\r".
+		$_POST['comment'];
+
+	if($user_email!=null)
+	{
+	mail("sales@sinu.mailstreet.com",$subject,$message,$from);
+	}//end of if email
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Sinu : Contact</title>
+                <meta name="classification" content="Technology Services">
+
+                <meta name="description" content="Sinu delivers an outsourced IT department for small business, inclusive of email communications, mobility, file share, security and technical support.">
+
+                <meta name="keywords" content="Sinu, desktop support, tech support, help desk , IT support, computer solutions, small business technology ">
+
+<?
+/**this block of code is for conversion counter for yahoo*************/
+$filename ="overture_cc.js";
+$fp = fopen($filename,'r');
+if ($fp) {
+$js = fread($fp,filesize($filename));
+echo($js);
+fclose($fp);
+}
+/********************************************************************/
+?>
+ </head>
+<script language="javascript" src="common/cbe_core.js"></script>
+<script language="javascript" src="common/cbe_event.js"></script>
+<script language="javascript" src="common/cbe_util.js"></script>
+<script>
+var initCalled = false;
+var squareOn = '';
+var newsquareOn = '';
+
+function windowOnload() {
+	document.cbe.addEventListener('mousemove', mouseMoveListener);
+	setTimeout("init()", 250);
+}
+
+function init() {
+	initCalled = true;
+}
+
+function mouseMoveListener(e) {
+	if (((siteLeft+32<e.pageX) && (e.pageX<siteLeft+183))&&((siteTop+139<e.pageY)&&(e.pageY<siteTop+523))) {
+		if (squareOn != 'sq1') { cbeSetImage('sq1','sqOn'); newsquareOn = 'sq1'; }
+	} else if (((siteLeft+206<e.pageX) && (e.pageX<siteLeft+721))&&((siteTop+139<e.pageY)&&(e.pageY<siteTop+523))) {
+		if (squareOn != 'sq2') { cbeSetImage('sq2','sqOn'); newsquareOn = 'sq2'; }
+	} else newsquareOn = '';
+	if ((squareOn != '' ) && (newsquareOn != squareOn)) { cbeSetImage (squareOn,'sqOff'); }
+	squareOn = newsquareOn;
+}
+
+cbeNewImage('navhomeOn','images/nav-home-on.gif');
+cbeNewImage('navhomeOver','images/nav-home-over.gif');
+cbeNewImage('navhomeOff','images/nav-home-off.gif');
+cbeNewImage('navsvcOn','images/nav-itservice-on.gif');
+cbeNewImage('navsvcOver','images/nav-itservice-over.gif');
+cbeNewImage('navsvcOff','images/nav-itservice-off.gif');
+cbeNewImage('navabtOn','images/nav-aboutsinu-on.gif');
+cbeNewImage('navabtOver','images/nav-aboutsinu-over.gif');
+cbeNewImage('navabtOff','images/nav-aboutsinu-off.gif');
+cbeNewImage('navcltOn','images/nav-clients-on.gif');
+cbeNewImage('navcltOver','images/nav-clients-over.gif');
+cbeNewImage('navcltOff','images/nav-clients-off.gif');
+cbeNewImage('navcntOn','images/nav-contact-on.gif');
+cbeNewImage('navcntOver','images/nav-contact-over.gif');
+cbeNewImage('navcntOff','images/nav-contact-over.gif');
+cbeNewImage('sqOn','images/square-on.gif');
+cbeNewImage('sqOff','images/square-off.gif');
+
+document.write(getStyles());
+
+function getRadioValue(radio) {
+    value = null;
+
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked)
+	    value = radio[i].value;
+    }
+
+    return value
+}
+
+function checkFrm(form) {
+
+	err_str = "";
+    errors = false;
+    contact_meth = getRadioValue(form.contact_method);
+
+    if (form.fname.value.length < 1) {
+        err_str += "You didn't enter your first name\n";
+        errors = true;
+    }
+
+    if (form.lname.value.length < 1) {
+        err_str += "You didn't enter your last name\n";
+        errors = true;
+    }
+
+    if (contact_meth == null) {
+    	err_str += "You didn't choose a contact method\n";
+    	errors = true;
+    }
+
+    if (contact_meth == "email" && !validateEmail(form.email)) {
+    	err_str += "You chose email as a contact method but didn't enter a valid email address\n";
+    	errors = true;
+    }
+
+    if (contact_meth == "phone" && form.phone.value.length < 1) {
+    	err_str += "You chose phone as a contact method but didn't enter a phone number\n";
+    	errors = true;
+    }
+
+    if (contact_meth == "no preference" && form.phone.value.length < 1 && !validateEmail(form.email)) {
+    	err_str += "You didn't enter a phone number or a valid email address\n";
+    	errors = true;
+    }
+
+    if (form.num_employees.value == -1) {
+    	err_str += "You didn't enter the number of employees at your location\n";
+    	errors = true;
+    }
+
+    if (errors) {
+  	err_str = "There were problems with the data you entered (see below)\n\n" + err_str;
+        alert(err_str);
+        return false;
+    } else {
+        return true;
+    }
+}// end of checkFrm Function.....
+
+function validateEmail(email) {
+    //alert('in here validating');
+   var goodEmail = email.value.match(/\b(^(\S+@).+((\.com)|(\.net)|(\.edu)|(\.mil)|(\.gov)|(\.org)|(\..{2,2}))$)\b/gi);
+
+    if (!goodEmail)
+    {
+        return false;
+    } else
+     {
+
+        return true;
+    }
+}// end of function validate....
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<script>
+sitePosition();
+document.write('<style>');
+document.write('#square1 { position:absolute; left:'+Math.floor(siteLeft+170)+'px; top:'+Math.floor(siteTop+512)+'px; width:6px; height:6px; clip:rect(0px 6px 6px 0px); } ');
+document.write('#square2 { position:absolute; left:'+Math.floor(siteLeft+708)+'px; top:'+Math.floor(siteTop+512)+'px; width:6px; height:6px; clip:rect(0px 6px 6px 0px); } ');
+document.write('</style>');
+</script>
+<div id="SiteDiv"><!-- begin header -->
+<table cellspacing="0" cellpadding="0" border="0" width="783">
+    <tr height="4">
+    <td><img height="4" src="images/ul.gif" width="32"></td>
+    <td bgcolor="black"><img height="1" src="images/bk_pix.gif" width="89"></td>
+    <td bgcolor="black"><img height="1" src="images/bk_pix.gif" width="277"></td>
+    <td bgcolor="black"><img height="1" src="images/bk_pix.gif" width="363"></td>
+    <td><img height="4" src="images/ur.gif" width="22"></td></tr>
+  <tr height="35">
+    <td rowspan="3"><img height="79" src="images/green-logo-left.gif" width="32"></td>
+    <td rowspan="3"><a href="index.html"><img height="79" src="images/green-logo-logo.gif" width="89" border="0"></a></td>
+    <td><img height="35" src="images/green-logo-top.jpg" width="277"></td>
+    <td rowspan="3"><img height="79" src="images/green-logo-big.jpg" width="363"></td>
+    <td rowspan="3"><img height="79" src="images/green-logo-right.gif" width="22"></td></tr>
+  <tr height="8">
+    <td><img height="8" src="images/green-logo-mid-slogan.gif" width="277"></td></tr>
+  <tr height="36">
+    <td><img height="36" src="images/green-logo-bot.jpg" width="277"></td></tr>
+</table><!-- end header --><!-- begin navbar -->
+<table cellspacing="0" cellpadding="0" border="0" width="783">
+  <tr height="16">
+    <td bgcolor="black" nowrap><IMG src="images/bk_pix.gif" height="1" width="200"><a
+href="index.html" onmouseover="cbeSetImage('navhome','navhomeOver')" onmouseout="cbeSetImage('navhome','navhomeOff')" onmousedown="cbeSetImage('navhome','navhomeOn')"><img
+src="images/nav-home-off.gif" name="navhome" width="58" height="15" alt="Home" border="0"></a><img
+src="images/nav-colon.gif" width="3" height="20"><a
+href="services.html" onmouseover="cbeSetImage('navsvc','navsvcOver')" onmouseout="cbeSetImage('navsvc','navsvcOff')" onmousedown="cbeSetImage('navsvc','navsvcOn')"><img
+src="images/nav-itservice-off.gif" name="navsvc" width="114" height="15" alt="Services" border="0"></a><img
+src="images/nav-colon.gif" width="3" height="20"><!--<a
+href="profservices.html" onmouseover="cbeSetImage('navabt','navabtOver')" onmouseout="cbeSetImage('navabt','navabtOff')" onmousedown="cbeSetImage('navabt','navabtOn')"><img
+src="images/nav-aboutsinu-off.gif" name="navabt" width="121" height="16" alt="About Sinu" border="0"></a><img
+src="images/nav-colon.gif" width="2" height="16">--><a
+href="clients.html" onmouseover="cbeSetImage('navclt','navcltOver')" onmouseout="cbeSetImage('navclt','navcltOff')" onmousedown="cbeSetImage('navclt','navcltOn')"><img
+src="images/nav-clients-off.gif" name="navclt" width="94" height="15" alt="Clients" border="0"></a><img
+src="images/nav-colon.gif" width="3" height="20"><a
+href="contact.html" onmouseover="cbeSetImage('navcnt','navcntOver')" onmouseout="cbeSetImage('navcnt','navcntOff')" onmousedown="cbeSetImage('navcnt','navcntOn')"><img
+src="images/nav-contact-over.gif" name="navcnt" width="85" height="15" alt="Contact" border="0"></a><img
+src="images/bk_pix.gif" width="85" height="15"></td></tr>
+  <tr height="19">
+	<td bgcolor="black" nowrap><img src="images/bk_pix.gif" width="4" height="1"><img
+src="images/subnav-left.jpg" width="393" height="19"><img
+src="images/subnav-mid.jpg" width="363" height="19"><img
+src="images/subnav-redge.gif" width="22" height="19"></td>
+	</tr>
+</table><!-- end navbar --><!-- begin body -->
+<table cellspacing="0" cellpadding="0" border="0" width="783">
+    <tr height="10" bgcolor="#EAE8E8">
+	    <td nowrap><img src="images/bk_pix.gif" height="10" width="4"><img
+			src="images/1_pix.gif" width="16" height="10"></td>
+		<td><img src="images/1_pix.gif" width="170" height="10"></td>
+		<td><img src="images/1_pix.gif" width="4" height="10"></td>
+		<td><img src="images/1_pix.gif" width="534" height="10"></td>
+		<td nowrap><img src="images/1_pix.gif" width="51" height="10"><img
+			src="images/bk_pix.gif" height="10" width="4"></td></tr>
+	<tr height="405" bgcolor="#EAE8E8">
+		<td><img src="images/bk_pix.gif" height="405" width="4"><img
+			src="images/1_pix.gif" width="16" height="405"></td>
+		<td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="170"><!-- begin left panel -->
+				<tr height="7"><td><img src="images/outline-tll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-tlr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="148" height="7"></td>
+					<td><img src="images/outline-trl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-trr.gif" width="7" height="7"></td></tr>
+				<tr height="4"><td><img src="images/outline-tldn.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-tl.gif" width="4" height="4"></td>
+					<td><img src="images/contpan-1tm.gif" width="148" height="4"></td>
+					<td><img src="images/3pan-corner-tr.gif" width="4" height="4"></td>
+					<td><img src="images/outline-trdn.gif" width="7" height="4"></td></tr>
+				<tr height="15"><td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td>
+					<td><img src="images/contpan-1titlel.gif" width="4" height="15"></td>
+					<td><img src="images/contpan-1titlem.gif" width="148" height="15"></td>
+					<td><img src="images/contpan-1titler.gif" width="4" height="15"></td>
+					<td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td></tr>
+				<tr height="367"><td><img src="images/contpan-1ml.gif" width="4" height="367"></td>
+					<td background="images/contpan-1back.gif" align="center" valign="top"><img src="images/1_pix.gif" width="5" height="5"><br>
+						<img src="images/l_contact.jpg" width=138 height=86 alt="" border="0"><br>
+						<br>
+						<br>
+						<br>
+						<div align="center"><a href="mailto:sales@sinu.com">sales@sinu.com</a><br>
+						<br>
+                877-NYC-SINU<br>
+						<br>
+						<b>Sinu</b><br>
+						285 West Broadway<br>
+						Suite 410<br>
+						New York, NY 10013</div></td>
+					<td><img src="images/contpan-1mr.gif" width="4" height="367"></td></tr>
+				<tr height="4"><td><img src="images/outline-blup.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-bl.gif" width="4" height="4"></td>
+					<td><img src="images/contpan-1bm.gif" width="148" height="4"></td>
+					<td><img src="images/3pan-corner-br.gif" width="4" height="4"></td>
+					<td><img src="images/outline-brup.gif" width="7" height="4"></td></tr>
+				<tr height="7"><td><img src="images/outline-bll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-blr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="148" height="7"></td>
+					<td><img src="images/outline-brl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-brr.gif" width="7" height="7"></td></tr>
+			<!-- end left panel --></table></td>
+		<td><img src="images/1_pix.gif" width="4" height="405"></td>
+		<td><table border="0" cellpadding="0" cellspacing="0" width="534"><!-- begin right panel -->
+				<tr height="7"><td><img src="images/outline-tll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-tlr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="512" height="7"></td>
+					<td><img src="images/outline-trl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-trr.gif" width="7" height="7"></td></tr>
+				<tr height="4"><td><img src="images/outline-tldn.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-tl.gif" width="4" height="4"></td>
+					<td><img src="images/3pan-2tm.gif" width="512" height="4"></td>
+					<td><img src="images/3pan-corner-tr.gif" width="4" height="4"></td>
+					<td><img src="images/outline-trdn.gif" width="7" height="4"></td></tr>
+				<tr height="15"><td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td>
+					<td><img src="images/3pan-2titlel.gif" width="4" height="15"></td>
+					<td><img src="images/2pan-2titlem.gif" width="512" height="15"></td>
+					<td><img src="images/3pan-2titler.gif" width="4" height="15"></td>
+					<td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td></tr>
+				<tr height="367"><td><img src="images/3pan-2ml.gif" width="4" height="367"></td>
+					<td background="images/3pan-2back.gif" valign="top"><!--<img src="images/1_pix.gif" width="5" height="5"><br>
+						<img src="images/1_pix.gif" width="5" height="362" align="left" hspace=0 vspace=0><img src="images/r_contact.jpg" width=504 height=141><br>
+						<BR>-->
+						<BR><BR>
+						Thank you for your interest in Sinu. A representative will contact you shortly. Or call 877-NYC-SINU.
+
+
+
+
+
+
+
+
+<!--
+						<b>Sinu, Inc.</b><br>
+						285 West Broadway, Suite 410<br>
+						New York, NY 10013<br>
+              Tel: 212-696-7249<br>
+						Fax: 646.827.8720<br>
+						<a href="http://sinu.com">www.sinu.com</a> <br>
+						<br>
+						<B>Sales:</B><br>
+              877-NYC-SINU<br>
+						<a href="mailto:sales@sinu.com">sales@sinu.com</a><br>
+						<br>
+						<B>Technical Support:</B><br>
+              Login at <a href="./">www.sinu.com</a> home page<br>
+              Email <a href="mailto:support@sinu.com">support@sinu.com</a>
+-->
+              </td>
+					<td><img src="images/3pan-2mr.gif" width="4" height="367"></td></tr>
+
+				<tr height="4"><td><img src="images/outline-blup.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-bl.gif" width="4" height="4"></td>
+					<td><img src="images/3pan-2bm.gif" width="512" height="4"></td>
+					<td><img src="images/3pan-corner-br.gif" width="4" height="4"></td>
+					<td><img src="images/outline-brup.gif" width="7" height="4"></td></tr>
+				<tr height="7"><td><img src="images/outline-bll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-blr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="512" height="7"></td>
+					<td><img src="images/outline-brl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-brr.gif" width="7" height="7"></td></tr>
+			<!-- end right panel --></table></td>
+		<td nowrap><img src="images/1_pix.gif" width="51" height="405"><img
+			src="images/bk_pix.gif" height="405" width="4"></td></tr>
+</table>
+<!-- end body -->
+<table border="0" cellpadding="0" cellspacing="0" width="783">
+	<tr height="9"><td rowspan="3"><img src="images/bl.gif" width="26" height="28"></td>
+		<td nowrap><img src="images/brow.gif" width="721" height="9"></td>
+		<td nowrap><img src="images/brow.gif" width="11" height="9"></td>
+		<td rowspan="3"><img src="images/br.gif" width="25" height="28"></td></tr>
+	<tr height="15"><td nowrap><img src="images/bcopy.gif" width="175" height="15"><img
+		src="images/brow2.gif" width="546" height="15"></td>
+		<td background="images/brep.gif"><img src="images/1_pix.gif" width="11" height="15"></td></tr>
+	<tr height="4"><td><img src="images/bk_pix.gif" width="721" height="4"></td>
+		<td><img src="images/bk_pix.gif" width="11" height="4"></td></tr>
+</table>
+
+<center>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td>
+<br>
+<a href="index.html">Home</a> | <a href="services.html">IT Service</a> | <a href="clients.html">Clients</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a> | <a href="aboutsinu.html">About</a>
+</td></tr>
+</table>
+</center>
+
+</div>
+<div id="square1"><img src="images/square-off.gif" width="6" height="6" name="sq1"></div>
+
+<!-- Google Code for Purchase Conversion Page -->
+
+<script language="JavaScript" type="text/javascript">
+
+
+var google_conversion_id = 1070532332;
+
+var google_conversion_language = "en_US";
+
+var google_conversion_format = "1";
+
+var google_conversion_color = "FFFFFF";
+
+if (1.0) {
+
+  var google_conversion_value = 1.0;
+
+}
+
+var google_conversion_label = "Lead";
+
+
+</script>
+
+<script language="JavaScript" src="http://www.googleadservices.com/pagead/conversion.js">
+
+</script>
+
+<noscript>
+
+<img height=1 width=1 border=0 src="http://www.googleadservices.com/pagead/conversion/1070532332/?value=1.0&label=Lead&script=0">
+
+</noscript>
+
+
+<img height=1 width=1 border=0
+src="http://www.googleadservices.com/pagead/conversion/1234567890/?value=<? echo
+$totalValue ?>&label=Purchase&script=0">
+</noscript><div id="square2"><img src="images/square-off.gif" width="6" height="6" name="sq2"></div>
+
+</body>
+</html>

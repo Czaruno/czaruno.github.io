@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Sinu : Services</title>
+<script language="javascript" src="common/cbe_core.js"></script>
+<script language="javascript" src="common/cbe_event.js"></script>
+<script language="javascript" src="common/cbe_util.js"></script>
+<script>
+var initCalled = false;
+var squareOn = '';
+var newsquareOn = '';
+
+function windowOnload() {
+	document.cbe.addEventListener('mousemove', mouseMoveListener);
+	setTimeout("init()", 250);
+}
+
+function init() {
+	initCalled = true;
+}
+
+function mouseMoveListener(e) {
+	if (((siteLeft+32<e.pageX) && (e.pageX<siteLeft+183))&&((siteTop+139<e.pageY)&&(e.pageY<siteTop+523))) {
+		if (squareOn != 'sq1') { cbeSetImage('sq1','sqOn'); newsquareOn = 'sq1'; }
+	} else if (((siteLeft+206<e.pageX) && (e.pageX<siteLeft+721))&&((siteTop+139<e.pageY)&&(e.pageY<siteTop+523))) {
+		if (squareOn != 'sq2') { cbeSetImage('sq2','sqOn'); newsquareOn = 'sq2'; }
+	} else newsquareOn = '';
+	if ((squareOn != '' ) && (newsquareOn != squareOn)) { cbeSetImage (squareOn,'sqOff'); }
+	squareOn = newsquareOn;
+}
+
+cbeNewImage('navhomeOn','images/nav-home-on.gif');
+cbeNewImage('navhomeOver','images/nav-home-over.gif');
+cbeNewImage('navhomeOff','images/nav-home-off.gif');
+cbeNewImage('navsvcOn','images/nav-services-on.gif');
+cbeNewImage('navsvcOver','images/nav-services-over.gif');
+cbeNewImage('navsvcOff','images/nav-services-off.gif');
+cbeNewImage('navabtOn','images/nav-aboutsinu-on.gif');
+cbeNewImage('navabtOver','images/nav-aboutsinu-over.gif');
+cbeNewImage('navabtOff','images/nav-aboutsinu-off.gif');
+cbeNewImage('navcltOn','images/nav-clients-on.gif');
+cbeNewImage('navcltOver','images/nav-clients-over.gif');
+cbeNewImage('navcltOff','images/nav-clients-off.gif');
+cbeNewImage('navcntOn','images/nav-contact-on.gif');
+cbeNewImage('navcntOver','images/nav-contact-over.gif');
+cbeNewImage('navcntOff','images/nav-contact-off.gif');
+cbeNewImage('sqOn','images/square-on.gif');
+cbeNewImage('sqOff','images/square-off.gif');
+
+document.write(getStyles());
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<script>
+sitePosition();
+document.write('<style>');
+document.write('#square1 { position:absolute; left:'+Math.floor(siteLeft+170)+'px; top:'+Math.floor(siteTop+512)+'px; width:6px; height:6px; clip:rect(0px 6px 6px 0px); } ');
+document.write('#square2 { position:absolute; left:'+Math.floor(siteLeft+708)+'px; top:'+Math.floor(siteTop+512)+'px; width:6px; height:6px; clip:rect(0px 6px 6px 0px); } ');
+document.write('</style>');
+</script>
+<div id="SiteDiv"><!-- begin header -->
+<table cellspacing="0" cellpadding="0" border="0" width="783">
+    <tr height="4">
+    <td><img height="4" src="images/ul.gif" width="32"></td>
+    <td bgcolor="black"><img height="1" src="images/bk_pix.gif" width="89"></td>
+    <td bgcolor="black"><img height="1" src="images/bk_pix.gif" width="277"></td>
+    <td bgcolor="black"><img height="1" src="images/bk_pix.gif" width="363"></td>
+    <td><img height="4" src="images/ur.gif" width="22"></td></tr>
+  <tr height="35">
+    <td rowspan="3"><img height="79" src="images/gray-logo-left.gif" width="32"></td>
+    <td rowspan="3"><a href="index.html"><img height="79" src="images/gray-logo-logo.gif" width="89" border="0"></a></td>
+    <td><img height="35" src="images/gray-logo-top.jpg" width="277"></td>
+    <td rowspan="3"><img height="79" src="images/gray-logo-big.jpg" width="363"></td>
+    <td rowspan="3"><img height="79" src="images/gray-logo-right.gif" width="22"></td></tr>
+  <tr height="8">
+    <td><img height="8" src="images/gray-logo-mid.gif" width="277"></td></tr>
+  <tr height="36">
+    <td><img height="36" src="images/gray-logo-bot.jpg" width="277"></td></tr>
+</table><!-- end header --><!-- begin navbar -->
+<table cellspacing="0" cellpadding="0" border="0" width="783">
+    <tr height="16">
+    <td bgcolor="black" nowrap><IMG src="images/bk_pix.gif" height="1" width="132"><a 
+href="index.html" onmouseover="cbeSetImage('navhome','navhomeOver')" onmouseout="cbeSetImage('navhome','navhomeOff')" onmousedown="cbeSetImage('navhome','navhomeOn')"><img 
+src="images/nav-home-off.gif" name="navhome" width="77" height="16" alt="Home" border="0"></a><img 
+src="images/nav-colon.gif" width="2" height="16"><a 
+href="services.html" onmouseover="cbeSetImage('navsvc','navsvcOver')" onmouseout="cbeSetImage('navsvc','navsvcOff')" onmousedown="cbeSetImage('navsvc','navsvcOn')"><img 
+src="images/nav-services-off.gif" name="navsvc" width="98" height="16" alt="Services" border="0"></a><img 
+src="images/nav-colon.gif" width="2" height="16"><a 
+href="aboutsinu.html" onmouseover="cbeSetImage('navabt','navabtOver')" onmouseout="cbeSetImage('navabt','navabtOff')" onmousedown="cbeSetImage('navabt','navabtOn')"><img 
+src="images/nav-aboutsinu-off.gif" name="navabt" width="121" height="16" alt="About Sinu" border="0"></a><img 
+src="images/nav-colon.gif" width="2" height="16"><a 
+href="clients.html" onmouseover="cbeSetImage('navclt','navcltOver')" onmouseout="cbeSetImage('navclt','navcltOff')" onmousedown="cbeSetImage('navclt','navcltOn')"><img 
+src="images/nav-clients-off.gif" name="navclt" width="94" height="16" alt="Clients" border="0"></a><img 
+src="images/nav-colon.gif" width="2" height="16"><a 
+href="contact.html" onmouseover="cbeSetImage('navcnt','navcntOver')" onmouseout="cbeSetImage('navcnt','navcntOff')" onmousedown="cbeSetImage('navcnt','navcntOn')"><img 
+src="images/nav-contact-off.gif" name="navcnt" width="101" height="16" alt="Contact" border="0"></a><img 
+src="images/bk_pix.gif" width="152" height="16"></td></tr>
+	<tr height="19">
+	<td bgcolor="black" nowrap><img src="images/bk_pix.gif" width="4" height="1"><img 
+src="images/subnav-left.jpg" width="393" height="19"><img 
+src="images/subnav-mid.jpg" width="363" height="19"><img 
+src="images/subnav-redge.gif" width="22" height="19"></td>
+	</tr>
+</table><!-- end navbar --><!-- begin body -->
+<table cellspacing="0" cellpadding="0" border="0" width="783">
+    <tr height="10" bgcolor="#EAE8E8">
+	    <td nowrap><img src="images/bk_pix.gif" height="10" width="4"><img 
+			src="images/1_pix.gif" width="16" height="10"></td>
+		<td><img src="images/1_pix.gif" width="170" height="10"></td>
+		<td><img src="images/1_pix.gif" width="4" height="10"></td>
+		<td><img src="images/1_pix.gif" width="534" height="10"></td>
+		<td nowrap><img src="images/1_pix.gif" width="51" height="10"><img 
+			src="images/bk_pix.gif" height="10" width="4"></td></tr>
+	<tr height="405" bgcolor="#EAE8E8">
+		<td><img src="images/bk_pix.gif" height="405" width="4"><img 
+			src="images/1_pix.gif" width="16" height="405"></td>
+		<td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="170"><!-- begin left panel -->
+				<tr height="7"><td><img src="images/outline-tll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-tlr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="148" height="7"></td>
+					<td><img src="images/outline-trl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-trr.gif" width="7" height="7"></td></tr>
+				<tr height="4"><td><img src="images/outline-tldn.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-tl.gif" width="4" height="4"></td>
+					<td><img src="images/servpan-1tm.gif" width="148" height="4"></td>
+					<td><img src="images/3pan-corner-tr.gif" width="4" height="4"></td>
+					<td><img src="images/outline-trdn.gif" width="7" height="4"></td></tr>
+				<tr height="15"><td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td>
+					<td><img src="images/servpan-1titlel.gif" width="4" height="15"></td>
+					<td><img src="images/servpan-1titlem.gif" width="148" height="15"></td>
+					<td><img src="images/servpan-1titler.gif" width="4" height="15"></td>
+					<td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td></tr>
+				<tr height="367"><td><img src="images/servpan-1ml.gif" width="4" height="367"></td>
+					<td background="images/servpan-1back.gif" align="center" valign="top"><img src="images/1_pix.gif" width="5" height="5"><br>
+						<a href="services.html"><img src="images/l_services.jpg" width=138 height=86 border="0"></a><br>
+						<br><br>
+						<b></b><br><br><br>
+						<a href="webdevneeds.html">What does a company need from a website?</a><br><br>
+						<a href="webdevsinu.html">How does Sinu address your needs?</a><br><br>
+						</td>
+					<td><img src="images/servpan-1mr.gif" width="4" height="367"></td></tr>
+				<tr height="4"><td><img src="images/outline-blup.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-bl.gif" width="4" height="4"></td>
+					<td><img src="images/servpan-1bm.gif" width="148" height="4"></td>
+					<td><img src="images/3pan-corner-br.gif" width="4" height="4"></td>
+					<td><img src="images/outline-brup.gif" width="7" height="4"></td></tr>
+				<tr height="7"><td><img src="images/outline-bll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-blr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="148" height="7"></td>
+					<td><img src="images/outline-brl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-brr.gif" width="7" height="7"></td></tr>
+			<!-- end left panel --></table></td>
+		<td><img src="images/1_pix.gif" width="4" height="405"></td>
+		<td><table border="0" cellpadding="0" cellspacing="0" width="534"><!-- begin right panel -->
+				<tr height="7"><td><img src="images/outline-tll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-tlr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="512" height="7"></td>
+					<td><img src="images/outline-trl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-trr.gif" width="7" height="7"></td></tr>
+				<tr height="4"><td><img src="images/outline-tldn.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-tl.gif" width="4" height="4"></td>
+					<td><img src="images/3pan-2tm.gif" width="512" height="4"></td>
+					<td><img src="images/3pan-corner-tr.gif" width="4" height="4"></td>
+					<td><img src="images/outline-trdn.gif" width="7" height="4"></td></tr>
+				<tr height="15"><td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td>
+					<td><img src="images/3pan-2titlel.gif" width="4" height="15"></td>
+					<td><img src="images/2pan-2titlem.gif" width="512" height="15"></td>
+					<td><img src="images/3pan-2titler.gif" width="4" height="15"></td>
+					<td rowspan="2" background="images/outline-heightrep.gif"><img src="images/1_pix.gif" width="7" height="382"></td></tr>
+				<tr height="367"><td><img src="images/3pan-2ml.gif" width="4" height="367"></td>
+					<td background="images/3pan-2back.gif"><img src="images/1_pix.gif" width="5" height="5"><br>
+						<img src="images/1_pix.gif" width="5" height="362" align="left" hspace=0 vspace=0><img src="images/r_services-inf.jpg" width=504 height=141><br>
+						<br>
+						<b>What does a company need from a website?</b><br>
+						<br>
+						Businesses and Organizations need a way to communicate with their target audience and create a compelling presence to feature their products or services. They must reassure potential customers that they are the ideal company to work with. They also want to provide customer service and a way for visitors to contact them. It is important for companies to draw and retain visitors to their website in order to capture an audience. Many companies want to increase brand awareness and create tools to sell their products and services while getting a good return on their investment.</td>
+					<td><img src="images/3pan-2mr.gif" width="4" height="367"></td></tr>
+				<tr height="4"><td><img src="images/outline-blup.gif" width="7" height="4"></td>
+					<td><img src="images/3pan-corner-bl.gif" width="4" height="4"></td>
+					<td><img src="images/3pan-2bm.gif" width="512" height="4"></td>
+					<td><img src="images/3pan-corner-br.gif" width="4" height="4"></td>
+					<td><img src="images/outline-brup.gif" width="7" height="4"></td></tr>
+				<tr height="7"><td><img src="images/outline-bll.gif" width="7" height="7"></td>
+					<td><img src="images/outline-blr.gif" width="4" height="7"></td>
+					<td background="images/outline-widthrep.gif"><img src="images/1_pix.gif" width="512" height="7"></td>
+					<td><img src="images/outline-brl.gif" width="4" height="7"></td>
+					<td><img src="images/outline-brr.gif" width="7" height="7"></td></tr>
+			<!-- end right panel --></table></td>
+		<td nowrap><img src="images/1_pix.gif" width="51" height="405"><img 
+			src="images/bk_pix.gif" height="405" width="4"></td></tr>
+</table>
+<!-- end body -->
+<table border="0" cellpadding="0" cellspacing="0" width="783">
+	<tr height="9"><td rowspan="3"><img src="images/bl.gif" width="26" height="28"></td>
+		<td nowrap><img src="images/brow.gif" width="721" height="9"></td>
+		<td nowrap><img src="images/brow.gif" width="11" height="9"></td>
+		<td rowspan="3"><img src="images/br.gif" width="25" height="28"></td></tr>
+	<tr height="15"><td nowrap><img src="images/bcopy.gif" width="175" height="15"><img 
+		src="images/brow2.gif" width="546" height="15"></td>
+		<td background="images/brep.gif"><img src="images/1_pix.gif" width="11" height="15"></td></tr>
+	<tr height="4"><td><img src="images/bk_pix.gif" width="721" height="4"></td>
+		<td><img src="images/bk_pix.gif" width="11" height="4"></td></tr>
+</table>
+</div>
+<div id="square1"><img src="images/square-off.gif" width="6" height="6" name="sq1"></div>
+<div id="square2"><img src="images/square-off.gif" width="6" height="6" name="sq2"></div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.bodyTxt, TD, input,select,textarea	{ font-family:verdana, arial, helvetica, sans-serif; color:black; 
+			  font-size:10px; }
+.bodyTxt B, TD B	{ font-weight:bold; }
+A			{ text-decoration:none; color:#0000ff; }
+.hilite { color:#ff6666; }
