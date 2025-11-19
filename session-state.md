@@ -121,6 +121,9 @@
 - [x] Embedded Kogi AI animation using optimized WebP workaround (clean capture)
 - [x] Added Sinu legacy website screenshots
 - [x] Verified functionality locally (animations, links, responsiveness)
+- [x] Added "AI Consulting" section with accordion UI (Serviceaide, PR Firm, EdTech)
+- [x] Updated Sinu (Electric acquisition) and Pseudo (YouTube video) assets
+- [x] Corrected job titles for Consulting, Alltrue, and Pseudo
 
 ---
 
@@ -128,7 +131,8 @@
 
 ### Current Status: Core Site Complete & Work History Deployed ✅
 - Status: ✅ Homepage, Writing Archive, and Article Pages complete
-- Status: ✅ Work History page built, verified locally, and deployed to production
+- Status: ✅ Work History page enhanced (Consulting Accordion) & Deployed
+- Status: 🟢 Starting Functional Excellence page build
 - Live URLs:
   - Homepage: https://larryvelez.com
   - Work History: https://larryvelez.com/work
