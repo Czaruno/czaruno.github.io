@@ -45,8 +45,19 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{date | date('YYYY-MM-DD')}} - {{title}}"
-    sortable_fields: ['date', 'title']
+    summary: "{{fields.published | ternary('✓', '✗')}} {{date | date('YYYY-MM-DD')}} - {{title}}"
+    sortable_fields: ['date', 'title', 'published']
+    view_filters:
+      - label: "Published"
+        field: published
+        pattern: true
+      - label: "Hidden"
+        field: published
+        pattern: false
+    view_groups:
+      - label: "Year"
+        field: date
+        pattern: \d{4}
     editor:
       preview: false
     fields:
