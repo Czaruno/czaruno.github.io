@@ -1,0 +1,25 @@
+---
+layout: post
+published: true
+title: "Why Net Neutrality Matters to Small Business"
+date: 2014-11-17
+author: Sinu
+categories: Iit support, Net Neutrality, business technology, president obama, small business
+link: /blog/2014/11/17/why-net-neutrality-matters-to-small-business.html
+---
+
+*Just when advocates thought their last hope of securing Internet neutrality, also known as “net neutrality,” was about to pass, President Obama stepped out of the shadows to call for broadband Internet to be reclassified as a public utility, so it would be regulated similarly to electricity. From video of President Obama explaining his net neutrality plan posted on www.whitehouse.gov*
+
+---
+
+Just when advocates thought their last hope of securing Internet neutrality, also known as “net neutrality,” was about to pass, President Obama stepped out of the shadows to call for broadband Internet to be reclassified as a public utility, so it would be regulated similarly to electricity. From video of President Obama explaining his net neutrality plan posted on www.whitehouse.gov 
+
+Currently, broadband is regulated at the federal level by the FCC.  Advocates for net neutrality have accused the agency of being reticent to counterbalance the power of large media conglomerates and have asked the government to reclassify the Internet as a utility in order to support a level playing field for all users, rather than allowing large companies, such as Netflix, to buy up and control Internet bandwidth and speed. (For more history on the debate, see the Sinu blog, [A Neutral Look at Net Neutrality](https://sinu2.squarespace.com/blog/2014/5/15/a-neutral-look-at-net-neutrality.html)).
+
+According to [NPR](http://www.npr.org/blogs/alltechconsidered/2014/11/10/363013806/the-white-house-is-backing-the-internet-in-a-major-way), “President Obama [released a statement and video](http://www.whitehouse.gov/net-neutrality) on Monday, November 10, in which he asks to reclassify the Internet — and mobile broadband — as a public utility under Title II of the Telecommunications Act.”
+
+*"I believe the FCC should create a new set of rules protecting net neutrality and ensuring that neither the cable company nor the phone company will be able to act as a gatekeeper, restricting what you can do or see online," Obama said in the statement.*
+
+The net neutrality implications are far reaching in terms of broadband costs and speed, particularly for small businesses interested in utilizing more cloud technologies or dependent upon online commerce. Small businesses benefit greatly by lower-entry cost services. For example, cloud services, such as Microsoft 365, Google Apps, Salesforce, etc., can be delivered at a relatively low cost to small businesses because these online solutions are able to scale their customer base widely. Any "tolls on the road" for these online services will impact small businesses the most because their budgets are more limited than large enterprise.  
+
+The Internet has been called a great equalizer, helping small companies compete against multinational companies. However, if net neutrality is not protected and cloud service providers have to pass along an additional cost to prioritize their data, small businesses will be negatively affected and likely lose some of the competitive advantage cloud services can provide.

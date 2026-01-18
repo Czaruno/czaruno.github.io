@@ -1,0 +1,48 @@
+---
+layout: post
+published: true
+title: "Reducing the randomness of choosing new Business Solutions"
+date: 2013-07-01
+author: Sinu
+categories: Tech Trends, Business and Technology
+link: /blog/2013/7/1/reducing-the-randomness-of-choosing-new-business-solutions.html
+---
+
+*There are two topics I find myself talking about often lately. One is the emotional impact that Hurricane Sandy had on small businesses in the Northeast. The other is the emotional response to the ongoing NSA leak incident and how it is affecting company’s openness to [cloud based solutions](/it-support-services/). One of these is a random occurrence and the other is something most people didn’t think was very likely to happen.*
+
+---
+
+There are two topics I find myself talking about often lately. One is the emotional impact that Hurricane Sandy had on small businesses in the Northeast. The other is the emotional response to the ongoing NSA leak incident and how it is affecting company’s openness to [cloud based solutions](/it-support-services/). One of these is a random occurrence and the other is something most people didn’t think was very likely to happen.   
+
+People’s ability to predict when either of these would have happened is a fascinating topic to me. I think people tend to underestimate the likelihood of natural disasters like hurricanes and overestimate the chances of being spied on by their government. This makes it very difficult for most people to accurately assign resources to preventing both of these kinds of incidents. We will likely post more about both of these topics soon, but today I wanted to talk about something that lies between these two extremes: hiring people and picking new business solutions.
+
+Google’s SVP of people operation recently [said in an interview](http://www.nytimes.com/2013/06/20/business/in-head-hunting-big-data-may-not-be-such-a-big-deal.html?&pagewanted=all) with The New York Times that after performing some internal research they found that most of their techniques for trying to improve the quality of their hires were not working. Looking at GPA, schools, or even the logically complex questions [many](http://en.wikipedia.org/wiki/Microsoft_interview) Silicon Valley [companies](http://online.wsj.com/article/SB10001424052970204552304577113003705089744.html) have become known for, do not improve their chances of hiring a great performing person for each role. Only one person at Google was able to consistently hire great people for his team, but he also happened to be the world’s leading expert in the area his team worked in – making things a bit easier.    
+
+For the most part Google found that hiring was… **random**. There are many whose jobs or careers depend on assuring the people they work for can spot talent. They probably don’t welcome this information or might dismiss it as specific to Google. I personally think Google is right and hiring is pretty random. So does this mean that you need to give up to randomness? No, there are ways to increase your chances when faced with a random and unpredictable world.
+
+For those who really want to master randomness, I highly recommend Nassim Taleb’s [books and theories](http://en.wikipedia.org/wiki/Black_swan_theory) on randomness. In the meantime I will share one way I think you can reduce the negative effects of randomness in one major part of your business similar to hiring.
+
+There are two major areas where businesses are faced with many choices. Hiring people is one and choosing new [technology business solutions](/it-support-services/) is the other. Today we will focus on the less talked about of the two: Business Solutions. 
+
+Here at Sinu, we spent a lot of time gathering and organizing the status and history of people’s efficiency tools. For us, it helps to look at all the technology as solutions to specific business problems. In your company, you will find that most of the technology you have is related to solving common business tasks or gaining access to these systems. Payroll, donor tracking, customer tracking, accounting, and asset storage are some of the major business tasks where software has dramatically improved efficiency. Some of these solutions become critical to the business, and their health and availability become areas where a good portion of the IT budget is focused. Choosing a replacement for one of these systems could be as hard – and often harder – than hiring someone to fill a role in the business. 
+
+What if you find yourself with a business solution that is out of date? Three years is the typical lifespan of a business solution. This seems too short to many people, but you have to remember that software and hardware companies are now making most of their money from consumer devices and that Apple device you might have is being replaced by a new version every 1-2 years. This accelerated replacement cycle Apple has gotten away with has given every other company in the industry permission to accelerate their replacement cycles. So now even the most niche arcane software companies are finding it much easier to release new versions of their product; their customers are welcoming this because the new versions are supporting the latest mobile devices now being released every six months. 
+
+Once you have decided that your Business Solution needs to be updated or replaced by a competitor’s solution, you are in a very similar position to hiring a person for your company. The salespeople of each solution will paint a very rosy picture of the transition process, but many of us have been through enough transitions like these to know that sales promises from software companies are rarely accurate.
+
+Here are three ways to increase your chances of choosing a solution that will smoothly transition in, bring additional value and efficiency, and gain fans inside your company: 
+
+**1)      **How similar is the solution to what you use today?
+Different solutions within a specific business task often take different approaches to the same problem. Some accounting systems have a metaphor of a checkbook while others have a list of transactions. Some focus on meeting regulation requirements while others focus on building a pleasant beautiful interface. No matter what software you are researching, you will find different camps of thinking on how they work. Try to understand which camp your current solution is in and look for other solutions from the same school of thinking. You may find that one day you might want to change your school of thinking and switch camps but if you are at that point you would know it and you would clearly understand the differences between the different players in this space. At Sinu we spend a lot of time with our customers filtering out the technical acronyms and getting the essence of solutions so that our customers can make an informed decision on where they want their business to go.
+****
+
+**2)      **What is the solutions mobile strategy and how far down that roadmap are they?
+One** **way that a** **solution will** **gain** **fans at your business is if it is much more convenient to access and use than the previous solution. Some companies find that their teams really love when a new solution has a mobile app or a great web browser interface because their team is less tied to desktops and VPNs to get their job done. They also find it easier to work from anywhere, something that is becoming more common. When evaluating many business solutions, look at their browser and mobile strategies and one solution might stand out for having executed better in this area. These additional points might inch it forward in a race to be your next solution and might be a welcome change by your team.
+****
+
+**3)      **How many people at your company know the solution and are comfortable with it?
+As your company has grown throughout the years, you will find that every new hire brings a different set of skills and the latest generation of people entering the workforce have lived their entire lives on the Internet and with browser interfaces for email and social networks. Another important source of value is if you hire a great new addition to your financial team who is a master at an accounting system you don’t currently use. If you happen to be in the middle of choosing a new system, you may find a champion and valuable resource for a particular solution in some of the latest hires. Ask your team what solutions they have used before and what they like about their favorite. This will give you a good list of attributes to look for while researching new Business Solutions for your company. 
+
+These are just some guidelines to help you shift the odds in your favor when faced with a decision that has a lot of inherent random risk attatched to it. While you will never escape the random, at least you can make a decision that keeps you and your team working together towards common goals. That way no matter what black swan comes your way, you can all work together to quickly bob and weave as a team towards success.
+
+We are always here to discuss these kind of business technology decisions, so [please call us](/contact/) if you ever find yourself questioning the value or health of one of your important Business Solutions.

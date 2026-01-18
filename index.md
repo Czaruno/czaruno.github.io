@@ -1,0 +1,363 @@
+---
+layout: default
+title: Larry Velez - Technology Entrepreneur & Motoring Enthusiast
+featured_articles:
+  - post: 2019-09-16-are-we-teaching-ai-to-be-racist
+  - post: 2020-10-29-indigenous-peoples-deserve-on-going-recognition-an
+  - post: 2012-05-26-trust-the-expert-in-you
+---
+
+<style>
+  /* Precision Brutalism Typography */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+  
+  body {
+    font-family: var(--font-display);
+  }
+  
+  .mono {
+    font-family: var(--font-mono);
+  }
+  
+  /* Grid System */
+  .brutalist-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Geometric Accent Blocks */
+  .accent-block {
+    position: absolute;
+    background: var(--accent);
+    z-index: -1;
+  }
+  
+  /* Sharp Edges */
+  .sharp-corner {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
+  }
+  
+  /* Hero name table - equal width cells for perfect alignment */
+  .hero-name-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* Reduce width to bring letters closer together */
+    width: auto;
+  }
+  .hero-name-table td {
+    text-align: center;
+    padding: 0 0.1em; /* Minimal horizontal padding */
+    width: 20%; /* 5 columns = 20% each */
+  }
+</style>
+
+<!-- Hero: Precision Brutalism -->
+<section class="relative min-h-screen bg-black text-white overflow-hidden">
+  <!-- Geometric Accent -->
+  <div class="accent-block w-64 h-64 top-20 right-0 opacity-10"></div>
+  
+  <div class="container mx-auto px-8 py-12 relative z-10">
+    <!-- Name/Title Block -->
+    <div class="max-w-5xl">
+      <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-6">
+        Technology Entrepreneur • Motoring Enthusiast
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold leading-none mb-6">
+        <table class="hero-name-table">
+          <tr>
+            <td>L</td>
+            <td>A</td>
+            <td>R</td>
+            <td>R</td>
+            <td>Y</td>
+          </tr>
+          <tr>
+            <td>V</td>
+            <td>E</td>
+            <td>L</td>
+            <td>E</td>
+            <td>Z</td>
+          </tr>
+        </table>
+      </h1>
+      
+      <div class="w-24 h-1 bg-red-600 mb-8"></div>
+
+      <p class="text-lg md:text-xl font-light max-w-3xl leading-relaxed text-gray-300">
+        Building <a href="https://kogi.ai" target="_blank" class="font-bold text-white hover:text-red-600 transition-colors">Kogi AI</a> — Using advanced AI to transform mechanical documentation.
+        Previously part of multiple zero to one venture funded startups from payments to streaming video. Also founded Sinu, one of the first IT Managed Service Providers with a SaaS model. Sinu was acquired by Electric.ai, the leader in AI Helpdesk Agentic solutions.
+      </p>
+
+      <div class="flex gap-6 mt-12">
+        <a href="https://kogi.ai" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 hover:text-white transition-colors">
+          Explore Kogi →
+        </a>
+        <a href="#writing" class="border-2 border-white px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-black transition-colors">
+          Read My Writing
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom anchor -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+    <div class="mono text-xs uppercase tracking-widest text-gray-600 animate-pulse">
+      Scroll ↓
+    </div>
+  </div>
+</section>
+
+<!-- Current Work: Kogi AI -->
+<section class="bg-white text-black py-32">
+  <div class="container mx-auto px-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="grid md:grid-cols-12 gap-12 mb-20">
+        <div class="md:col-span-4">
+          <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">
+            01 — Current Focus
+          </div>
+          <h2 class="text-5xl font-bold leading-tight">
+            Kogi AI
+          </h2>
+        </div>
+        <div class="md:col-span-8">
+          <p class="text-xl text-gray-700 leading-relaxed">
+            AI-generated interactive 3D documentation for mechanical machines. 
+            From cars to rockets, watches to submarines — we're transforming how the world 
+            repairs and maintains the machines that keep us alive, healthy, and advancing toward Mars.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Stats Grid -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="border-l-4 border-red-600 pl-6">
+          <div class="text-5xl font-bold mb-2">$1T+</div>
+          <div class="text-gray-600">Spent annually on repairs using outdated static manuals</div>
+        </div>
+        <div class="border-l-4 border-black pl-6">
+          <div class="text-5xl font-bold mb-2">6</div>
+          <div class="text-gray-600">AI agents powering Kogi's documentation engine</div>
+        </div>
+        <div class="border-l-4 border-black pl-6">
+          <div class="text-5xl font-bold mb-2">∞</div>
+          <div class="text-gray-600">Devices supported: smartphones to AR headsets to neural interfaces</div>
+        </div>
+      </div>
+      
+      <!-- Mission Statement -->
+      <div class="bg-black text-white p-12 sharp-corner">
+        <p class="text-2xl font-light leading-relaxed">
+          "Mechanical machines are crucial to our lives. To reach Mars and beyond, we need reliable vehicles. 
+          Kogi uses advanced AI to create continually updated, interactive 3D animations accessible on any device."
+        </p>
+        <div class="mono text-xs uppercase tracking-widest text-gray-400 mt-6">
+          — Mission Statement
+        </div>
+      </div>
+      
+      <div class="mt-12">
+        <a href="https://kogi.ai" target="_blank" class="inline-flex items-center gap-3 text-lg font-bold group">
+          <span>Visit Kogi.ai</span>
+          <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Writing Archive Teaser -->
+<section id="writing" class="bg-gray-50 text-black py-32">
+  <div class="container mx-auto px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-5">
+          <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">
+            02 — Writings
+          </div>
+          <h2 class="text-5xl font-bold leading-tight mb-8">
+            20 Years of<br/>
+            Tech Foresight
+          </h2>
+          <div class="w-16 h-1 bg-red-600 mb-8"></div>
+          <p class="text-xl text-gray-700 mb-12">
+            From AI ethics to cloud architecture, indigenous heritage to people-first technology — 
+            insights often years ahead of mainstream adoption.
+          </p>
+          <a href="/writing" class="bg-black text-white px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 transition-colors inline-block">
+            Explore Archive →
+          </a>
+        </div>
+        
+        <div class="md:col-span-7">
+          <!-- Featured Article Cards -->
+          <div class="space-y-6">
+            {% for featured in page.featured_articles %}
+              {% assign post_slug = featured.post %}
+              {% assign featured_post = site.posts | where_exp: "item", "item.path contains post_slug" | first %}
+              {% if featured_post %}
+                <a href="{{ featured_post.url }}" class="block border-l-4 border-black pl-6 hover:border-red-600 transition-colors">
+                  <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-2">
+                    {{ featured_post.date | date: "%Y" }} ·
+                    {% if featured_post.categories %}
+                      {{ featured_post.categories | first | upcase }}
+                    {% endif %}
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">{{ featured_post.title }}</h3>
+                  <p class="text-gray-600">
+                    {% if featured_post.excerpt %}
+                      {{ featured_post.excerpt | strip_html | truncatewords: 20 }}
+                    {% endif %}
+                  </p>
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Functional Excellence Teaser -->
+<section class="bg-white text-black py-32">
+  <div class="container mx-auto px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">
+        03 — Philosophy
+      </div>
+      <h2 class="text-5xl font-bold leading-tight mb-12">
+        Functional<br/>
+        Excellence
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-16">
+        <!-- Left: Concept -->
+        <div>
+          <p class="text-xl text-gray-700 leading-relaxed mb-8">
+            A personal museum exploring precision engineering, design philosophy, and the people and ideas shaping my worldview.
+          </p>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-bold text-lg mb-2">Influences</h3>
+              <p class="text-gray-600">Naval Ravikant • Matt Moreman • Elon Musk • Gary Vaynerchuk</p>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-2">Formative Books</h3>
+              <p class="text-gray-600">Guns, Germs, and Steel • The Innovator's Dilemma • Seven Powers</p>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-2">Obsessions</h3>
+              <p class="text-gray-600">Cars • Garage Design • Modern Prefab Architecture • Colombian Culture</p>
+            </div>
+          </div>
+          
+          <a href="/functional-excellence" class="inline-flex items-center gap-3 text-lg font-bold mt-8 group">
+            <span>Enter the Museum</span>
+            <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
+          </a>
+        </div>
+        
+        <!-- Right: Visual -->
+        <div class="relative">
+          <div class="bg-gray-900 h-96 sharp-corner flex items-center justify-center">
+            <div class="text-white text-center">
+              <div class="text-6xl mb-4">⚙️</div>
+              <div class="mono text-xs uppercase tracking-widest">Precision • Function • Excellence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Press Kit Teaser -->
+<section class="bg-black text-white py-32">
+  <div class="container mx-auto px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-4">
+            04 — Press Kit
+          </div>
+          <h2 class="text-5xl font-bold leading-tight mb-8">
+            Media Resources
+          </h2>
+          <p class="text-xl text-gray-300 mb-12">
+            Bios, headshots, achievements, and press materials for media inquiries and speaking engagements.
+          </p>
+          <a href="/press" class="bg-white text-black px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 hover:text-white transition-colors inline-block">
+            Access Press Kit →
+          </a>
+        </div>
+        
+        <div class="flex gap-4">
+          <div class="mono text-xs uppercase tracking-widest text-gray-600 space-y-4">
+            <div>• Biographies (25/100/250 words)</div>
+            <div>• High-resolution headshots</div>
+            <div>• Speaking topics</div>
+            <div>• Awards & recognition</div>
+            <div>• Contact information</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white border-t border-gray-800 py-16">
+  <div class="container mx-auto px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <div class="text-3xl font-bold mb-4">LV</div>
+          <p class="text-gray-400 text-sm">
+            Technology entrepreneur,<br/>
+            motoring enthusiast.
+          </p>
+        </div>
+        
+        <div>
+          <div class="mono text-xs uppercase tracking-widest text-gray-600 mb-4">Connect</div>
+          <div class="space-y-2">
+            <div><a href="https://www.linkedin.com/in/larryvelez/" target="_blank" class="hover:text-red-600 transition-colors">LinkedIn</a></div>
+            <div><a href="https://x.com/LarryVelez" target="_blank" class="hover:text-red-600 transition-colors">Twitter</a></div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="mono text-xs uppercase tracking-widest text-gray-600 mb-4">Navigate</div>
+          <div class="space-y-2">
+            <div><a href="/writing" class="hover:text-red-600 transition-colors">Writing Archive</a></div>
+            <div><a href="/work" class="hover:text-red-600 transition-colors">Work History</a></div>
+            <div><a href="/functional-excellence" class="hover:text-red-600 transition-colors">Functional Excellence</a></div>
+            <div><a href="/press" class="hover:text-red-600 transition-colors">Press Kit</a></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 flex justify-between items-center">
+        <div class="mono text-xs text-gray-600">
+          © 2025 Larry Velez.
+        </div>
+        <div class="mono text-xs text-gray-600">
+          Designed with precision
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,17 @@
+---
+layout: post
+published: true
+title: "More tech, less stress."
+date: 2014-11-03
+author: Sinu
+categories: Tech Tips, Business and Technology, Nonprofits and Technology
+link: /blog/2014/11/3/more-tech-less-stress.html
+---
+
+*How would it look to our clients and employees? Would it seem like we don’t care about their messages? The pressure is on when so many of our colleagues continue to show how dedicated they are by answering emails during their time off.  So really, we never really ‘turn off’ and our stress levels continue climb.*
+
+---
+
+Is it just a fact of life now that we all need to be ‘on’ 24/7? Most would agree that we feel obligated to carry our smartphones and tablets everywhere, answer emails after hours, and from vacation. Our vacation bounceback messages often hint that emails will be checked from time to time, and so we continue to stay connected. It is hard for many people to write a vacation email that states they are completely unavailable to answer emails. How would it look to our clients and employees? Would it seem like we don’t care about their messages? The pressure is on when so many of our colleagues continue to show how dedicated they are by answering emails during their time off.  So really, we never really ‘turn off’ and our stress levels continue climb.
+
+In a [Wall Street Journal report](http://online.wsj.com/articles/how-technology-can-help-work-life-balance-1414382688?mod=WSJ_TechWSJD_moreTopStories), Dr. Jennifer Deal, a senior research scientist at the Center for Creative Leadership, explains our compulsion to stay connected and how much time it is taking up: “My research shows that people use their smartphones so much outside of business hours—reading and responding to streams of messages from the office—that many end up putting in 13 hours or more a day. But they’re not doing that extra work because they want to. They’re doing it because they feel compelled to, and because the smartphone makes it so easy.”

@@ -1,0 +1,26 @@
+---
+layout: post
+published: true
+title: "Understanding the Risks of Local Administrative Rights"
+date: 2015-05-26
+author: Sinu
+categories: Tech Management Services, Business and Technology, Nonprofits and Technology
+link: /blog/2015/5/26/understanding-the-risks-of-local-administrative-rights.html
+---
+
+*There are a number of reasons employees may ask for local administrative rights, or the ability to download software on their workstations, with convenience and expediency topping the list. However, business owners may not be fully aware of the risk: the more people and time spent working on desktops with local administrative rights, the greater the chance that malicious software exploits a weakness.*
+
+---
+
+Sinu co-founder & COO, John Christie, about the risks of Local Admin Rights: "We have seen Trojans execute six figure wire transactions and major banks deny responsibility. We’ve had multiple networks crippled for days – even up to 2 weeks." There are a number of reasons employees may ask for local administrative rights, or the ability to download software on their workstations, with convenience and expediency topping the list. However, business owners may not fully understand the risks of local administrative rights: the more people and time spent working on desktops with local administrative rights, the greater the chance that malicious software exploits a weakness.  
+
+With local administrative rights, the security controls used to protect a company’s systems including password controls, anti-malware software, and similar tools, can be shut off. Granting local admin rights risks the installation of unapproved software, breaking business-critical applications and causing disruption and downtime. Local admin rights can also expose a company to malware, 
+including a number of different phishing scams that can deliberately run code on systems with full permissions if someone inadvertently clicks on a malicious link or opens infected email content.
+
+Today's malware is harder to detect and uses sophisticated social engineering that can leave most people unaware of the problem before it is too late. For example, [Bank Info Security reports](http://www.bankinfosecurity.com/dyre-malware-a-8076/op-1) that there have been increased incidences of phishing scams using a malware called Dyre Wolf, which is usually distributed via an attached document or zipped executable. IBM senior researcher John Kuhn was quoted in the report: “The Dyre Wolf malware was used to make fraudulent wire transfers totaling between $500,000 and $1.5 million from various businesses that are IBM customers in recent weeks.” IBM was not aware of any institution or business that had recovered stolen funds or stopped fraudulent wires linked to a Dyre Wolf attack.
+
+According to Sinu co-founder and COO, John Christie, “We have seen Trojans execute six figure wire transactions and major banks deny responsibility. We’ve had multiple networks crippled for days – even up to 2 weeks – because of a virus inadvertently installed on a person’s machine, which then replicated as an auto-run on the file server, then spread to every machine that touched the file server. It also used peer-to-peer methods exploiting machines that did not have a patch applied.”
+
+Christie explained, “IT best practices dictate that employees not be given local administrative rights. Auditors also frown upon the practice because of its inherent risk. At Sinu, we install software updates and patches weekly to protect our customers, however the system is only as strong as its weakest link. By allowing local administrative rights, companies expose themselves to malicious attacks and the risk of losing time, data, and money.” 
+
+At Sinu, we believe that people matter, things don't. Contact us to learn more about our [IT consulting](https://www.sinu.com/it-support-services/) services and what we can offer your company and employees.

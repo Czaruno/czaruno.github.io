@@ -1,0 +1,37 @@
+---
+layout: post
+published: true
+title: "What businesses can learn from Cornell Tech?"
+date: 2014-08-14
+author: Sinu
+categories: Cornell Tech, NNew York Times, Roosevelt Island, Technion-Israel Institute of Technology, business technology
+link: /blog/2014/8/14/what-businesses-can-learn-from-cornell-tech.html
+---
+
+*Cornell Tech, a closely watched collaboration in New York City between [Cornell University](http://topics.nytimes.com/top/reference/timestopics/organizations/c/cornell_university/index.html?inline=nyt-org) and the Technion-Israel Institute of Technology, finalized the construction design for its first academic building on Manhattan’s Roosevelt Island. Cornell and Technion joined forces in December 2011 when New York City officials, under then-mayor Michael Bloomberg, selected them to build an applied-science graduate school.*
+
+---
+
+Cornell Tech, a closely watched collaboration in New York City between [Cornell University](http://topics.nytimes.com/top/reference/timestopics/organizations/c/cornell_university/index.html?inline=nyt-org) and the Technion-Israel Institute of Technology, finalized the construction design for its first academic building on Manhattan’s Roosevelt Island. Cornell and Technion joined forces in December 2011 when New York City officials, under then-mayor Michael Bloomberg, selected them to build an applied-science graduate school.
+
+According to a recent [New York Times report](http://www.nytimes.com/2014/08/11/education/creating-an-ever-flexible-center-for-tech-innovation.html?_r=0), Cornell Tech expects to open its first buildings in 2017, with construction continuing for two decades. The campus is currently being planned by people who understand they cannot really anticipate how we will interact with the future digital world. The NYT describes the challenge as an attempt at “building in nimbleness” to hedge against the “hissing pace of technological change.”
+
+According to the report, Dan Huttenlocher, Dean of Cornell Tech, hopes to answer what he calls the central question of this daring and expensive endeavor: “How do you do something that’s technologically advanced that isn’t immediately technologically dated?”
+
+Cornell Tech’s answer: No data center.
+
+The idea of building a campus without a data center was Mr. Huttenlocher’s. Data centers have been a staple of college campuses for decades, providing the computing power and local storage necessary to accommodate research and daily use. The decision not to build one on the Cornell Tech campus raised some eyebrows. The report explains: “Data centers, which house large numbers of servers, cost money. They are bulky and suck down energy… The decision has obvious appeal given the quantum leaps in cloud computing, much of it driven by commercial vendors. Why build your own data storage when industry leaders can do the heavy lifting for you?”
+
+Sharif Nijim, enterprise application architect at the University of Notre Dame, agrees with the move and says that if he were building a campus today he would forgo the data center. “You’re not saddled with all the detritus that’s built up over time,” he said. “That’s your biggest advantage.”
+
+It is exciting to image the digital world in 2017, when the first building opens at Cornell Tech here in Manhattan. While we wait, there are several messages we can take away from Huttenlocher’s approach to this new campus, and here are a few examples that align most directly with the [Sinu philosophy](/it-business-solutions/) and how we deliver IT to our customers: 
+
+·      Avoid investing too much in the kind of “proprietary technology that risks becoming quickly outdated.”
+
+·      “Embracing technology means not buying too much.”
+
+·       “Why build your own data storage when industry leaders can do the heavy lifting for you?”
+
+·      “Use as many open standards and protocols as possible. If you’re using open protocols and open languages, devices then become interchangeable.”
+
+Migrating away from expensive data centers is not new to Sinu. For over 10 years, we have offered a platform that minimizes technology infrastructure, while maximizing productivity. We believe that this approach not only keeps your data more secure, it is more cost-effective and offers more flexibility than traditional in-house [IT services](/%5D).

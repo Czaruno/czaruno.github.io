@@ -1,0 +1,27 @@
+---
+layout: post
+published: true
+title: "How to protect your data when using public Wi-Fi"
+date: 2014-09-03
+author: Sinu
+categories: IT Security, Security, WiiFi security, data protection, data security
+link: /blog/2014/9/3/how-to-protect-your-data-when-using-public-wi-fi.html
+---
+
+*According to [PCWorld](http://www.pcworld.com/article/2456560/google-may-bring-wifi-to-new-york-city-pay-phones.html), if Google has its way, New York City’s antiquated pay-phone system will soon be converted to provide range of technology services, including a network of free wireless networks throughout the city.*
+
+---
+
+According to [PCWorld](http://www.pcworld.com/article/2456560/google-may-bring-wifi-to-new-york-city-pay-phones.html), if Google has its way, New York City’s antiquated pay-phone system will soon be converted to provide range of technology services, including a network of free wireless networks throughout the city. But as our access to public Wi-Fi increases, so do the opportunities for mobile hackers to access your data. For example, hackers are setting up “free Wi-Fi” hubs designed to entice unsuspecting users onto their network where they can quickly hijack passwords and other personal data. However, there are several simple ways you can protect yourself while using public Wi-Fi networks.
+
+**1. Know Your WiFi**: This sounds simple, but wherever  possible, use Wi-Fi networks you know and that are secured with a password. Ask your barista for the name of their network to be sure you’re accessing a legitimate one.
+
+**2. ****Turn Off 'File Sharing'**: Whether you’re on a PC or an Apple computer, you can turn off access to your files from outside parties very quickly by turning off file and printer sharing. CNET has a [good video](http://www.cnet.com/how-to/tips-to-stay-safe-on-public-wi-fi/) that walks you through the process.
+
+**3. ****Use a VPN (Virtual Private Network)**: This is a great option to help protect yourself on public Wi-Fi, while preventing people from knowing who you are or what you’re looking at on the Internet. A VPN essentially creates a secure data tunnel between the end user and the destination. PC News wrote a great blog suggesting their [ten VPN picks](http://www.pcmag.com/article2/0,2817,2403388,00.asp) and Sinu offers several VPN solutions for its clients.
+
+**4. ****Forget the Network**: On the go, it’s often tempting to just shut off your laptop or device and then just go, but don’t forget to forget the network. On a device, just hold down on the network name until the option pops up. Or, on a computer, go into your network preferences and remove the network from your computer’s memory. This will prevent your computer or device from automatically connecting to that unsecured network in the future.
+
+**5. Use a HotSpot****: **Most cell phone carriers are now offering the option for a personal hotspot, turning your cell phone into a mobile Wi-Fi. Be sure to secure the network with a password – if it doesn’t automatically require one – in order to prevent poachers and would-be hackers. [About Technology ](https://www.lifewire.com/safety-privacy-4102606) provides several suggestions on how to boost the security of your HotSpot, ensuring that it’s not just a more convenient source of WiF, it is a significantly more secure source, as well.
+
+At Sinu, our goal is to provide our clients with full-service technology services that increase productivity while mitigating risk. Should you have questions about device security, please contact your account manager for assistance.
