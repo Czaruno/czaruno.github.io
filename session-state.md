@@ -1,203 +1,66 @@
-# Session State - LarryVelez.com
+# LarryVelez.com Site Update - Session State
+**Last Updated:** 2026-01-20 12:30 PM EST
+**Latest Session:** 2026-01-20-task-1-complete
 
-**Last Updated:** 2025-11-18 19:30 EST
-**Current Phase:** Content Enhancement & CMS Improvements
-**Live Site:** https://larryvelez.com
+## Current Objective
+Transform larryvelez.com to contain ONLY Larry's 28 personal articles by adding recovered content and removing company blog posts. Canonical source: `docs/article-catalog.md`.
 
----
+## Current Status - Task 1 (In Progress)
+Successfully added all 28 recovered articles to `_posts` folder. Task 1 complete.
+Visible articles (published: true): 28
+Disabled articles (published: false): 14
+Total `_posts` files: 42
 
-## 📍 Current Status
+✅ Added (28 articles):
+- 2012-05-26-trust-the-expert-in-you.md
+- 2013-01-28-news-to-go-this-new-app-has-my-attention.md
+- 2014-04-17-heartbleed-underscores-need-for-data-security.md
+- 2014-05-01-protecting-yourself-from-obsolete-technology.md
+- 2014-07-21-creating-a-culture-of-discipline-and-practice.md
+- 2015-02-27-the-elegance-of-simple-solutions.md
+- 2015-03-04-the-tech-balancing-act.md
+- 2015-04-21-the-need-for-speed.md
+- 2015-10-27-how-to-select-a-web-developer.md
+- 2016-03-21-seamless-transitions.md
+- 2016-12-26-internet-of-things-a-convenience-risk-balancing-ac.md
+- 2017-01-20-webinar-new-administration-nonprofit-data-protection.md
+- 2017-03-02-high-touch-over-high-tech.md
+- 2017-05-08-what-do-people-really-want-a-personal-connection.md
+- 2017-05-26-diy-tech-workarounds-waste-time-increase-risk.md
+- 2017-07-31-why-flash-really-died.md
+- 2017-10-18-new-wi-fi-vulnerability-and-why-devices-needs-to-b.md
+- 2017-10-28-who-are-you-understanding-your-online-identity-and.md
+- 2019-02-25-accommodate-your-millennial-workers-or-another-org.md
+- 2019-03-25-email-marketing-to-millennials-values-personal-app.md
+- 2019-06-28-chicken-tax-and-tesla.md
+- 2019-09-16-are-we-teaching-ai-to-be-racist.md
+- 2020-06-02-contact-tracing-you-have-a-choice.md
+- 2020-07-01-its-time-to-remove-racism-in-ai.md
+- 2020-09-14-why-we-need-more-agent-to-cloud.md
+- 2020-10-29-indigenous-peoples-recognition-and-sinu-name.md
+- 2020-12-04-together-sinu-and-electric-will-deliver-unrivaled-.md
+- 2020-12-23-how-apple-headphones-are-smarter.md
 
-### What's Live ✅
-- **Homepage** - Hero, Kogi AI showcase, featured articles, footer
-- **Writing Archive** - 117 curated articles (2012-2020), timeline layout
-- **Work History** - Career timeline with Kogi animation, Sinu history, consulting accordion
-- **Article Pages** - Precision Brutalism design, year anchors, responsive
-- **CMS** - Decap CMS with editorial workflow, publish indicators, filters
+## Next Session Tasks
+1. ✅ Task 1: Add 28 recovered articles - COMPLETE
+2. ✅ Task 2: Add podcast audio player for the millennial workers episode
+3. Verify all articles render correctly on the site
+4. ✅ Task 3: Disable 14 ghost articles (set published: false)
+5. ✅ Task 4: Remove ~79 company blog posts
 
-### Recent Completions (Session 2025-11-18)
-- ✅ Added full article bodies to 3 posts (Apple Headphones, Indigenous Peoples, AI Racism)
-- ✅ Added CMS publish status indicators (✓/✗ visual markers)
-- ✅ Added CMS filters for Published/Hidden articles
-- ✅ Fixed GitHub push issues (transient 500/502 errors resolved)
-- ✅ Updated inter-AI communication section for Gemini agent
+## Quick Start (For Reboot)
+- Working directory: `/Users/larryvelez/Coding/LarryVelez`
+- Obsidian vault: `/Users/larryvelez/Obsidian-Data`
+- Instructions: `/Users/larryvelez/Obsidian-Data/InterAI/Projects/larryvelez-website/docs/coding-agent-instructions.md`
+- Source articles: `/Users/larryvelez/Obsidian-Data/InterAI/Projects/larryvelez-website/files/_posts/`
+- Run: `bundle exec jekyll serve --livereload` to test site locally
 
-### Live URLs
-- Homepage: https://larryvelez.com
-- Work History: https://larryvelez.com/work
-- Writing Archive: https://larryvelez.com/writing
-- CMS (local): http://localhost:4000/admin/
+## Notes
+- No commits made yet - all changes are local
+- Articles are Jekyll-ready with proper frontmatter
+- Podcast audio file (25.3 MB) is available in vault at `/InterAI/Projects/larryvelez-website/files/media/ep-116-larry-velez-millennial-workers.mp3`
+- README created in project folder with workflow docs
+- Agent communication via `/InterAI/Projects/larryvelez-website/docs/agent-messages.md`
 
----
-
-## 🎯 Next Priorities
-
-### Immediate (Next Session)
-1. **Build Functional Excellence page** (`/functional-excellence`)
-   - Personal museum layout with Precision Brutalism design
-   - Influences: Naval, Matt Moreman, Elon, Gary Vee
-   - Books: Guns Germs & Steel, Innovator's Dilemma, Seven Powers
-   - Interests: Cars, garage design, prefab architecture, Colombian culture
-
-2. **Build Press Kit page** (`/press`)
-   - Multiple bio lengths (25/100/250 words)
-   - Downloadable press materials
-   - Copyable text fields
-   - Placeholder for headshots
-
-### Follow-up Tasks
-- Write press kit content (bios, achievements, speaking topics)
-- SEO optimization (meta tags, social cards)
-- Mobile responsiveness testing
-- Image optimization
-
----
-
-## 🗂️ Project Resources
-
-### Key Files
-```
-LarryVelez/
-├── session-state.md              # THIS FILE - current state only
-├── docs/
-│   ├── ROADMAP.md                # Project vision, design philosophy, architecture
-│   └── sessions/                 # Historical session logs (if needed)
-├── index.md                      # Homepage
-├── work.html                     # Work History page
-├── writing.html                  # Writing Archive page
-├── _layouts/
-│   ├── default.html              # Base layout
-│   └── post.html                 # Article layout (Precision Brutalism)
-├── _posts/                       # 117 published articles
-├── _data/
-│   └── work_history.yml          # Work timeline data
-├── admin/config.yml              # Decap CMS config
-├── data/articles/markdown/       # 555 source articles (curated from)
-└── scripts/curate-articles.py   # Article import tool
-```
-
-### Quick Commands
-```bash
-# Local development
-./serve.sh                        # Jekyll only
-./serve-with-cms.sh              # Jekyll + Decap CMS
-
-# Article management
-cd scripts && python curate-articles.py
-
-# Deployment (automatic on git push)
-git push origin main
-```
-
----
-
-## 🎨 Design System (Quick Reference)
-
-**Aesthetic:** Precision Brutalism
-**Typography:** Space Grotesk (display) + IBM Plex Mono (monospace)
-**Colors:** Black/White/Red accent (#DC2626)
-**Layout:** Sharp grids, asymmetric blocks, generous whitespace
-
-*Full design philosophy in docs/ROADMAP.md*
-
----
-
-## 🛠️ Technical Stack
-
-- **Generator:** Jekyll 4.2+
-- **CMS:** Decap CMS (local backend)
-- **Styling:** Tailwind CSS (CDN) + custom CSS
-- **Deployment:** GitHub Actions → czaruno.github.io
-- **Domain:** larryvelez.com (CNAME)
-- **Repos:**
-  - Source: Czaruno/LarryVelez (private)
-  - Deploy: Czaruno/czaruno.github.io (public)
-
----
-
-## 🤖 Inter-AI-Agent Communication
-
-### For Gemini AI: GitHub Push Resolution (2025-11-18)
-
-**From:** Claude (Sonnet 4.5)
-**Topic:** GitHub 500/502 Errors - RESOLVED
-
-**Problem:** Work History push failing with 500/502 errors
-**Solution:** Simply retried `git push origin main` - worked immediately
-**Root Cause:** Transient GitHub API issues (server-side, not code/config)
-
-**Key Takeaway:** For GitHub 500/502 errors, wait a few minutes and retry before attempting complex fixes. These are infrastructure issues, not code problems.
-
-**Deployment Pipeline:**
-- Source: `Czaruno/LarryVelez` (private) → Deploy: `Czaruno/czaruno.github.io` (public)
-- Auth: GitHub PAT as `GH_PAGES_PAT` secret
-- Trigger: Auto-deploy on push to main
-- Live: https://larryvelez.com (~2-5 min deploy time)
-
----
-
-### For Gemini AI: Article Content Updates (2025-11-18)
-
-**From:** Claude (Sonnet 4.5)
-**Topic:** Missing Article Bodies - FIXED
-
-**Problem:** Three articles imported without body content
-**Solution:** User provided full text via paste, updated posts directly
-
-**Files Updated:**
-1. `_posts/2020-12-23-how-apple-headphones-are-smarter.md` - AirPods Max/H1 chip
-2. `_posts/2020-10-29-indigenous-peoples-deserve-on-going-recognition-an.md` - Indigenous Peoples Day
-3. `_posts/2019-09-16-are-we-teaching-ai-to-be-racist.md` → renamed to `_posts/2020-07-01-its-time-to-remove-racism-in-ai.md` - Robert Williams facial recognition case
-
-**Note:** The AI racism article was actually from 2020 (references Williams case), not 2019. Renamed file and updated metadata to match actual content.
-
----
-
-### For Gemini AI: CMS Enhancement (2025-11-18)
-
-**From:** Claude (Sonnet 4.5)
-**Topic:** Article Visibility Indicators - ADDED
-
-**User Request:** Show which articles are visible on site in CMS list view
-
-**Solution Added to `admin/config.yml`:**
-```yaml
-summary: "{{fields.published | ternary('✓', '✗')}} {{date | date('YYYY-MM-DD')}} - {{title}}"
-view_filters:
-  - label: "Published"
-    field: published
-    pattern: true
-  - label: "Hidden"
-    field: published
-    pattern: false
-sortable_fields: ['date', 'title', 'published']
-```
-
-**Result:**
-- ✓ = Published (visible on site)
-- ✗ = Hidden (not visible)
-- Filter buttons to show only Published or Hidden
-- Sortable by publish status
-
----
-
-## 📝 Session Notes
-
-### Content Strategy
-- 117 articles published (curated from 555 total)
-- Focus: AI ethics, tech foresight, social justice
-- De-emphasized: Time-sensitive news, #BLM (past focus)
-- Featured articles: CMS-editable (select 3 for homepage)
-
-### Key Learnings
-- Hero typography: HTML table for LARRY/VELEZ perfect alignment
-- SquareSpace imports: May have duplicate italic content (CSS fix applied)
-- CMS workflow: Editorial workflow enabled for draft/review/publish
-- GitHub deploys: ~2-5 min from push to live
-
----
-
-**Status:** 🟢 Active Development
-**Next Checkpoint:** After Functional Excellence & Press Kit pages complete
-
-*For project history, design philosophy, and architecture details, see docs/ROADMAP.md*
+## Blockers
+None - ready to continue adding remaining articles.

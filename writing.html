@@ -97,6 +97,13 @@
     overflow: hidden;
   }
 
+  .article-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+  }
+
   .article-card::before {
     content: '';
     position: absolute;
@@ -160,38 +167,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* Stats Block */
-  .stats-block {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .stat-item {
-    border-left: 4px solid #000;
-    padding-left: 1.5rem;
-  }
-
-  .stat-item.highlight {
-    border-left-color: var(--accent);
-  }
-
-  .stat-number {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-label {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #666;
-    letter-spacing: 0.1em;
-  }
-
   /* Diagonal section divider */
   .diagonal-divider {
     height: 2px;
@@ -224,43 +199,138 @@
   .hero-section {
     position: relative;
   }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: end;
+  }
+
+  .hero-latest {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero-card {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-card:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .hero-card a {
+    color: #fff;
+  }
+
+  .hero-card a:hover {
+    color: var(--accent);
+  }
+
+  .hero-meta {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-latest {
+      margin-top: 2rem;
+    }
+  }
 </style>
 
 <div class="writing-archive">
   <!-- Hero Section -->
-  <section class="hero-section bg-black text-white py-24">
+  <section class="hero-section bg-black text-white py-20">
     <a href="/" class="back-home-btn">← Back to Home</a>
     <div class="container mx-auto px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-8">
+        <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-6">
           02 — Writing Archive
         </div>
 
-        <h1 class="text-6xl md:text-8xl font-bold leading-none mb-8">
-          20 Years of<br/>
-          Tech Foresight
-        </h1>
+        <div class="hero-grid">
+          <div>
+            <h1 class="text-6xl md:text-8xl font-bold leading-none mb-6">
+              Years of<br/>
+              tech foresight
+            </h1>
 
-        <div class="w-24 h-1 bg-red-600 mb-12"></div>
+            <div class="w-24 h-1 bg-red-600 mb-10"></div>
 
-        <p class="text-2xl font-light max-w-3xl leading-relaxed text-gray-300 mb-16">
-          From AI ethics to cloud architecture, indigenous heritage to people-first technology.
-          Curated insights spanning 2012 to the present.
-        </p>
+            <p class="text-2xl font-light max-w-3xl leading-relaxed text-gray-300">
+              From AI ethics to cloud architecture, indigenous heritage to people-first technology.
+              Curated insights spanning 2012 to the present.
+            </p>
 
-        <!-- Stats -->
-        <div class="stats-block">
-          <div class="stat-item highlight">
-            <div class="stat-number">113</div>
-            <div class="stat-label">Published Articles</div>
+            <a href="#timeline" class="mono text-xs uppercase tracking-[0.3em] text-gray-400 inline-flex items-center gap-2 mt-10">
+              Browse the archive
+              <span aria-hidden="true">↓</span>
+            </a>
           </div>
-          <div class="stat-item">
-            <div class="stat-number">2012</div>
-            <div class="stat-label">Writing Since</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">6</div>
-            <div class="stat-label">Years of Insights</div>
+
+          <div class="hero-latest">
+            <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-4">
+              Latest Writing
+            </div>
+            
+            
+              <div class="hero-card">
+                <div class="hero-meta">December 23, 2020</div>
+                <a href="/2020/12/23/how-apple-headphones-are-smarter.html" class="text-xl font-semibold leading-snug block mt-2">
+                  How Apple Headphones Are Smarter
+                </a>
+                
+                  <p class="text-sm text-gray-300 mt-2">
+                    By Larry Velez, Sinu CTO
+
+                  </p>
+                
+              </div>
+            
+              <div class="hero-card">
+                <div class="hero-meta">December 04, 2020</div>
+                <a href="/2020/12/04/together-sinu-and-electric-will-deliver-unrivaled-service.html" class="text-xl font-semibold leading-snug block mt-2">
+                  Together, Sinu and Electric will deliver 'unrivaled service'
+                </a>
+                
+                  <p class="text-sm text-gray-300 mt-2">
+                    Sinu is proud to announce that Electric and Sinu will merge in order to drive a...
+                  </p>
+                
+              </div>
+            
+              <div class="hero-card">
+                <div class="hero-meta">October 29, 2020</div>
+                <a href="/2020/10/29/indigenous-peoples-recognition-and-sinu-name.html" class="text-xl font-semibold leading-snug block mt-2">
+                  Indigenous Peoples Deserve On-Going Recognition... And Why I Named My Company Sinu
+                </a>
+                
+                  <p class="text-sm text-gray-300 mt-2">
+                    By Larry Vélez, Sinu CTO ﻿
+
+                  </p>
+                
+              </div>
+            
+            <a href="#timeline" class="mono text-xs uppercase tracking-widest text-gray-400 inline-flex items-center gap-2 mt-6">
+              View full timeline
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </div>
@@ -279,84 +349,436 @@
           <div class="year-block" id="year-2020">
             <div class="year-marker highlight">
               <div class="mono text-2xl font-bold">2020</div>
-              <div class="mono text-xs mt-1">3 Articles</div>
+              <div class="mono text-xs mt-1">6 Articles</div>
             </div>
 
             <div class="articles-grid">
               
                 <article class="article-card">
-                  <div class="article-date">December 23, 2020</div>
-                  <h3 class="article-title">
-                    <a href="/2020/12/23/how-apple-headphones-are-smarter.html" class="hover:text-red-600 transition-colors">
+                  <a href="/2020/12/23/how-apple-headphones-are-smarter.html" class="article-card-link">
+                    <div class="article-date">December 23, 2020</div>
+                    <h3 class="article-title">
                       How Apple Headphones Are Smarter
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Many people are asking why Apple’s newly-released over-the-ear headphones – the AirPods Max – cost $549. CNN is quick to point out that by comparison, the iPhone SE starts at...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">technology,</span>
-                      
-                        <span class="tag">tech</span>
-                      
-                        <span class="tag">trends,</span>
-                      
-                    </div>
-                  
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">AI</span>
+                        
+                          <span class="tag">Technology</span>
+                        
+                          <span class="tag">Ethics</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">October 29, 2020</div>
-                  <h3 class="article-title">
-                    <a href="/2020/10/29/indigenous-peoples-deserve-on-going-recognition-an.html" class="hover:text-red-600 transition-colors">
-                      Recognizing Indigenous Peoples and Their On-Going Struggles
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Indigenous Peoples Day was held this year on October 12 in over a dozen states and 130 cities, often in lieu of Columbus Day, which has been a federal holiday...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Sinu,</span>
-                      
-                        <span class="tag">Larry</span>
-                      
-                        <span class="tag">Velez,</span>
-                      
-                    </div>
-                  
+                  <a href="/2020/12/04/together-sinu-and-electric-will-deliver-unrivaled-service.html" class="article-card-link">
+                    <div class="article-date">December 04, 2020</div>
+                    <h3 class="article-title">
+                      Together, Sinu and Electric will deliver 'unrivaled service'
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        Sinu is proud to announce that Electric and Sinu will merge in order to drive a more modern approach to IT support for businesses and nonprofits.
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Business</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">July 01, 2020</div>
-                  <h3 class="article-title">
-                    <a href="/2020/07/01/its-time-to-remove-racism-in-ai.html" class="hover:text-red-600 transition-colors">
-                      It's time to remove racism in A.I.
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Over six months ago, well before the #BlackLivesMatter protests became widespread, I had written an article that highlighted an algorithm I discovered that clearly demonstrated the racial biases which are...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">AI,</span>
-                      
-                        <span class="tag">technology,</span>
-                      
-                        <span class="tag">racial</span>
-                      
-                    </div>
-                  
+                  <a href="/2020/10/29/indigenous-peoples-recognition-and-sinu-name.html" class="article-card-link">
+                    <div class="article-date">October 29, 2020</div>
+                    <h3 class="article-title">
+                      Indigenous Peoples Deserve On-Going Recognition... And Why I Named My Company Sinu
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Vélez, Sinu CTO ﻿
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Personal</span>
+                        
+                          <span class="tag">Sinu</span>
+                        
+                          <span class="tag">Heritage</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2020/09/14/why-we-need-more-agent-to-cloud.html" class="article-card-link">
+                    <div class="article-date">September 14, 2020</div>
+                    <h3 class="article-title">
+                      Why we need more 'Agent to Cloud'
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">COVID-19</span>
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                          <span class="tag">Data Security</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2020/07/01/bringing-awareness-to-racism-in-ai.html" class="article-card-link">
+                    <div class="article-date">July 01, 2020</div>
+                    <h3 class="article-title">
+                      Bringing awareness to racism in A.I.
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        *Over six months ago, well before the #BlackLivesMatter protests became widespread, I **wrote an article* highlighting an algorithm I discovered that clearly demonstrated the racial biases which are being baked...
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">artificial</span>
+                        
+                          <span class="tag">intelligence,</span>
+                        
+                          <span class="tag">AI,</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2020/06/02/contact-tracing-you-have-a-choice.html" class="article-card-link">
+                    <div class="article-date">June 02, 2020</div>
+                    <h3 class="article-title">
+                      New iOS and Android Technology Supports Contact Tracing: You Have a Choice
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">COVID-19</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+            </div>
+          </div>
+
+          
+            <div class="diagonal-divider"></div>
+          
+        
+          <div class="year-block" id="year-2019">
+            <div class="year-marker highlight">
+              <div class="mono text-2xl font-bold">2019</div>
+              <div class="mono text-xs mt-1">4 Articles</div>
+            </div>
+
+            <div class="articles-grid">
+              
+                <article class="article-card">
+                  <a href="/2019/09/16/are-we-teaching-ai-to-be-racist.html" class="article-card-link">
+                    <div class="article-date">September 16, 2019</div>
+                    <h3 class="article-title">
+                      Are we teaching A.I. to be racist?
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Artificial Intelligence</span>
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2019/06/28/chicken-tax-and-tesla.html" class="article-card-link">
+                    <div class="article-date">June 28, 2019</div>
+                    <h3 class="article-title">
+                      Chicken Tax and Tesla, the Native Invasive Species
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, CTO, Sinu
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Tech Trends</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2019/03/25/email-marketing-to-millennials.html" class="article-card-link">
+                    <div class="article-date">March 25, 2019</div>
+                    <h3 class="article-title">
+                      Email marketing to Millennials: Values, personal appeals can boost clicks
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        Photo by Kaleidico on Unsplash.
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Business</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2019/02/25/accommodate-your-millennial-workers-or-another-org.html" class="article-card-link">
+                    <div class="article-date">February 25, 2019</div>
+                    <h3 class="article-title">
+                      Accommodate Your Millennial Workers – or Another Organization Will: A Conversation with Larry Velez of Sinu
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        Successful Nonprofits, a firm that provides strategic planning, board development, executive coaching and transition assistance to help nonprofits, recently spoke with Larry Velez, founder and CTO of Sinu, to help...
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Business</span>
+                        
+                          <span class="tag">Technology</span>
+                        
+                          <span class="tag">Interview</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+            </div>
+          </div>
+
+          
+            <div class="diagonal-divider"></div>
+          
+        
+          <div class="year-block" id="year-2017">
+            <div class="year-marker ">
+              <div class="mono text-2xl font-bold">2017</div>
+              <div class="mono text-xs mt-1">7 Articles</div>
+            </div>
+
+            <div class="articles-grid">
+              
+                <article class="article-card">
+                  <a href="/2017/10/28/who-are-you-understanding-your-online-identity.html" class="article-card-link">
+                    <div class="article-date">October 28, 2017</div>
+                    <h3 class="article-title">
+                      Who are you? Understanding your online identity and how to protect it
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, CTO and co-founder
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Technology</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2017/10/18/new-wi-fi-vulnerability-and-why-devices-need-to-be-more-connected.html" class="article-card-link">
+                    <div class="article-date">October 18, 2017</div>
+                    <h3 class="article-title">
+                      New Wi-Fi vulnerability and why devices needs to be more connected
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, co-founder and CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Technology</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2017/07/31/why-flash-really-died.html" class="article-card-link">
+                    <div class="article-date">July 31, 2017</div>
+                    <h3 class="article-title">
+                      Why Flash really died
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, co-founder &amp; CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Cybersecurity</span>
+                        
+                          <span class="tag">Data Security</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2017/05/26/diy-tech-workarounds-waste-time-increase-risk.html" class="article-card-link">
+                    <div class="article-date">May 26, 2017</div>
+                    <h3 class="article-title">
+                      DIY tech workarounds waste time, increase risk
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, co-founder and CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Internet of Things</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2017/05/08/what-do-people-really-want-a-personal-connection.html" class="article-card-link">
+                    <div class="article-date">May 08, 2017</div>
+                    <h3 class="article-title">
+                      What do people really want? A personal connection.
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, co-founder and CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2017/03/02/high-touch-over-high-tech.html" class="article-card-link">
+                    <div class="article-date">March 02, 2017</div>
+                    <h3 class="article-title">
+                      'High touch' over high tech: What people want from customer service today
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, co-founder and CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                      </div>
+                    
+                  </a>
+                </article>
+              
+                <article class="article-card">
+                  <a href="/2017/01/20/webinar-new-administration-new-risks.html" class="article-card-link">
+                    <div class="article-date">January 20, 2017</div>
+                    <h3 class="article-title">
+                      Webinar: New Administration, New Risks? How To Protect Your Nonprofit's Data
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        The 2016 election brought digital security and surveillance into tight focus. The webinar, “New Administration, New Risks? How To Protect Your Nonprofit’s Data,” held with Idealware and Fission Strategy, encourages...
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Technology</span>
+                        
+                          <span class="tag">Nonprofits</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
             </div>
@@ -367,227 +789,57 @@
           
         
           <div class="year-block" id="year-2016">
-            <div class="year-marker highlight">
+            <div class="year-marker ">
               <div class="mono text-2xl font-bold">2016</div>
-              <div class="mono text-xs mt-1">9 Articles</div>
+              <div class="mono text-xs mt-1">2 Articles</div>
             </div>
 
             <div class="articles-grid">
               
                 <article class="article-card">
-                  <div class="article-date">March 21, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/03/21/seamless-transitions.html" class="hover:text-red-600 transition-colors">
-                      Seamless Transitions
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      IBM’s Watson supercomputer chats with researchers and other professionals about natural solutions to big problems.
+                  <a href="/2016/12/26/internet-of-things-a-convenience-risk-balancing-act.html" class="article-card-link">
+                    <div class="article-date">December 26, 2016</div>
+                    <h3 class="article-title">
+                      Internet of Things: A convenience-risk balancing act
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        Larry Velez manages the technology side of the business.
 
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Internet</span>
-                      
-                        <span class="tag">of</span>
-                      
-                        <span class="tag">Things,</span>
-                      
-                    </div>
-                  
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Technology</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">March 10, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/03/10/so-whats-the-big-deal-about-virtual-reality.html" class="hover:text-red-600 transition-colors">
-                      So what’s the big deal about Virtual Reality?
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      When Samsung released its new phone, the Samsung 7, the buzz was less about the phone and more about virtual reality (VR) and a surprise appearance by Facebook CEO, Mark...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">February 12, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/02/12/internet-speed-are-you-getting-what-you-are-paying.html" class="hover:text-red-600 transition-colors">
-                      Internet Speed: Are you getting what you are paying for?
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      With Internet costs rising and broadband speed increasingly important for day-to-day business operations, more people – including the government – are questioning whether consumers are receiving the broadband speeds they...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Internet</span>
-                      
-                        <span class="tag">of</span>
-                      
-                        <span class="tag">Things,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">February 05, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/02/05/what-to-do-about-emails-when-an-employee-leaves.html" class="hover:text-red-600 transition-colors">
-                      What to do about emails when an employee leaves
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Departing employees often leave behind vast amounts of information in their email correspondences, so archiving the data is recommended. For continuity, an organization may wish to take some action to deal...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Data</span>
-                      
-                        <span class="tag">Security,</span>
-                      
-                        <span class="tag">Tech</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">January 29, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/01/29/what-else-can-sinu-do-for-you-sinu-now-offers-more.html" class="hover:text-red-600 transition-colors">
-                      What else can Sinu do for you?  Sinu now offers more business productivity tools.
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Sinu customers already know that we provide a reliable IT infrastructure and full-time support, but did you know that we also install and manage a wide range of business productivity...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Sinu</span>
-                      
-                        <span class="tag">Services</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">January 21, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/01/21/blizzard-to-hit-east-coast-how-to-prepare-your-tec.html" class="hover:text-red-600 transition-colors">
-                      Blizzard to hit East Coast: How to prepare your tech
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Sinu has been monitoring the weather conditions in NYC and DC and have prepared our team to be able to operate during any interruption that may be caused by the...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Sinu</span>
-                      
-                        <span class="tag">Services</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">January 18, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/01/18/new-idealware-data-security-report-download-for-fr.html" class="hover:text-red-600 transition-colors">
-                      New Idealware Data Security Report - Download for Free
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Is your nonprofit doing enough to secure its most important data? Our friends at Idealware have put together their newest report: What Nonprofits Need to Know About Security: A Practical Guide to...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Data</span>
-                      
-                        <span class="tag">Security,</span>
-                      
-                        <span class="tag">Cybersecurity,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">January 11, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/01/11/support-ends-for-internet-explorer-leaving-million.html" class="hover:text-red-600 transition-colors">
-                      Support ends for Internet Explorer leaving millions at risk
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Despite an announcement in 2014 informing users that they would no longer offer support or security upgrades for Internet Explorer (IE) 8, 9, and 10, it is estimated that 340...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Tech</span>
-                      
-                        <span class="tag">Tips,</span>
-                      
-                        <span class="tag">Business</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">January 08, 2016</div>
-                  <h3 class="article-title">
-                    <a href="/2016/01/08/after-two-years-of-planning-nyc-begins-converting.html" class="hover:text-red-600 transition-colors">
-                      After two years of planning, NYC begins converting phone booths to free Wi-Fi kiosks
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      It’s been nearly two years since New York City’s Mayor Bill de Blasio and CityBridge announced a project called LinkNYC to transform public pay phones in New York City into...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Internet</span>
-                      
-                        <span class="tag">of</span>
-                      
-                        <span class="tag">Things,</span>
-                      
-                    </div>
-                  
+                  <a href="/2016/03/21/seamless-transitions.html" class="article-card-link">
+                    <div class="article-date">March 21, 2016</div>
+                    <h3 class="article-title">
+                      Seamless Transitions
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu co-founder and CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Internet of Things</span>
+                        
+                          <span class="tag">Tech Trends</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
             </div>
@@ -600,306 +852,108 @@
           <div class="year-block" id="year-2015">
             <div class="year-marker ">
               <div class="mono text-2xl font-bold">2015</div>
-              <div class="mono text-xs mt-1">41 Articles</div>
+              <div class="mono text-xs mt-1">4 Articles</div>
             </div>
 
             <div class="articles-grid">
               
                 <article class="article-card">
-                  <div class="article-date">December 28, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/12/28/what-to-do-with-e-waste.html" class="hover:text-red-600 transition-colors">
-                      What to do with e-waste
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Many people upgrade their electronics this time of year, whether it’s a holiday gift or you’re taking advantage of some holiday deals or making year-end investments in the company. With...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Internet</span>
-                      
-                        <span class="tag">of</span>
-                      
-                        <span class="tag">Things,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">December 28, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/12/28/new-years-tech-resolutions.html" class="hover:text-red-600 transition-colors">
-                      New Year’s Tech Resolutions
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      The New Year is often a time for reflection and for resolutions designed to better ourselves. The same is true for IT! Do a New Year’s “reboot” by adopting five...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">2016,</span>
-                      
-                        <span class="tag">Domain</span>
-                      
-                        <span class="tag">Renewal,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">December 10, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/12/10/tips-to-avoid-holiday-cyber-threats.html" class="hover:text-red-600 transition-colors">
-                      Tips to avoid holiday cyber-threats
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Historically, 40 percent of online fraud occurs in the last three months of the year, but experts predict that figure could be even higher this year. According to an estimate...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Amazon,</span>
-                      
-                        <span class="tag">Black</span>
-                      
-                        <span class="tag">Friday,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">December 01, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/12/01/gray-matter-controlling-graymail-other-email-clutt.html" class="hover:text-red-600 transition-colors">
-                      Gray matter: Controlling graymail & other email clutter
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      We all know what spam email is – the email we get from people we don’t know and have never communicated with. Graymail is the email we receive from subscriptions...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Spoofing,</span>
-                      
-                        <span class="tag">bulk</span>
-                      
-                        <span class="tag">email,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">November 24, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/11/24/sinu-beats-national-average-for-customer-satisfact.html" class="hover:text-red-600 transition-colors">
-                      Sinu beats national average for customer satisfaction!
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Thanks to our customers providing ongoing feedback about our service and our dedicated team of expert technicians, Sinu has exceeded the competition for customer satisfaction four quarters in a row!...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Sinu</span>
-                      
-                        <span class="tag">Services</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">November 19, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/11/19/what-are-spoof-emails-how-do-you-avoid-them.html" class="hover:text-red-600 transition-colors">
-                      What are spoof emails? How do you avoid them?
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      From holiday scams and data leaks to CEO phishing, we have covered quite a bit of topics on how to protect yourself, your employees and your business against scammers trying to steal...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Cybersecurity</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">November 11, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/11/11/microsoft-releases-its-first-laptop.html" class="hover:text-red-600 transition-colors">
-                      Microsoft releases its first laptop
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Microsoft launches its first laptop, the Surface Book.Microsoft’s first laptop, the Surface Book, is creating quite a buzz because the company is not only taking a page out of the...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Apple,</span>
-                      
-                        <span class="tag">Microsoft</span>
-                      
-                        <span class="tag">Surface,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 28, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/10/28/wait-to-install-office-2016-for-mac.html" class="hover:text-red-600 transition-colors">
-                      Wait to install Office 2016 for Mac!
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Mac users have waited anxiously for Office for Mac 2016 (the previous version Office for Mac 2011 was released in October 2010).
-
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Apple,</span>
-                      
-                        <span class="tag">El</span>
-                      
-                        <span class="tag">Capitan,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 27, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/10/27/how-to-select-a-web-developer.html" class="hover:text-red-600 transition-colors">
+                  <a href="/2015/10/27/how-to-select-a-web-developer.html" class="article-card-link">
+                    <div class="article-date">October 27, 2015</div>
+                    <h3 class="article-title">
                       How to select a web developer
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Many Sinu customers have asked us about web development. There are a number of good platform options out there (see Sinu blog for more info on website builder solutions), so I...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Website</span>
-                      
-                        <span class="tag">builder,</span>
-                      
-                        <span class="tag">enterprise</span>
-                      
-                    </div>
-                  
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        Many Sinu customers have asked us about web development. There are a number of good platform options out there (see Sinu blog for more info on website builder solutions), so I...
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Website</span>
+                        
+                          <span class="tag">builder,</span>
+                        
+                          <span class="tag">enterprise</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">October 08, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/10/08/the-future-of-enterprise-apple-ge-look-to-consumer.html" class="hover:text-red-600 transition-colors">
-                      The future of enterprise: Apple, GE look to consumer tech
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      When asked about the future of enterprise technology, the chief executives from two of America’s largest companies agree that it is personalization.
+                  <a href="/2015/04/21/the-need-for-speed.html" class="article-card-link">
+                    <div class="article-date">April 21, 2015</div>
+                    <h3 class="article-title">
+                      The Need for Speed
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu founder and CTO
 
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Jeffrey</span>
-                      
-                        <span class="tag">Immelt,</span>
-                      
-                        <span class="tag">Tim</span>
-                      
-                    </div>
-                  
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                          <span class="tag">Nonprofits and Technology</span>
+                        
+                          <span class="tag">Tech Tips</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">September 28, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/09/28/sinu-can-help-with-the-budgeting-process.html" class="hover:text-red-600 transition-colors">
-                      Sinu Can Help with the Budgeting Process
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      This time of year, many organizations begin budgeting for the upcoming year. Sinu offers several Business Intelligence tools and best practices to help you allocate your operating budget wisely.
+                  <a href="/2015/03/04/the-tech-balancing-act.html" class="article-card-link">
+                    <div class="article-date">March 04, 2015</div>
+                    <h3 class="article-title">
+                      The Tech Balancing Act: Finding the Optimal Range for Your Solutions
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, co-founder &amp; CTO
 
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">HaaS,</span>
-                      
-                        <span class="tag">Hardware</span>
-                      
-                        <span class="tag">Replacement,</span>
-                      
-                    </div>
-                  
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Sinu Services</span>
+                        
+                          <span class="tag">Tech Management Services</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">September 21, 2015</div>
-                  <h3 class="article-title">
-                    <a href="/2015/09/21/apple-showsto-stay-relevant-make-tech-about-people.html" class="hover:text-red-600 transition-colors">
-                      Apple Shows...To Stay Relevant, Make Tech About People
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      While we used to eagerly anticipate the latest and greatest from new tech rollouts, smartphone announcements, such as Apple’s Special Event on September 9, have gone from glamorous to mundane...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Apple,</span>
-                      
-                        <span class="tag">Apple</span>
-                      
-                        <span class="tag">Upgrade</span>
-                      
-                    </div>
-                  
+                  <a href="/2015/02/27/the-elegance-of-simple-solutions.html" class="article-card-link">
+                    <div class="article-date">February 27, 2015</div>
+                    <h3 class="article-title">
+                      The elegance of simple solutions
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu co-founder &amp; CTO
+
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Internet of Things</span>
+                        
+                          <span class="tag">Tech Trends</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
             </div>
@@ -912,309 +966,81 @@
           <div class="year-block" id="year-2014">
             <div class="year-marker ">
               <div class="mono text-2xl font-bold">2014</div>
-              <div class="mono text-xs mt-1">43 Articles</div>
+              <div class="mono text-xs mt-1">3 Articles</div>
             </div>
 
             <div class="articles-grid">
               
                 <article class="article-card">
-                  <div class="article-date">December 23, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/12/23/what-small-businesses-can-learn-from-the-sony-hack.html" class="hover:text-red-600 transition-colors">
-                      What small businesses can learn from the Sony hack
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      In the wake of the Sony breach, many business owners have asked us about how they can protect their businesses from such a data leak.
+                  <a href="/2014/07/21/creating-a-culture-of-discipline-and-practice.html" class="article-card-link">
+                    <div class="article-date">July 21, 2014</div>
+                    <h3 class="article-title">
+                      Creating a culture of discipline and practice in your business
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu founder and CTO
 
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Cybersecurity</span>
-                      
-                    </div>
-                  
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">December 11, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/12/11/beware-of-new-holiday-shopping-scam-using-fake-ord.html" class="hover:text-red-600 transition-colors">
-                      Beware of new holiday shopping scam using fake order confirmations
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      This holiday season, hackers created an ingenious way of getting even the most tech and security savvy person to open their virus-laden email. Playing on our natural curiosity, they send...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Asprox</span>
-                      
-                        <span class="tag">Spam</span>
-                      
-                        <span class="tag">Botnet,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">December 05, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/12/05/with-todays-technology-there-is-no-better-time-to.html" class="hover:text-red-600 transition-colors">
-                      With today’s technology, there is no better time to be an entrepreneur
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Experts agree, technology has provided small business with the edge they need to successfully compete in today’s global economy.
+                  <a href="/2014/05/01/protecting-yourself-from-obsolete-technology.html" class="article-card-link">
+                    <div class="article-date">May 01, 2014</div>
+                    <h3 class="article-title">
+                      Protecting yourself from the risks of obsolete technology
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu founder and CTO
 
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Harvard</span>
-                      
-                        <span class="tag">Business</span>
-                      
-                        <span class="tag">Review,</span>
-                      
-                    </div>
-                  
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Sinu Services</span>
+                        
+                          <span class="tag">Tech Management Services</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
                 <article class="article-card">
-                  <div class="article-date">November 25, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/11/25/technology-on-most-holiday-gift-lists-please-shop.html" class="hover:text-red-600 transition-colors">
-                      Technology on most holiday gift lists… please shop wisely!
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      63 percent of American adults – or 89 million people – will purchase technology holiday gifts, CEA predicts.
+                  <a href="/2014/04/17/heartbleed-underscores-need-for-data-security.html" class="article-card-link">
+                    <div class="article-date">April 17, 2014</div>
+                    <h3 class="article-title">
+                      Heartbleed underscores need for data security and password policies
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez, Sinu founder and CTO
 
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Consumer</span>
-                      
-                        <span class="tag">Electronics</span>
-                      
-                        <span class="tag">Association,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">November 21, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/11/21/new-york-city-to-have-the-fastest-free-wi-fi-in-th.html" class="hover:text-red-600 transition-colors">
-                      New York City to have the “Fastest Free Wi-Fi in the World”
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      The remaining 6,400 payphones throughout New York City’s five boroughs will be replaced by free Wi-Fi kiosks, according to city officials.
-
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Free</span>
-                      
-                        <span class="tag">Wi-Fi,</span>
-                      
-                        <span class="tag">IT</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">November 17, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/11/17/why-net-neutrality-matters-to-small-business.html" class="hover:text-red-600 transition-colors">
-                      Why Net Neutrality Matters to Small Business
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Just when advocates thought their last hope of securing Internet neutrality, also known as “net neutrality,” was about to pass, President Obama stepped out of the shadows to call for...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Iit</span>
-                      
-                        <span class="tag">support,</span>
-                      
-                        <span class="tag">Net</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">November 06, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/11/06/global-leaders-predict-the-future-of-technology-at.html" class="hover:text-red-600 transition-colors">
-                      Global Leaders Predict the Future of Technology at Wall Street Journal’s First Tech Conference
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Wall Street Journal’s WSJ.D Live Conference attracted some of the most recognized global leaders discussing where technology is headed ­– from Apple’s Tim Cook to filmmaker James Cameron and media...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Apple,</span>
-                      
-                        <span class="tag">Leadership,</span>
-                      
-                        <span class="tag">Microsoft,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">November 03, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/11/03/more-tech-less-stress.html" class="hover:text-red-600 transition-colors">
-                      More tech, less stress.
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      How would it look to our clients and employees? Would it seem like we don’t care about their messages? The pressure is on when so many of our colleagues continue...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Tech</span>
-                      
-                        <span class="tag">Tips,</span>
-                      
-                        <span class="tag">Business</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 20, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/10/20/two-factor-authentication-no-longer-optional.html" class="hover:text-red-600 transition-colors">
-                      Two-Factor Authentication “No Longer Optional”
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      As a follow up to our previous blog, we wanted to share a very helpful ZDNet article by Ed Botts who provides step-by-step instructions on two-factor authentication for cloud credentials to...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">2FA,</span>
-                      
-                        <span class="tag">authentication,</span>
-                      
-                        <span class="tag">cloud</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 20, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/10/20/attn-mr-ceo-your-it-partner-is-your-new-best-frien.html" class="hover:text-red-600 transition-colors">
-                      Attn Mr. CEO: Your IT Partner Is Your New Best Friend
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      For smaller businesses and nonprofits, every penny counts. We’re sure you’ve noticed that, too. That’s why many small businesses and nonprofits have responded to the need to do more with...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">IT,</span>
-                      
-                        <span class="tag">help</span>
-                      
-                        <span class="tag">desk</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 09, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/10/09/7-data-security-tips.html" class="hover:text-red-600 transition-colors">
-                      7 Data Security Tips
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Whether it’s the BASH flaw we blogged about recently, the JP Morgan/Chase hack this summer, or the discovery of the Reddit Mac iWorm, it seems that news about data breaches has been...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Protecting</span>
-                      
-                        <span class="tag">yourself</span>
-                      
-                        <span class="tag">online,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 03, 2014</div>
-                  <h3 class="article-title">
-                    <a href="/2014/10/03/why-bashs-shellshock-bug-is-getting-so-much-attent.html" class="hover:text-red-600 transition-colors">
-                      Why Bash's Shellshock bug is getting so much attention
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Customers using the Sinu service should rest assured that all steps have been taken to protect the Sinu infrastructure from Shellshock. We have reviewed all of our customers’  devices we...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">BASH,</span>
-                      
-                        <span class="tag">IT,</span>
-                      
-                        <span class="tag">Linux,</span>
-                      
-                    </div>
-                  
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Data Security</span>
+                        
+                          <span class="tag">Cybersecurity</span>
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
             </div>
@@ -1227,312 +1053,35 @@
           <div class="year-block" id="year-2013">
             <div class="year-marker ">
               <div class="mono text-2xl font-bold">2013</div>
-              <div class="mono text-xs mt-1">14 Articles</div>
+              <div class="mono text-xs mt-1">1 Article</div>
             </div>
 
             <div class="articles-grid">
               
                 <article class="article-card">
-                  <div class="article-date">December 01, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/12/01/most-devices-now-allowed-on-airplanes-cellphone-ca.html" class="hover:text-red-600 transition-colors">
-                      Most devices now allowed on airplanes, cellphone calls may be added soon
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      While most consumers supported the FAA’s decision to allow passengers to use portable electronic devices such as tablets, laptop computers, e-readers and cell phones in airplane mode throughout the flight,...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Tech</span>
-                      
-                        <span class="tag">Trends,</span>
-                      
-                        <span class="tag">Internet</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">December 01, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/12/01/a-new-generation-of-malware-cryptolocker.html" class="hover:text-red-600 transition-colors">
-                      A new generation of malware: CryptoLocker
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      CryptoLocker is a nasty Trojan Horse malware which surfaced in October. It is a form of ransomware targeting computers running Microsoft Windows, locking up personal data through state-of-the-art encryption, and...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Cybersecurity,</span>
-                      
-                        <span class="tag">Data</span>
-                      
-                        <span class="tag">Security</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 31, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/10/31/evaluating-your-cloud-strategy.html" class="hover:text-red-600 transition-colors">
-                      Evaluating your cloud strategy
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      A little over a year ago, the Northeast, particularly New York City and New Jersey, was faced with the worst disaster in over a century.
+                  <a href="/2013/01/28/news-to-go-this-new-app-has-my-attention.html" class="article-card-link">
+                    <div class="article-date">January 28, 2013</div>
+                    <h3 class="article-title">
+                      News to go... This new app has my attention.
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        By Larry Velez
 
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Business</span>
-                      
-                        <span class="tag">and</span>
-                      
-                        <span class="tag">Technology,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 01, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/10/01/now-more-than-everpeople-matter-things-dont.html" class="hover:text-red-600 transition-colors">
-                      Now more than ever...People Matter, Things Don't
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Sinu was founded in 2000 on a simple premise: people matter, things don’t. In other words, technology is just one more tool to help employee productivity and support the goals...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Sinu</span>
-                      
-                        <span class="tag">Services,</span>
-                      
-                        <span class="tag">Business</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">September 02, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/09/02/so-whats-the-buzz-about-business-intelligence.html" class="hover:text-red-600 transition-colors">
-                      So what’s the buzz about Business Intelligence?
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Whether you know what business intelligence is or not, we all understand the importance of good data in our decision-making process. But where do we get the data to drive...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Sinu</span>
-                      
-                        <span class="tag">Services,</span>
-                      
-                        <span class="tag">Business</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">July 31, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/07/31/no-more-worlds-fairs-what-microsoft-learned-from-a.html" class="hover:text-red-600 transition-colors">
-                      No more World’s Fairs: What Microsoft learned from Apple
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      It is a fascinating dynamic landscape in both software and technology hardware companies right now. Because these companies are now making a lot of their money from consumers (Apple, Google,...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Internet</span>
-                      
-                        <span class="tag">of</span>
-                      
-                        <span class="tag">Things,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">July 01, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/07/01/reducing-the-randomness-of-choosing-new-business-s.html" class="hover:text-red-600 transition-colors">
-                      Reducing the randomness of choosing new Business Solutions
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      There are two topics I find myself talking about often lately. One is the emotional impact that Hurricane Sandy had on small businesses in the Northeast. The other is the...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Tech</span>
-                      
-                        <span class="tag">Trends,</span>
-                      
-                        <span class="tag">Business</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">June 06, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/06/06/the-people-cost-of-technology.html" class="hover:text-red-600 transition-colors">
-                      The People Cost of Technology
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      For decades the focus of business and technology solutions has been on the acquisition and implementation of the tool.
-
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Tech</span>
-                      
-                        <span class="tag">Trends,</span>
-                      
-                        <span class="tag">Business</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">April 29, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/04/29/understanding-the-rhythm-of-your-technology.html" class="hover:text-red-600 transition-colors">
-                      Understanding the rhythm of your technology
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      An interesting article on Smithsonian.com has pointers to a lot of compelling information about why people like music and what benefits humans have from feeling better when they hear music they recognize....
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Business</span>
-                      
-                        <span class="tag">and</span>
-                      
-                        <span class="tag">Technology</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">March 28, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/03/28/when-is-your-hardware-good-enough-creating-a-hardw.html" class="hover:text-red-600 transition-colors">
-                      When is your hardware ‘good enough’? Creating a hardware replacement plan to support productivity.
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      The consumer space gets tons of research because it tends to be a global and large business space. This article from Tech.Pinions (3/22/13) explores what happens when everyone already has a...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Tech</span>
-                      
-                        <span class="tag">Management</span>
-                      
-                        <span class="tag">Services,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">March 11, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/03/11/your-companys-online-reputation-promoting-the-posi.html" class="hover:text-red-600 transition-colors">
-                      Your Company’s Online Reputation: Promoting the Positive
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      *Sinu gets asked about online reputation sometimes.
-
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Google,</span>
-                      
-                        <span class="tag">Larry</span>
-                      
-                        <span class="tag">Velez,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">February 14, 2013</div>
-                  <h3 class="article-title">
-                    <a href="/2013/02/14/enhancing-the-customer-experience-using-mobile-pay.html" class="hover:text-red-600 transition-colors">
-                      Enhancing the customer experience using mobile payment options
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      Current mobile consumer usage trends include a growing demand for mobile payment options. Small businesses can capitalize on a number of payment apps that enhance the user experience and, ultimately,...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Internet</span>
-                      
-                        <span class="tag">of</span>
-                      
-                        <span class="tag">Things,</span>
-                      
-                    </div>
-                  
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">Internet of Things</span>
+                        
+                          <span class="tag">Tech Tips</span>
+                        
+                          <span class="tag">Business and Technology</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
             </div>
@@ -1545,82 +1094,34 @@
           <div class="year-block" id="year-2012">
             <div class="year-marker ">
               <div class="mono text-2xl font-bold">2012</div>
-              <div class="mono text-xs mt-1">3 Articles</div>
+              <div class="mono text-xs mt-1">1 Article</div>
             </div>
 
             <div class="articles-grid">
               
                 <article class="article-card">
-                  <div class="article-date">November 19, 2012</div>
-                  <h3 class="article-title">
-                    <a href="/2012/11/19/a-time-to-give-thanks-a-time-to-reflect.html" class="hover:text-red-600 transition-colors">
-                      A Time to Give Thanks, A Time to Reflect...
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      I prefer listening to news articles and found a new app called Umano – it lets me keep my eye on the road and my hands free to shift through...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Sinu</span>
-                      
-                        <span class="tag">Services</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">October 11, 2012</div>
-                  <h3 class="article-title">
-                    <a href="/2012/10/11/one-in-four-friends-will-have-a-windows-phone.html" class="hover:text-red-600 transition-colors">
-                      One in four friends will have a Windows Phone
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      In the next few weeks we are all going to experience the ‘shock and awe’ of Microsoft’s billion dollar marketing engine as it tries to convince us all that we should...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Internet</span>
-                      
-                        <span class="tag">of</span>
-                      
-                        <span class="tag">Things,</span>
-                      
-                    </div>
-                  
-                </article>
-              
-                <article class="article-card">
-                  <div class="article-date">May 26, 2012</div>
-                  <h3 class="article-title">
-                    <a href="/2012/05/26/trust-the-expert-in-you.html" class="hover:text-red-600 transition-colors">
+                  <a href="/2012/05/26/trust-the-expert-in-you.html" class="article-card-link">
+                    <div class="article-date">May 26, 2012</div>
+                    <h3 class="article-title">
                       Trust the expert in you
-                    </a>
-                  </h3>
-                  
-                    <p class="article-excerpt">
-                      I was recently rereading a very interesting article by Paul Graham on ‘What Startups are Really Like’.  Among the many great points he makes,  he summarizes how VCs disproportionally reward...
-                    </p>
-                  
-                  
-                    <div class="article-tags">
-                      
-                        <span class="tag">Business</span>
-                      
-                        <span class="tag">and</span>
-                      
-                        <span class="tag">Technology</span>
-                      
-                    </div>
-                  
+                    </h3>
+                    
+                      <p class="article-excerpt">
+                        I was recently rereading a very interesting article by Paul Graham on ‘What Startups are Really Like’.  Among the many great points he makes,  he summarizes how VCs disproportionally reward...
+                      </p>
+                    
+                    
+                      <div class="article-tags">
+                        
+                          <span class="tag">AI</span>
+                        
+                          <span class="tag">Technology</span>
+                        
+                          <span class="tag">Ethics</span>
+                        
+                      </div>
+                    
+                  </a>
                 </article>
               
             </div>

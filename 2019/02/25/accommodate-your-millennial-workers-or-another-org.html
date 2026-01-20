@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodate Your Millennial Workers – or Another Organization Will: A Conversation with Larry Velez of Sinu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    
+    
+    <link rel="alternate" type="text/markdown" href="https://larryvelez.com/2019/02/25/accommodate-your-millennial-workers-or-another-org.md" title="Markdown">
+    
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>February 25, 2019</span>
+            
+              <span>• Larry Velez</span>
+            
+          </div>
+          <a href="/writing#year-2019" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">Accommodate Your Millennial Workers – or Another Organization Will: A Conversation with Larry Velez of Sinu</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p><a href="https://successfulnonprofits.com">Successful Nonprofits</a>, a firm that provides strategic planning, board development, executive coaching and transition assistance to help nonprofits, recently spoke with Larry Velez, founder and CTO of Sinu, to help them understand and accommodate millennials in the workplace.</p>
+
+<p>Top of the list: make sure your organization’s systems and tools are mobile-ready.</p>
+
+<hr />
+
+<h2 id="listen-now">Listen Now</h2>
+
+<div class="podcast-player bg-gradient-to-br from-[#667eea] via-[#5b6ed8] to-[#764ba2] rounded-[12px] p-6 my-6 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+  <div class="flex items-center gap-4 mb-5 text-white">
+    <div class="bg-white rounded-2xl p-3">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="#764ba2" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+      </svg>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-1">Successful Nonprofits Podcast</h3>
+      <p class="text-sm text-white/80">Episode 116 • 31:34</p>
+    </div>
+  </div>
+  <audio controls="" class="w-full h-12 rounded-full bg-white/10 border border-white/25">
+    <source src="https://traffic.libsyn.com/nonprofits/ep-116-larry-velez-millennial-workers.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  <p class="mt-3 text-xs text-white/70">
+    Primary stream: Libsyn, local copy kept as a backup.
+  </p>
+</div>
+
+<h3 id="subscribe-to-successful-nonprofits">Subscribe to Successful Nonprofits</h3>
+
+<div class="podcast-links flex flex-wrap gap-3 mt-4">
+  <a href="https://podcasts.apple.com/search?term=successful+nonprofits+podcast" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
+    </svg>
+    Apple Podcasts
+  </a>
+  <a href="https://open.spotify.com/search/successful%20nonprofits%20podcast" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-[#1DB954] px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1DB954]">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+    </svg>
+    Spotify
+  </a>
+  <a href="https://nonprofits.libsyn.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-[#E8443A] px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E8443A]">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+    </svg>
+    Libsyn
+  </a>
+  <a href="https://www.stitcher.com/search?query=successful+nonprofits+podcast" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <rect x="2" y="6" width="4" height="12" rx="1" />
+      <rect x="8" y="4" width="4" height="16" rx="1" />
+      <rect x="14" y="8" width="4" height="8" rx="1" />
+      <rect x="20" y="6" width="2" height="12" rx="1" />
+    </svg>
+    Stitcher
+  </a>
+</div>
+
+<hr />
+
+<h2 id="timestamped-highlights">Timestamped Highlights</h2>
+
+<p>Click a timestamp to jump to that section:</p>
+
+<ul>
+  <li><strong>[6:58]</strong> The trend: Millennials love iPhones!</li>
+  <li><strong>[9:23]</strong> Finding balance for seamless integration of devices, data and more</li>
+  <li><strong>[12:45]</strong> Yahoo’s semi-cautionary tale</li>
+  <li><strong>[15:47]</strong> Being remote but having an office for those who need it</li>
+  <li><strong>[17:07]</strong> Trust Issues: Why the older generation fears the cloud</li>
+  <li><strong>[22:35]</strong> Accommodating millennials by increasing usability of your tools</li>
+  <li><strong>[24:40]</strong> The value of video</li>
+  <li><strong>[28:30]</strong> The gift Banksy left on Larry’s office</li>
+</ul>
+
+<hr />
+
+<h2 id="about-the-episode">About the Episode</h2>
+
+<p>In this conversation with Dolph Goldenburg, host of the Successful Nonprofits Podcast, Larry discusses how organizations can better accommodate millennial workers—or risk losing them to competitors who will.</p>
+
+<p>Key topics include mobile-first technology strategies, the shift to cloud computing, building trust in remote work environments, and an unexpected story about discovering a Banksy mural on the side of the Sinu office building.</p>
+
+<hr />
+
+<h2 id="links-mentioned">Links Mentioned</h2>
+
+<ul>
+  <li><strong>Larry’s firm:</strong> <a href="https://www.sinu.com">Sinu</a></li>
+  <li><strong>Book:</strong> <a href="https://www.amazon.com/Remote-Office-Required-Jason-Fried/dp/0804137501">Remote: Office Not Required</a> by Jason Fried</li>
+  <li><strong>Banksy Rat Mural</strong> on Canal Street, Chinatown, New York City</li>
+</ul>
+
+<hr />
+
+<p style="font-size: 14px; color: #666; margin-top: 40px;">
+  <em>This episode was originally published on February 19, 2019 on the Successful Nonprofits Podcast.</em>
+</p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">Business</span>
+          
+            <span class="category-tag">Technology</span>
+          
+            <span class="category-tag">Interview</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>

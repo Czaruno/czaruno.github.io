@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinar: New Administration, New Risks? How To Protect Your Nonprofit's Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    
+    
+    <link rel="alternate" type="text/markdown" href="https://larryvelez.com/2017/01/20/webinar-new-administration-new-risks.md" title="Markdown">
+    
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>January 20, 2017</span>
+            
+              <span>• Larry Velez</span>
+            
+          </div>
+          <a href="/writing#year-2017" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">Webinar: New Administration, New Risks? How To Protect Your Nonprofit's Data</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p>The 2016 election brought digital security and surveillance into tight focus. The webinar, “New Administration, New Risks? How To Protect Your Nonprofit’s Data,” held with <a href="http://www.idealware.org/">Idealware</a> and <a href="http://www.fissionstrategy.com">Fission Strategy</a>, encourages organizations to rethink their security. Panelists from several organizations, including Sinu co-founder and CTO, Larry Velez, Idealware board member Leon Wilson of the <a href="http://www.clevelandfoundation.org">Cleveland Foundation</a>, and Shauna Dillavou of <a href="http://www.communityred.org/">Community Red</a>, contribute to the conversation about keeping your nonprofit data safe while bringing more productivity and safety to your team and constituents.</p>
+
+<p>Larry kicked off the webinar, with a people-first approach to protecting nonprofit data. Larry emphasized that increasing an organization’s security is first and foremost about the people, not the objects or software.</p>
+
+<p>Over the past ten years, the focus has shifted from self-contained hardware housed on-site to software and the cloud. Ten years ago, the risk was limited to who had access to the hardware. Now, anyone with a laptop has the potential to access your nonprofit data.</p>
+
+<p>To help identify potential vulnerabilities in your tech solutions, Larry suggests starting with a one-page inventory of your systems that considers the following components:</p>
+<ul>
+  <li>People credentials</li>
+  <li>Access to cloud services</li>
+  <li>Business solutions (CRM, accounting, database, etc.)</li>
+  <li>Vendor relationships</li>
+  <li>Hardware</li>
+</ul>
+
+<p>Organizations should consider the following: 1) Are your solutions up-to-date and secure? 2) Have you had conversations with your vendors about the security of your systems? 3) Is your hardware fresh? 4) Do you have a hardware replacement plan? (You should plan to replace about 35% of your hardware each year, and budget accordingly.)</p>
+
+<p>When considering security risks, here are some of the top risk considerations:</p>
+<ul>
+  <li>Mobile first tools: Who has these devices and are they secure and locked with passwords?</li>
+  <li>The war for your data: Different systems will want more of your data, whether its Dropbox, Box, Microsoft 365, or Google Docs. Think about how many systems you have and what data you leave behind.</li>
+  <li>Reintegration of the cloud: These solutions will start talking to each other. What data do you want to share between these systems?</li>
+  <li>The Apple/Google fan executive: More and more people are bringing their devices in to work and want to use consumer software. Organizations will want to think ahead on how to introduce these solutions and keep them secure.</li>
+  <li>Data security and privacy should be treated as seriously at that same level of importance as legal and accounting, Larry advised. Malicious hackers are becoming more sophisticated and it’s becoming very profitable, that means the threats will become increasingly difficult to protect against. A great starting point to protect your organization is knowing where your risks are. Larry advises reviewing your technology inventory and risk summary a minimum of twice a year with your IT and management teams.</li>
+</ul>
+
+<p>Leon Wilson of the <a href="http://www.clevelandfoundation.org">Cleveland Foundation</a> mentioned several notable nonprofits who have had significant data breaches, emphasizing that hacking is not just about political organization and Internet company breaches. Leon suggests several enterprise-grade data storage solutions that offer better control and security.</p>
+
+<p>Shauna Dillavou of <a href="http://www.communityred.org">Community Red</a> outlined several vulnerabilities, such as the weakness of two factor authentication (2FA) when using SMS (text messaging), the risks of using thumb drives and a known insecure backdoor into Skype. She also talks about the risks that come with the blurred lines between our personal and professional lives, whether it’s posting on the company Facebook page or using persona devices for work.</p>
+
+<p>Watch the <a href="https://fissionstrategy.com/video-how-to-protect-your-nonprofit-data-from-increased-risks/">recording of the webinar</a> to hear more from Larry, Leon and Shauna about the steps you can start taking today to help make your organization’s nonprofit data more secure and your team more productive.</p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">Technology</span>
+          
+            <span class="category-tag">Nonprofits</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>

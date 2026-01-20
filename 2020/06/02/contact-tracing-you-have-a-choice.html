@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New iOS and Android Technology Supports Contact Tracing: You Have a Choice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    
+    
+    <link rel="alternate" type="text/markdown" href="https://larryvelez.com/2020/06/02/contact-tracing-you-have-a-choice.md" title="Markdown">
+    
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>June 02, 2020</span>
+            
+              <span>• Larry Velez</span>
+            
+          </div>
+          <a href="/writing#year-2020" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">New iOS and Android Technology Supports Contact Tracing: You Have a Choice</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p><em>By Larry Velez, Sinu CTO</em></p>
+
+<p>The new updates to Apple iOS and Google Android that allow for mobile apps to use blockchain-like technology to create infection tracing apps do not in and of themselves allow any app, company or government to start tracking you.</p>
+
+<p>Just because an iPhone has a camera, it does not mean Apple is watching you (contrary to what conspiracy theorists believe). We voluntarily track ourselves and share our info through social media and on websites – all for the social acceptance of other humans or the convenience of finding a nearby service. With the Apple-Google technology in place, you can then choose whether or not to download the public health application that notifies you if you have come into contact with a person infected with COVID-19.</p>
+
+<p>Here’s how it works. Last week, both Apple and Google released APIs (application programming interfaces) that enable interoperability between Android and iOS devices using apps developed by governments and health authorities to conduct contact tracing. These apps will be available for people to download on their devices from the respective app stores. This technology uses a Bluetooth-based system that stores data on people’s phones, not on a central database. When someone officially tests positive for Covid-19, the system can send a notification to anyone who was recently near that person telling them to contact their local health authority and get medical advice.</p>
+
+<p>According to a <a href="https://www.apple.com/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/">statement by Apple</a>, “Given the urgent need, the plan is to implement this solution in two steps while maintaining strong protections around user privacy.”</p>
+
+<p>Over the next few months, the two companies will build the Bluetooth-based contact tracing platform directly into their devices, rather than using APIs.</p>
+
+<p>“This is a more robust solution than an API and would allow more individuals to participate, if they choose to opt in, as well as enable interaction with a broader ecosystem of apps and government health authorities,” explains Apple.</p>
+
+<p>This new technology has drawn much interest and controversy. While 23 countries and several U.S. states have expressed interest in utilizing the Apple-Google technology to help control the spread of the virus, debate about data privacy abound around this technology. What’s unusual is that you hear two sides of the argument: some say it collects too much personal data while <a href="https://www.washingtonpost.com/technology/2020/05/15/app-apple-google-virus/">others say it’s too restrictive to be effective</a>. But it’s important to distinguish between the Apple-Google technology and the applications that will run on it.</p>
+
+<p>Several states and countries have started developing their own virus-tracking apps, typically collecting more information on individuals than Apple-Google will allow. Some use GPS tracking to help detect virus hot spots. In other instances, user identification numbers have been assigned to a device. There are also concerns around centralized versus decentralized data collection and storage.</p>
+
+<p>According to <a href="https://www.cnbc.com/2020/05/20/three-states-commit-to-apple-google-technology-for-virus-tracking-apps.html">CNBC</a>, “The companies won’t allow apps built with their technology to use GPS data, which can pinpoint a user’s location, and won’t allow governments to turn them on silently, company representatives said. The companies also say they will restrict governmental authorities to collecting the minimum amount of data necessary, and nobody will be able to use the data for advertising or other uses.”</p>
+
+<p>Even with the data collection restrictions, governments and health authorities are looking to the Apple-Google system to run their apps because both iOS and Android restrict the use of Bluetooth in the background; developers have also encountered battery life and usability issues which are addressed with the new Apple-Google solution.</p>
+
+<p>While the <a href="https://developer.apple.com/contact/request/download/Exposure_Notification_Addendum.pdf">rules for apps</a> using the Apple and Google API are designed to protect privacy, concerns remain about the apps and if they comply.</p>
+
+<p>“Health authorities are moving fast to build coronavirus apps, often with limited technical resources. They’re relying on commercial tracking companies and murky privacy protections — and under those conditions, it’s not clear we should trust them, reports <a href="https://www.washingtonpost.com/people/geoffrey-a-fowler/">Geoffrey Fowler</a> in <a href="https://www.washingtonpost.com/technology/2020/05/21/care19-dakota-privacy-coronavirus/">The Washington Post</a>.</p>
+
+<p>Fowler explains, “Third-party software makes it easier for app companies to code quickly. But it also often feeds the personal data economy, used to target us for marketing and political messaging.”</p>
+
+<p>But that is true of any third-party app. You accept that risk for convenience, online engagement, or, in this case, personal safety.</p>
+
+<p>The upside is that public health authorities have a real incentive to secure these apps and develop public trust. The more people that adopt the technology then the more data public officials have to help detect the virus and understand how it spreads.</p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">COVID-19</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>

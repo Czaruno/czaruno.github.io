@@ -185,7 +185,7 @@ featured_articles:
             02 — Writings
           </div>
           <h2 class="text-5xl font-bold leading-tight mb-8">
-            20 Years of<br/>
+            Years of<br/>
             Tech Foresight
           </h2>
           <div class="w-16 h-1 bg-red-600 mb-8"></div>

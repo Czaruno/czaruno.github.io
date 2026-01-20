@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Tax and Tesla, the Native Invasive Species</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    
+    
+    <link rel="alternate" type="text/markdown" href="https://larryvelez.com/2019/06/28/chicken-tax-and-tesla.md" title="Markdown">
+    
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>June 28, 2019</span>
+            
+              <span>• Larry Velez</span>
+            
+          </div>
+          <a href="/writing#year-2019" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">Chicken Tax and Tesla, the Native Invasive Species</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p><em>By Larry Velez, CTO, Sinu</em></p>
+
+<p>With increased tariffs – real and threatened – by the current administration, there’s more mention in the media of a five-decade-old tariff called the Chicken Tax. However, something I’m not hearing much about is that the Chicken Tax is what will likely provide a significant competitive advantage to Tesla in the very near future.</p>
+
+<p>What is the Chicken Tax? Simply put, it’s a law from 1963 that imposes a 25 percent U.S. duty on imported potato starch, dextrin, brandy and light-duty pickup trucks and work vans produced outside North America. <a href="https://www.washingtonpost.com">The Washington Post</a> explains that the fee is “10 times the 2.5 percent duty on imported passenger vans. The tax is a relic of a mostly forgotten trade war from the early 1960s, when Europe tried to stop a flood of imported U.S. chicken and, in retaliation, President Lyndon B. Johnson imposed the big tariff aimed at European automakers such as Volkswagen.”</p>
+
+<p>Arguably, these long-standing tariffs helped prop up domestic light-duty manufacturers, such as Ford and Dodge, which have been selling trucks and SUVs to Americans that are technically inferior to their European counterparts without much competition or incentive to innovate.</p>
+
+<p>Just one example is the Toyota Hilux. This truck (not sold in the U.S.) is so good that it is the <a href="https://qz.com/519171/how-did-the-toyota-pickup-become-terrorists-favorite-truck/">choice of many terrorist groups</a> for its ability to be almost indestructible with its reliability. Beyond terrorists, the Hilux is a favorite of car lovers reports Jared Ronsenholtz in <a href="https://carbuzz.com/news/5-amazing-trucks-the-us-can-t-have-because-of-the-chicken-tax">Carbuzz</a>: The Hilux “launched into the hearts of enthusiasts thanks to three appearance on BBC’s Top Gear. The Hilux was used by Jeremy Clarkson and James May as the first car to ever reach the magnetic North Pole. James May then took one of the camera cars from that polar voyage right up to an erupting volcano. If those stunts didn’t prove the reliability of the Hilux, then dropping it from the top of a building and having it still start up definitely did. The Hilux may not be that different from the US market Tacoma, but there are some subtle differences that make Americans pine for this forbidden fruit.”</p>
+
+<p>So while many lament that we cannot buy superior European-made trucks and vans here in the U.S., there is hope that we too can have great trucks, because soon there will be a new pickup truck from an American company which has no choice but to innovate to survive – Tesla.</p>
+
+<p>At <a href="https://www.autoblog.com/tesla/">Tesla’s</a> latest shareholder’s meeting, which took place on June 11 in Palo Alto, California, the company’s CEO Elon Musk said he aims to price the pickup, which he calls the “Cyberpunk Truck,” under $50,000. He also said that he hopes to unveil it in late Summer 2019.</p>
+
+<p>“‘It’s going to look pretty sci-fi,’ Musk said. ‘That means it’s not going to be for everyone. It’s going to be a truck that’s more capable than other trucks. The goal is to be a better truck than an F-150 in terms of trucklike functionality and be a better sports car than a standard 911,’” reports <a href="https://www.autonews.com/future-product/musk-tesla-pickup-start-under-50000-be-better-truck-ford-f-150">Automotive News.</a></p>
+
+<p>As an American company, Tesla will not be subject to the Chicken Tax. The other American truck companies will be caught so flat-footed when they have to go head-to-head against Tesla in the light-duty truck market that it will be like the <a href="https://en.wikipedia.org/wiki/Burmese_pythons_in_Florida">pythons in Florida.</a> This invasive species of constrictor snake, originally from Southeast Asia, has overpowered the indigenous animals which had never evolved to face this strong a predator and has impacted the entire ecosystem of Florida. The population of pythons in Florida are reported <a href="https://en.m.wikipedia.org/wiki/Burmese_pythons_in_Florida">as high as 300,000</a>, and the cost of the destruction caused by the pythons is <a href="https://www.csus.edu/envs/documents/theses/spring%202015/851.2015.spring.pdf">estimated at $83,892 per snake per year.</a></p>
+
+<p>Similarly, I think the introduction of a pickup truck by Tesla will be a bloodbath for Ford and other American car companies and they won’t know how to defend against this. They will be trapped in ‘<a href="https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma">The Innovator’s Dilemma</a>’ because of an unintended consequence of the Chicken Tax. As our current administration imposes tariffs across the world, it will be interesting to see how these ripples play out decades from now and what other unintended consequences will result.</p>
+
+<p><em>Note: Special thanks to the car enthusiast podcast <a href="https://overcrestproductions.com">Overcrest</a> and their episode <a href="https://overcrestproductions.com/episodes/2019/4/12/nobody-calls-me-chicken">Nobody calls me chicken!!!!</a> which helped inspire this article.</em></p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">Tech Trends</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>

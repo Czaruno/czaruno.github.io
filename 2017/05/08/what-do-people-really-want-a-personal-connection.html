@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What do people really want? A personal connection.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    
+    
+    <link rel="alternate" type="text/markdown" href="https://larryvelez.com/2017/05/08/what-do-people-really-want-a-personal-connection.md" title="Markdown">
+    
+</head>
+<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  /* Inherit fonts from homepage */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --accent: #DC2626;
+  }
+
+  .article-page {
+    font-family: var(--font-display);
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .article-container {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5rem;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Article Header */
+  .article-header {
+    position: relative;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .article-meta-info span {
+    margin-right: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .article-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #1a1a1a;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    background: var(--accent);
+    color: white;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+  }
+
+  .article-content code {
+    font-family: var(--font-mono);
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+
+  .article-content pre {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  /* Remove duplicate italic content that appears at start */
+  .article-content > p:first-child em:only-child,
+  .article-content > p:first-child > em:first-child:last-child {
+    display: none;
+  }
+
+  /* Categories */
+  .article-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: white;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    transition: all 0.2s ease;
+  }
+
+  .category-tag:hover {
+    background: var(--accent);
+  }
+
+  /* Article Navigation */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: #000;
+    color: white;
+  }
+
+  .back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<article class="article-page">
+  <div class="article-container">
+
+      <!-- Header -->
+      <header class="article-header">
+        <div class="article-meta">
+          <div class="article-meta-info">
+            <span>May 08, 2017</span>
+            
+              <span>• Larry Velez</span>
+            
+          </div>
+          <a href="/writing#year-2017" class="back-link">
+            Back to Writing Archive
+          </a>
+        </div>
+
+        <h1 class="article-title">What do people really want? A personal connection.</h1>
+
+        <div class="article-divider"></div>
+      </header>
+
+      <!-- Content -->
+      <div class="article-content">
+        <p><em>By Larry Velez, co-founder and CTO</em></p>
+
+<p>In the book, <a href="http://www.penguinrandomhouse.com/books/212681/social-by-matthew-d-lieberman/">Social</a>, scientist Matthew Lieberman makes the case that our need to connect is as fundamental as our need for food and water. People really want to connect and communicate with others, and I would suggest that this extends to how we connect with businesses and nonprofits. Is there a real person we can communicate with if we have questions or need assistance? Is that a satisfying experience? And, are the organizations that understand the basic human need to communicate and provide human interaction more successful?</p>
+
+<p>These questions came to me one evening while I spent time wrenching on an old car and binge listening to a podcast by Brian McCullough that has really captured my attention called the <a href="http://www.internethistorypodcast.com/2014/04/chapter-3-part-2-the-rise-of-aol/#tabpanel5">Internet History Podcast.</a> One of the episodes had a guest which mentioned something that really struck me. He explained that the reason AOL survived in the early 90s and its competitors (Compuserve and Prodigy) failed was partly because AOL encouraged its users to talk to each other. On the other hand, its competitors were owned by large companies (like H&amp;R Block) whose legal departments were petrified by what was being discussed in chat rooms. Because of this fear, they tried to stop or significantly restrict chat.</p>
+
+<p>So how important is it for people to form personal connections and communicate with other people? According to <a href="https://www.psychologytoday.com/blog/ulterior-motives/201407/why-other-people-are-the-key-our-happiness">Psychology Today</a>, “The interactions we have with other people affect the way we feel about life. Our close relationships keep us grounded and influence both happiness and the sense that we are part of a larger community. Interestingly, even our interactions with people we do not know that well give us a sense that we are part of that larger community. When we are first introduced to that community, those interactions and that feeling of belonging also increase our happiness.”</p>
+
+<p>I then wondered whether companies who have fostered personal connections have historically been more successful than those who don’t. This theory might explain Facebook’s rapid adoption and growth, and why collaborative tools like Trello are winning while Microsoft Project is being abandoned.</p>
+
+<p>Let’s look at Zappos, for example. In my recent article, <a href="http://www.sinu.com/blog/2017/3/2/high-touch-over-high-tech-what-people-want-from-customer-service-today-by-larry-velez-co-founder-and-cto">High Touch Over High Tech, What People Want From Customer Service Today</a>, I use the success of Zappos as an example of a company that excels at customer service. But, with this new theory in mind, the real thread now seems to be their focus on making a personal connection with their customers. According to Tony Hsieh, the CEO of Zappos.com, “…we’ve found that on average, our customers telephone us at least once at some point, and if we handle the call well, we have an opportunity to create an emotional impact and a lasting memory.”</p>
+
+<p>In other words, it is Zappos’ focus on having a well-trained person to communicate with their customers which leads to the lasting impression that they provide good customer service – that that feeling of a personal connection which also increases happiness.</p>
+
+<p>Companies that extend this culture of communication and connection to their employees, attract better talent. According to the <a href="https://hbr.org/2017/01/kick-ass-customer-service">Harvard Business Review</a> the best employees “want to be part of organizations that are serious about continual improvement and willing to give reps a voice in that process.”</p>
+
+<p>Workplace communications and personal connections can also increase productivity and creativity. According to a findings from <a href="http://news.mit.edu/2014/behavioral-analytics-moneyball-for-business-1114">Sociometric Solutions</a>’ study on employee behavioral analytics, “the number of lunchtime interactions affect employee productivity. Employees who sat at larger lunch tables were 36 percent more productive throughout the week and had 30 percent lower stress levels than those who sat at smaller tables.”</p>
+
+<p>These studies have important real-world implications for organizations. While there is a trend to adopt self-directed technology and work remotely, this is exactly the opposite of what people really want and need. It turns out people are hard wired with a need to communicate and connect, without which we can feel sad and unsatisfied. A company that can deliver personal communications and connect with their customers and employees will have a significant competitive edge.</p>
+
+      </div>
+
+      <!-- Categories -->
+      
+        <div class="article-categories">
+          
+            <span class="category-tag">Business and Technology</span>
+          
+        </div>
+      
+
+  </div>
+</article>
+
+
+</body>
+</html>

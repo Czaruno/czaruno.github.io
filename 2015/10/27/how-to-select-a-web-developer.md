@@ -1,6 +1,4 @@
 ---
-layout: post
-published: true
 title: "How to select a web developer"
 date: 2015-10-27
 author: Sinu

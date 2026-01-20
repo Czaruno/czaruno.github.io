@@ -74,7 +74,7 @@ Gray-900:   Dark sections
 ```
 ┌─────────────────────────────────────┐
 │ HEADER                              │
-│ - Title: "20 Years of Tech Foresight" │
+│ - Title: "Years of Tech Foresight" │
 │ - Intro: Brief philosophy           │
 │ - Stats: 555 articles, 2012-2023    │
 └─────────────────────────────────────┘

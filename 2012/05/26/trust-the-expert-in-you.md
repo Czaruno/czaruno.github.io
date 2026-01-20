@@ -1,15 +1,11 @@
 ---
 layout: post
-published: true
 title: "Trust the expert in you"
 date: 2012-05-26
-author: Sinu
-categories: Business and Technology
-link: /blog/2012/5/26/trust-the-expert-in-you.html
----
-
-*I was recently rereading a very interesting article by Paul Graham on 'What Startups are Really Like'.  Among the many great points he makes,  he summarizes how VCs disproportionally reward startup founders that present confidently over the objective measures of the value of the idea or company.    He hypothesizes that this is because they themselves had to show lots of confidence and make a strong impression that they knew exactly what they were talking about in order to raise their own money from their Limited Partners or Asset Managers.*
-
+author: Larry Velez
+categories: ['AI', 'Technology', 'Ethics']
+originally_published: Sinu.com
+recovered_from: SquareSpace Export (2023-07-16)
 ---
 
 I was recently rereading a very interesting article by Paul Graham on 'What Startups are Really Like'.  Among the many great points he makes,  he summarizes how VCs disproportionally reward startup founders that present confidently over the objective measures of the value of the idea or company.    He hypothesizes that this is because they themselves had to show lots of confidence and make a strong impression that they knew exactly what they were talking about in order to raise their own money from their Limited Partners or Asset Managers.
@@ -26,7 +22,7 @@ This got me thinking about our role as an IT advisor to our customers.   Our c
 
 We encourage our customers to include us in an open dialogue about their IT and Business challenges and welcome the opportunity to help them with as many as we can.
 
-But what happens when you don't understand your expert?  
+But what happens when you don't understand your expert?
 
 "You see, being ready to take experts on is about also being willing to dig behind their graphs, their equations, their forecasts, their prophecies, and being armed with the questions to do that -- questions like: What are the assumptions that underpin this? What is the evidence upon which this is based? What has your investigation focused on? And what has it ignored?"
 
