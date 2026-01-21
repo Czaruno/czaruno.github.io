@@ -53,24 +53,24 @@ featured_articles:
   }
   .hero-name-table td {
     text-align: center;
-    padding: 0 0.1em; /* Minimal horizontal padding */
+    padding: 0 0.05em; /* Tighter horizontal padding */
     width: 20%; /* 5 columns = 20% each */
   }
 </style>
 
 <!-- Hero: Precision Brutalism -->
-<section class="relative min-h-screen bg-black text-white overflow-hidden">
+<section id="home" class="relative bg-black text-white overflow-hidden">
   <!-- Geometric Accent -->
   <div class="accent-block w-64 h-64 top-20 right-0 opacity-10"></div>
   
-  <div class="container mx-auto px-8 py-12 relative z-10">
+  <div class="container mx-auto px-8 py-6 md:py-8 relative z-10">
     <!-- Name/Title Block -->
     <div class="max-w-5xl">
       <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-6">
         Technology Entrepreneur • Motoring Enthusiast
       </div>
 
-      <h1 class="text-5xl md:text-7xl font-bold leading-none mb-6">
+      <h1 class="text-5xl md:text-7xl font-bold leading-none mb-4">
         <table class="hero-name-table">
           <tr>
             <td>L</td>
@@ -89,34 +89,29 @@ featured_articles:
         </table>
       </h1>
       
-      <div class="w-24 h-1 bg-red-600 mb-8"></div>
+      <div class="w-24 h-1 bg-red-600 mb-6"></div>
 
-      <p class="text-lg md:text-xl font-light max-w-3xl leading-relaxed text-gray-300">
-        Building <a href="https://kogi.ai" target="_blank" class="font-bold text-white hover:text-red-600 transition-colors">Kogi AI</a> — Using advanced AI to transform mechanical documentation.
-        Previously part of multiple zero to one venture funded startups from payments to streaming video. Also founded Sinu, one of the first IT Managed Service Providers with a SaaS model. Sinu was acquired by Electric.ai, the leader in AI Helpdesk Agentic solutions.
+      <p class="text-lg md:text-xl font-light max-w-3xl leading-relaxed text-gray-300 mb-6">
+        People matter. Objects don't. I founded <a href="https://kogi.ai" target="_blank" class="font-bold text-white hover:text-red-600 transition-colors">Kogi AI</a> to turn mechanical knowledge into clear, usable guidance.
+        I have built teams across payments, streaming video, and IT services, and I founded Sinu, which was acquired by Electric.ai.
       </p>
 
-      <div class="flex gap-6 mt-12">
-        <a href="https://kogi.ai" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 hover:text-white transition-colors">
-          Explore Kogi →
+      <div class="flex gap-6 mt-8">
+        <a href="/working-on" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs tracking-wider hover:bg-red-600 hover:text-white transition-colors">
+          What I'm Working On →
         </a>
-        <a href="#writing" class="border-2 border-white px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-black transition-colors">
+        <a href="#writing" class="border-2 border-white px-6 py-3 font-bold uppercase text-xs tracking-wider hover:bg-white hover:text-black transition-colors">
           Read My Writing
         </a>
       </div>
     </div>
   </div>
   
-  <!-- Bottom anchor -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-    <div class="mono text-xs uppercase tracking-widest text-gray-600 animate-pulse">
-      Scroll ↓
-    </div>
-  </div>
+  <!-- Bottom anchor removed to reduce fold height -->
 </section>
 
 <!-- Current Work: Kogi AI -->
-<section class="bg-white text-black py-32">
+<section id="current-work" class="bg-white text-black py-20">
   <div class="container mx-auto px-8">
     <div class="max-w-7xl mx-auto">
       <!-- Section Header -->
@@ -166,10 +161,16 @@ featured_articles:
       </div>
       
       <div class="mt-12">
-        <a href="https://kogi.ai" target="_blank" class="inline-flex items-center gap-3 text-lg font-bold group">
-          <span>Visit Kogi.ai</span>
-          <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
-        </a>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="https://kogi.ai" target="_blank" class="inline-flex items-center gap-3 text-lg font-bold group">
+            <span>Visit Kogi.ai</span>
+            <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
+          </a>
+          <a href="/working-on" class="inline-flex items-center gap-3 text-lg font-bold group">
+            <span>More projects</span>
+            <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -229,7 +230,7 @@ featured_articles:
 </section>
 
 <!-- Functional Excellence Teaser -->
-<section class="bg-white text-black py-32">
+<section id="functional-excellence" class="bg-white text-black py-32">
   <div class="container mx-auto px-8">
     <div class="max-w-7xl mx-auto">
       <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">
@@ -284,40 +285,6 @@ featured_articles:
   </div>
 </section>
 
-<!-- Press Kit Teaser -->
-<section class="bg-black text-white py-32">
-  <div class="container mx-auto px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-4">
-            04 — Press Kit
-          </div>
-          <h2 class="text-5xl font-bold leading-tight mb-8">
-            Media Resources
-          </h2>
-          <p class="text-xl text-gray-300 mb-12">
-            Bios, headshots, achievements, and press materials for media inquiries and speaking engagements.
-          </p>
-          <a href="/press" class="bg-white text-black px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 hover:text-white transition-colors inline-block">
-            Access Press Kit →
-          </a>
-        </div>
-        
-        <div class="flex gap-4">
-          <div class="mono text-xs uppercase tracking-widest text-gray-600 space-y-4">
-            <div>• Biographies (25/100/250 words)</div>
-            <div>• High-resolution headshots</div>
-            <div>• Speaking topics</div>
-            <div>• Awards & recognition</div>
-            <div>• Contact information</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Footer -->
 <footer class="bg-black text-white border-t border-gray-800 py-16">
   <div class="container mx-auto px-8">
@@ -342,20 +309,20 @@ featured_articles:
         <div>
           <div class="mono text-xs uppercase tracking-widest text-gray-600 mb-4">Navigate</div>
           <div class="space-y-2">
+            <div><a href="/working-on" class="hover:text-red-600 transition-colors">What I'm Working On</a></div>
             <div><a href="/writing" class="hover:text-red-600 transition-colors">Writing Archive</a></div>
             <div><a href="/work" class="hover:text-red-600 transition-colors">Work History</a></div>
             <div><a href="/functional-excellence" class="hover:text-red-600 transition-colors">Functional Excellence</a></div>
-            <div><a href="/press" class="hover:text-red-600 transition-colors">Press Kit</a></div>
           </div>
         </div>
       </div>
       
       <div class="border-t border-gray-800 mt-12 pt-8 flex justify-between items-center">
         <div class="mono text-xs text-gray-600">
-          © 2025 Larry Velez.
+          © 2025 Larry Velez
         </div>
         <div class="mono text-xs text-gray-600">
-          Designed with precision
+          Precision is the Goal
         </div>
       </div>
     </div>

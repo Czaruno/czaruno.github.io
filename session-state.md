@@ -1,6 +1,6 @@
 # LarryVelez.com Site Update - Session State
-**Last Updated:** 2026-01-20 12:30 PM EST
-**Latest Session:** 2026-01-20-task-1-complete
+**Last Updated:** 2026-01-20 16:55 PM EST
+**Latest Session:** 2026-01-20-task-2-workspace-fix
 
 ## Current Objective
 Transform larryvelez.com to contain ONLY Larry's 28 personal articles by adding recovered content and removing company blog posts. Canonical source: `docs/article-catalog.md`.
@@ -61,6 +61,12 @@ Total `_posts` files: 42
 - Podcast audio file (25.3 MB) is available in vault at `/InterAI/Projects/larryvelez-website/files/media/ep-116-larry-velez-millennial-workers.mp3`
 - README created in project folder with workflow docs
 - Agent communication via `/InterAI/Projects/larryvelez-website/docs/agent-messages.md`
-
+- Added `/Users/larryvelez/Coding/CodeEnvironment/wezterm/larryvelez-workspace.sh`, a shared WezTerm helper that detects the coding agent, renames the tab to `<coding agent> - LarryVelez.com`, splits the active pane so the right 16% runs `bundle exec jekyll serve --livereload`, splits that column to also run `npx decap-server` in the lower pane, and only cleans up leftover panes whose cwd matches this project/tab.
+- Replaced the project-level `scripts/setup-terminal-layout.sh` with a thin wrapper that exports `PROJECT_DIR`, `CMD`, and `TAB_SUFFIX` before delegating to the shared CodeEnvironment helper; tmux support still exists for non-WezTerm terminals.
+- Workspace fix: WezTerm helper now targets `WEZTERM_PANE` and refuses to guess; it cleans only panes in the same tab with cwd in the project directory.
+- Workspace fix: corrected `wezterm cli set-tab-title` usage so the tab shows `Codex - LarryVelez.com` instead of `node`.
+- Workspace update: right column width set to 20% and split evenly top/bottom.
+- Workspace update: Decap server now starts with `PORT=8082` to avoid the Expo 8081 conflict; verified listening on 8082.
+- Workspace testing: layout runs in tab 12 (pane 114) and recreates panes for Jekyll + Decap while removing older panes in the same tab.
 ## Blockers
-None - ready to continue adding remaining articles.
+Decap server backend not starting yet; investigating.

@@ -25,7 +25,40 @@
     <link rel="alternate" type="text/markdown" href="https://larryvelez.com/work.md" title="Markdown">
     
 </head>
-<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+<body class="bg-white pb-24 md:pb-0 md:pl-56"> <!-- Default background, can be overridden by page content -->
+
+    <div class="fixed left-0 top-0 h-full w-56 bg-gray-900 hidden md:block z-40" aria-hidden="true"></div>
+    <nav class="fixed left-4 top-12 z-50 hidden md:block" aria-label="Site">
+        <div class="bg-teal-100/95 text-gray-900 backdrop-blur border border-black shadow-[6px_6px_0_rgba(0,0,0,0.2)] px-4 py-5 w-48 max-h-[80vh] overflow-y-auto">
+            <div class="text-xs uppercase tracking-widest text-gray-600 mb-3">Navigate</div>
+            <div class="space-y-2 text-sm">
+                <a href="/#home" class="block font-semibold hover:text-red-600 transition-colors">Home</a>
+                <a href="/#current-work" class="block hover:text-red-600 transition-colors">Current Focus</a>
+                <a href="/#writing" class="block hover:text-red-600 transition-colors">Writing Highlights</a>
+                <a href="/#functional-excellence" class="block hover:text-red-600 transition-colors">Functional Excellence</a>
+                <div class="border-t border-gray-300 my-2"></div>
+                <a href="/working-on" class="block hover:text-red-600 transition-colors">What I'm Working On</a>
+                <a href="/writing" class="block hover:text-red-600 transition-colors">Writing Archive</a>
+                <a href="/work" class="block hover:text-red-600 transition-colors">Work History</a>
+                <a href="/press" class="block hover:text-red-600 transition-colors">Press Kit</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden" aria-label="Site">
+        <div class="bg-teal-100/95 text-gray-900 backdrop-blur border border-black shadow-[4px_4px_0_rgba(0,0,0,0.2)] px-4 py-3 w-[calc(100vw-2.5rem)] max-w-[28rem]">
+            <div class="flex gap-4 text-xs uppercase tracking-widest text-gray-700 overflow-x-auto whitespace-nowrap">
+                <a href="/#home" class="font-semibold hover:text-red-600 transition-colors">Home</a>
+                <a href="/#current-work" class="hover:text-red-600 transition-colors">Focus</a>
+                <a href="/#writing" class="hover:text-red-600 transition-colors">Writing</a>
+                <a href="/#functional-excellence" class="hover:text-red-600 transition-colors">Functional Excellence</a>
+                <a href="/working-on" class="hover:text-red-600 transition-colors">Working On</a>
+                <a href="/writing" class="hover:text-red-600 transition-colors">Archive</a>
+                <a href="/work" class="hover:text-red-600 transition-colors">Work</a>
+                <a href="/press" class="hover:text-red-600 transition-colors">Press Kit</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Removed fixed header and footer to allow page content to control full layout -->
     <style>
@@ -36,6 +69,10 @@
     --font-display: 'Space Grotesk', -apple-system, sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
     --accent: #DC2626;
+  }
+
+  body {
+    font-family: var(--font-display);
   }
 
   /* Smooth Scroll Behavior */
@@ -224,7 +261,7 @@
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
             <div class="timeline-marker"></div>
             <div class="font-mono text-sm text-red-600 mb-2 font-bold tracking-wider">
-              2023 — Present
+              Present
             </div>
             <h2 class="text-5xl font-bold leading-tight mb-4">
               AI Consulting
@@ -309,7 +346,7 @@
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
             <div class="timeline-marker"></div>
             <div class="font-mono text-sm text-red-600 mb-2 font-bold tracking-wider">
-              2023 — Present
+              2023
             </div>
             <h2 class="text-5xl font-bold leading-tight mb-4">
               Kogi AI
@@ -358,7 +395,7 @@
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
             <div class="timeline-marker"></div>
             <div class="font-mono text-sm text-red-600 mb-2 font-bold tracking-wider">
-              2004 — 2020
+              2004
             </div>
             <h2 class="text-5xl font-bold leading-tight mb-4">
               Sinu
@@ -448,7 +485,7 @@
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
             <div class="timeline-marker"></div>
             <div class="font-mono text-sm text-red-600 mb-2 font-bold tracking-wider">
-              2000 — 2003
+              2001
             </div>
             <h2 class="text-5xl font-bold leading-tight mb-4">
               Alltrue
@@ -499,7 +536,7 @@
           <div class="timeline-section pl-8 border-l-2 border-gray-200">
             <div class="timeline-marker"></div>
             <div class="font-mono text-sm text-red-600 mb-2 font-bold tracking-wider">
-              1998 — 2000
+              1999
             </div>
             <h2 class="text-5xl font-bold leading-tight mb-4">
               Pseudo
@@ -525,15 +562,22 @@
             
             <div class="media-item aspect-video group">
               
-              <iframe src="https://www.youtube.com/embed/_XSTwfdFwIY" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen class="w-full h-full"></iframe>
+              <a href="https://www.youtube.com/watch?v=_XSTwfdFwIY" target="_blank"
+                class="block w-full h-full bg-gray-900 flex items-center justify-center group-hover:bg-red-600 transition-colors relative overflow-hidden">
+                <!-- Optional background image for link -->
+                
+                <img src="/assets/images/work/pseudo-youtube-thumb.jpg"
+                  class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity"
+                  alt="">
+                
+                <div class="relative z-10 text-center p-4">
+                  <span class="text-white font-bold text-xl block mb-2">Pseudo Programs (Watch on YouTube)</span>
+                  <span class="text-white text-sm uppercase tracking-widest border-b border-white pb-1">Visit Link
+                    &rarr;</span>
+                </div>
+              </a>
               
 
-              
-              <div class="media-caption">
-                Pseudo Programs
-              </div>
               
             </div>
             
@@ -546,17 +590,6 @@
 
     </div>
   </main>
-
-  <!-- Footer CTA -->
-  <section class="bg-gray-100 py-24">
-    <div class="container mx-auto px-8 text-center">
-      <h2 class="text-4xl font-bold mb-8">Ready for what's next?</h2>
-      <a href="/"
-        class="inline-block bg-black text-white px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 transition-colors">
-        Back to Home
-      </a>
-    </div>
-  </section>
 
 </div>
 
@@ -601,6 +634,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>

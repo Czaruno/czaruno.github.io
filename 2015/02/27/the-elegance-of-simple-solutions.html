@@ -25,7 +25,40 @@
     <link rel="alternate" type="text/markdown" href="https://larryvelez.com/2015/02/27/the-elegance-of-simple-solutions.md" title="Markdown">
     
 </head>
-<body class="bg-white"> <!-- Default background, can be overridden by page content -->
+<body class="bg-white pb-24 md:pb-0 md:pl-56"> <!-- Default background, can be overridden by page content -->
+
+    <div class="fixed left-0 top-0 h-full w-56 bg-gray-900 hidden md:block z-40" aria-hidden="true"></div>
+    <nav class="fixed left-4 top-12 z-50 hidden md:block" aria-label="Site">
+        <div class="bg-teal-100/95 text-gray-900 backdrop-blur border border-black shadow-[6px_6px_0_rgba(0,0,0,0.2)] px-4 py-5 w-48 max-h-[80vh] overflow-y-auto">
+            <div class="text-xs uppercase tracking-widest text-gray-600 mb-3">Navigate</div>
+            <div class="space-y-2 text-sm">
+                <a href="/#home" class="block font-semibold hover:text-red-600 transition-colors">Home</a>
+                <a href="/#current-work" class="block hover:text-red-600 transition-colors">Current Focus</a>
+                <a href="/#writing" class="block hover:text-red-600 transition-colors">Writing Highlights</a>
+                <a href="/#functional-excellence" class="block hover:text-red-600 transition-colors">Functional Excellence</a>
+                <div class="border-t border-gray-300 my-2"></div>
+                <a href="/working-on" class="block hover:text-red-600 transition-colors">What I'm Working On</a>
+                <a href="/writing" class="block hover:text-red-600 transition-colors">Writing Archive</a>
+                <a href="/work" class="block hover:text-red-600 transition-colors">Work History</a>
+                <a href="/press" class="block hover:text-red-600 transition-colors">Press Kit</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden" aria-label="Site">
+        <div class="bg-teal-100/95 text-gray-900 backdrop-blur border border-black shadow-[4px_4px_0_rgba(0,0,0,0.2)] px-4 py-3 w-[calc(100vw-2.5rem)] max-w-[28rem]">
+            <div class="flex gap-4 text-xs uppercase tracking-widest text-gray-700 overflow-x-auto whitespace-nowrap">
+                <a href="/#home" class="font-semibold hover:text-red-600 transition-colors">Home</a>
+                <a href="/#current-work" class="hover:text-red-600 transition-colors">Focus</a>
+                <a href="/#writing" class="hover:text-red-600 transition-colors">Writing</a>
+                <a href="/#functional-excellence" class="hover:text-red-600 transition-colors">Functional Excellence</a>
+                <a href="/working-on" class="hover:text-red-600 transition-colors">Working On</a>
+                <a href="/writing" class="hover:text-red-600 transition-colors">Archive</a>
+                <a href="/work" class="hover:text-red-600 transition-colors">Work</a>
+                <a href="/press" class="hover:text-red-600 transition-colors">Press Kit</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Removed fixed header and footer to allow page content to control full layout -->
     <style>
