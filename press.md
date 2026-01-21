@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Press Kit"
 permalink: /press/
 description: "Media resources and press materials"
