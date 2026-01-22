@@ -107,9 +107,9 @@ description: "Media resources and press materials"
 
             Larry's career spans over two decades of building and scaling technology companies. He founded Sinu, one of the first IT Managed Service Providers with a SaaS model, which was acquired by Electric.ai, the leader in AI Helpdesk Agentic solutions. He has been part of multiple zero-to-one venture-funded startups across sectors including payments, streaming video, and enterprise software.
 
-            His writing on technology, AI ethics, and indigenous peoples' recognition has appeared in various publications, often addressing emerging trends years before mainstream adoption. Larry is deeply influenced by precision engineering, Colombian culture, and design philosophy.
+            His writing on technology, AI ethics, and indigenous peoples' recognition has appeared in various publications, often addressing emerging trends years before mainstream adoption. Larry is deeply influenced by precision engineering and design philosophy.
 
-            Beyond technology, Larry is an avid motoring enthusiast with interests in garage design, modern prefab architecture, and automotive restoration. He believes in functional excellence — the idea that the best design serves both purpose and beauty.
+            Beyond technology, Larry is an avid motoring enthusiast with interests in garage design, modern prefab architecture, and automotive restoration. He believes in functional excellence — when something has the same level of quality from every angle you experience it.
           </p>
         </div>
       </div>

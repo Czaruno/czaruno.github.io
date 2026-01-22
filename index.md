@@ -56,6 +56,115 @@ featured_articles:
     padding: 0 0.05em; /* Tighter horizontal padding */
     width: 20%; /* 5 columns = 20% each */
   }
+
+  .focus-card {
+    border: 2px solid #000;
+    background: #fff;
+    padding: 2rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .focus-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .focus-card.entronic {
+    background: #1a1a1a;
+    border-color: #38b1ba;
+    color: #ffffff;
+  }
+
+  .focus-card.entronic:hover {
+    border-color: #38b1ba;
+    box-shadow: 10px 10px 0 rgba(56, 177, 186, 0.2);
+  }
+
+  .focus-card.entronic .card-title {
+    color: #ffffff;
+  }
+
+  .focus-card.entronic .card-copy {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .focus-card.entronic .card-cta {
+    color: #f3f2a5;
+  }
+
+  .focus-card.brookwill {
+    background: #eaeaee;
+    border-color: #0a3f8e;
+    color: #0a0a0a;
+  }
+
+  .focus-card.brookwill:hover {
+    border-color: #0a3f8e;
+    box-shadow: 10px 10px 0 rgba(10, 63, 142, 0.2);
+  }
+
+  .focus-card.brookwill .card-title {
+    color: #0a3f8e;
+  }
+
+  .focus-card.brookwill .card-copy {
+    color: #1a1a1a;
+  }
+
+  .focus-card.brookwill .card-cta {
+    color: #0a3f8e;
+  }
+
+  .focus-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+  }
+
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .focus-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .focus-divider {
+    border-top: 1px solid #e5e7eb;
+    margin: 2.5rem 0;
+  }
+
+  .section-kicker {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
+  }
+
+  .focus-callout {
+    border-left: 4px solid #000;
+    padding-left: 1.5rem;
+  }
+
+  .split-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .split-panel {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 
 <!-- Hero: Precision Brutalism -->
@@ -100,8 +209,8 @@ featured_articles:
         <a href="/working-on" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs tracking-wider hover:bg-red-600 hover:text-white transition-colors">
           What I'm Working On →
         </a>
-        <a href="#writing" class="border-2 border-white px-6 py-3 font-bold uppercase text-xs tracking-wider hover:bg-white hover:text-black transition-colors">
-          Read My Writing
+        <a href="/writing" class="border-2 border-white px-6 py-3 font-bold uppercase text-xs tracking-wider hover:bg-white hover:text-black transition-colors">
+          My Writing
         </a>
       </div>
     </div>
@@ -110,118 +219,64 @@ featured_articles:
   <!-- Bottom anchor removed to reduce fold height -->
 </section>
 
-<!-- Current Work: Kogi AI -->
+<!-- Current Focus + Working On -->
 <section id="current-work" class="bg-white text-black py-20">
   <div class="container mx-auto px-8">
-    <div class="max-w-7xl mx-auto">
-      <!-- Section Header -->
-      <div class="grid md:grid-cols-12 gap-12 mb-20">
-        <div class="md:col-span-4">
-          <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">
-            01 — Current Focus
-          </div>
-          <h2 class="text-5xl font-bold leading-tight">
-            Kogi AI
-          </h2>
-        </div>
-        <div class="md:col-span-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="split-panel mb-12">
+        <div>
+          <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">Current Focus</div>
+          <h2 class="text-5xl font-bold leading-tight mb-4">Kogi AI</h2>
           <p class="text-xl text-gray-700 leading-relaxed">
-            AI-generated interactive 3D documentation for mechanical machines. 
-            From cars to rockets, watches to submarines — we're transforming how the world 
-            repairs and maintains the machines that keep us alive, healthy, and advancing toward Mars.
+            Mechanical machines are crucial to our lives. To reach Mars and beyond, we need reliable vehicles. Kogi uses
+            advanced AI to create continually updated, interactive 3D animations accessible on any device.
           </p>
         </div>
-      </div>
-      
-      <!-- Stats Grid -->
-      <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <div class="border-l-4 border-red-600 pl-6">
-          <div class="text-5xl font-bold mb-2">$1T+</div>
-          <div class="text-gray-600">Spent annually on repairs using outdated static manuals</div>
-        </div>
-        <div class="border-l-4 border-black pl-6">
-          <div class="text-5xl font-bold mb-2">6</div>
-          <div class="text-gray-600">AI agents powering Kogi's documentation engine</div>
-        </div>
-        <div class="border-l-4 border-black pl-6">
-          <div class="text-5xl font-bold mb-2">∞</div>
-          <div class="text-gray-600">Devices supported: smartphones to AR headsets to neural interfaces</div>
-        </div>
-      </div>
-      
-      <!-- Mission Statement -->
-      <div class="bg-black text-white p-12 sharp-corner">
-        <p class="text-2xl font-light leading-relaxed">
-          "Mechanical machines are crucial to our lives. To reach Mars and beyond, we need reliable vehicles. 
-          Kogi uses advanced AI to create continually updated, interactive 3D animations accessible on any device."
-        </p>
-        <div class="mono text-xs uppercase tracking-widest text-gray-400 mt-6">
-          — Mission Statement
-        </div>
-      </div>
-      
-      <div class="mt-12">
-        <div class="flex flex-wrap items-center gap-6">
-          <a href="https://kogi.ai" target="_blank" class="inline-flex items-center gap-3 text-lg font-bold group">
-            <span>Visit Kogi.ai</span>
-            <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
-          </a>
-          <a href="/working-on" class="inline-flex items-center gap-3 text-lg font-bold group">
-            <span>More projects</span>
-            <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Writing Archive Teaser -->
-<section id="writing" class="bg-gray-50 text-black py-32">
-  <div class="container mx-auto px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-12">
-        <div class="md:col-span-5">
-          <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">
-            02 — Writings
+        <div class="focus-callout text-gray-700">
+          <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-3">What this unlocks</div>
+          <p class="leading-relaxed">
+            Faster repairs, consistent training, and fewer critical failures. The real shift is giving technicians a living
+            map of how systems behave instead of static PDFs.
+          </p>
+          <div class="mt-6">
+            <a href="https://kogi.ai" target="_blank" rel="noopener" class="font-bold inline-flex items-center gap-2 hover:text-red-600 transition-colors">
+              Visit kogi.ai <span aria-hidden="true">→</span>
+            </a>
           </div>
-          <h2 class="text-5xl font-bold leading-tight mb-8">
-            Years of<br/>
-            Tech Foresight
-          </h2>
-          <div class="w-16 h-1 bg-red-600 mb-8"></div>
-          <p class="text-xl text-gray-700 mb-12">
-            From AI ethics to cloud architecture, indigenous heritage to people-first technology — 
-            insights often years ahead of mainstream adoption.
-          </p>
-          <a href="/writing" class="bg-black text-white px-8 py-4 font-bold uppercase text-sm tracking-wider hover:bg-red-600 transition-colors inline-block">
-            Explore Archive →
-          </a>
         </div>
-        
-        <div class="md:col-span-7">
-          <!-- Featured Article Cards -->
-          <div class="space-y-6">
-            {% for featured in page.featured_articles %}
-              {% assign post_slug = featured.post %}
-              {% assign featured_post = site.posts | where_exp: "item", "item.path contains post_slug" | first %}
-              {% if featured_post %}
-                <a href="{{ featured_post.url }}" class="block border-l-4 border-black pl-6 hover:border-red-600 transition-colors">
-                  <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-2">
-                    {{ featured_post.date | date: "%Y" }} ·
-                    {% if featured_post.categories %}
-                      {{ featured_post.categories | first | upcase }}
-                    {% endif %}
-                  </div>
-                  <h3 class="text-2xl font-bold mb-2">{{ featured_post.title }}</h3>
-                  <p class="text-gray-600">
-                    {% if featured_post.excerpt %}
-                      {{ featured_post.excerpt | strip_html | truncatewords: 20 }}
-                    {% endif %}
-                  </p>
-                </a>
-              {% endif %}
-            {% endfor %}
+      </div>
+
+      <div class="focus-divider"></div>
+
+      <div class="focus-grid">
+        <div>
+          <div class="section-kicker">AI Consulting</div>
+          <div class="focus-card entronic">
+            <a class="focus-link" href="https://entronic.com" target="_blank" rel="noopener">
+              <div class="text-2xl font-bold mb-3 card-title">AI consulting for resilient teams</div>
+              <p class="leading-relaxed card-copy">
+                I partner with organizations to design agentic workflows, decision support tooling, and human-in-the-loop
+                operations that keep teams accountable and calm under pressure.
+              </p>
+              <div class="mt-4 font-bold inline-flex items-center gap-2 card-cta">
+                Visit entronic.com <span aria-hidden="true">→</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="section-kicker">Advisory</div>
+          <div class="focus-card brookwill">
+            <a class="focus-link" href="https://brookwill.com" target="_blank" rel="noopener">
+              <div class="text-2xl font-bold mb-3 card-title">IT teams you can scale with</div>
+              <p class="leading-relaxed card-copy">
+                Building durable, high-trust teams for critical technology operations. Brookwill focuses on long-term
+                reliability, not short-term outsourcing.
+              </p>
+              <div class="mt-4 font-bold inline-flex items-center gap-2 card-cta">
+                Visit brookwill.com <span aria-hidden="true">→</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -232,9 +287,9 @@ featured_articles:
 <!-- Functional Excellence Teaser -->
 <section id="functional-excellence" class="bg-white text-black py-32">
   <div class="container mx-auto px-8">
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <div class="mono text-xs uppercase tracking-widest text-gray-500 mb-4">
-        03 — Philosophy
+        Philosophy
       </div>
       <h2 class="text-5xl font-bold leading-tight mb-12">
         Functional<br/>
@@ -245,7 +300,7 @@ featured_articles:
         <!-- Left: Concept -->
         <div>
           <p class="text-xl text-gray-700 leading-relaxed mb-8">
-            A personal museum exploring precision engineering, design philosophy, and the people and ideas shaping my worldview.
+            When something has the same level of quality from every angle you experience it.
           </p>
           
           <div class="space-y-6">
@@ -260,24 +315,18 @@ featured_articles:
             </div>
             
             <div>
-              <h3 class="font-bold text-lg mb-2">Obsessions</h3>
-              <p class="text-gray-600">Cars • Garage Design • Modern Prefab Architecture • Colombian Culture</p>
+              <h3 class="font-bold text-lg mb-2">Interests</h3>
+              <p class="text-gray-600">Cars • Garage Design • Modern Prefab Architecture • Indigenous Cultures</p>
             </div>
           </div>
           
-          <a href="/functional-excellence" class="inline-flex items-center gap-3 text-lg font-bold mt-8 group">
-            <span>Enter the Museum</span>
-            <span class="text-red-600 group-hover:translate-x-2 transition-transform">→</span>
-          </a>
         </div>
         
         <!-- Right: Visual -->
         <div class="relative">
-          <div class="bg-gray-900 h-96 sharp-corner flex items-center justify-center">
-            <div class="text-white text-center">
-              <div class="text-6xl mb-4">⚙️</div>
-              <div class="mono text-xs uppercase tracking-widest">Precision • Function • Excellence</div>
-            </div>
+          <div class="sharp-corner overflow-hidden">
+            <img src="{{ '/assets/images/functional-excellence/garage-frame.jpg' | relative_url }}"
+              alt="Precision garage workspace" class="w-full h-96 object-cover">
           </div>
         </div>
       </div>
