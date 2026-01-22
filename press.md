@@ -31,14 +31,14 @@ description: "Media resources and press materials"
 <section class="relative min-h-[60vh] bg-black text-white overflow-hidden">
   <div class="container mx-auto px-8 py-12 relative z-10">
     <div class="max-w-7xl">
-      <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-6">
+      <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-6 reveal-on-scroll">
         04 — Media Resources
       </div>
-      <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-8">
+      <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-8 reveal-on-scroll delay-100">
         Press Kit
       </h1>
-      <div class="w-24 h-1 bg-red-600 mb-8"></div>
-      <p class="text-xl text-gray-300 max-w-3xl">
+      <div class="w-24 h-1 bg-red-600 mb-8 reveal-on-scroll delay-200"></div>
+      <p class="text-xl text-gray-300 max-w-3xl reveal-on-scroll delay-300">
         Biographies, headshots, achievements, and press materials for media inquiries and speaking engagements.
       </p>
     </div>
@@ -282,11 +282,7 @@ description: "Media resources and press materials"
             <div class="space-y-4">
               <div>
                 <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-1">Email</div>
-                <div class="text-lg">press@kogi.ai</div>
-              </div>
-              <div>
-                <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-1">Response Time</div>
-                <div class="text-lg">Within 24-48 hours</div>
+                <div class="text-lg">info@kogi.ai</div>
               </div>
             </div>
           </div>
