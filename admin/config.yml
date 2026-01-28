@@ -71,3 +71,48 @@ collections:
       - { label: "Featured", name: "featured", widget: "boolean", default: false, required: false }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "feed"
+    label: "Curated Feed"
+    files:
+      - label: "Homepage Feed"
+        name: "homepage_feed"
+        file: "_data/feed.yml"
+        fields:
+          - label: "Sort Mode"
+            name: "sort_mode"
+            widget: "select"
+            options:
+              - { label: "Chronological", value: "chronological" }
+              - { label: "Manual Order", value: "manual" }
+            default: "chronological"
+          - label: "Feed Items"
+            name: "items"
+            widget: "list"
+            hint: "Drag and drop to reorder when using Manual Order. Use Type to decide which fields matter."
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true, required: false }
+              - { label: "Pinned", name: "pinned", widget: "boolean", default: false, required: false }
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Writing", value: "writing" }
+                  - { label: "X Post", value: "x" }
+                  - { label: "External Highlight", value: "external" }
+              - label: "Writing Post"
+                name: "post"
+                widget: "relation"
+                collection: "blog"
+                search_fields: ["title"]
+                value_field: "{{slug}}"
+                display_fields: ["title"]
+                required: false
+              - { label: "X Post URL", name: "x_url", widget: "string", required: false, hint: "Paste the full X post URL." }
+              - { label: "External URL", name: "url", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Source Label", name: "source", widget: "string", required: false }
+              - { label: "Date", name: "date", widget: "datetime", required: false, hint: "Required for chronological sorting (use the post's publish date)." }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Caption", name: "caption", widget: "text", required: false, hint: "Optional context shown above embeds/cards." }
