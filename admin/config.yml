@@ -16,32 +16,8 @@ media_folder: "assets/images"
 public_folder: "/assets/images" # Path for CMS previews, Jekyll handles baseurl for live site
 
 collections:
-  - name: "homepage"
-    label: "Homepage Content"
-    files:
-      - label: "Home Page"
-        name: "home"
-        file: "index.md"
-        fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
-          - { label: "Title", name: "title", widget: "string" }
-          - label: "Featured Articles"
-            name: "featured_articles"
-            widget: "list"
-            max: 3
-            min: 3
-            hint: "Select exactly 3 articles to feature on the homepage"
-            fields:
-              - label: "Article"
-                name: "post"
-                widget: "relation"
-                collection: "blog"
-                search_fields: ["title"]
-                value_field: "{{slug}}"
-                display_fields: ["title"]
-  
   - name: "blog"
-    label: "Blog Posts"
+    label: "Writing (writing.html)"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -59,7 +35,7 @@ collections:
         field: date
         pattern: \d{4}
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Show on Site", name: "published", widget: "boolean", default: true, required: false, hint: "Uncheck to hide this article from the website" }
@@ -73,9 +49,9 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "feed"
-    label: "Curated Feed"
+    label: "Dynamic Writing Feed"
     files:
-      - label: "Homepage Feed"
+      - label: "Dynamic Writing Feed"
         name: "homepage_feed"
         file: "_data/feed.yml"
         fields:

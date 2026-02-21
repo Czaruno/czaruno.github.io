@@ -1,10 +1,6 @@
 ---
 layout: default
 title: Larry Velez - Technology Entrepreneur & Motoring Enthusiast
-featured_articles:
-  - post: 2019-09-16-are-we-teaching-ai-to-be-racist
-  - post: 2020-10-29-indigenous-peoples-deserve-on-going-recognition-an
-  - post: 2012-05-26-trust-the-expert-in-you
 ---
 
 <style>

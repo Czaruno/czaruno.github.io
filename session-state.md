@@ -1,6 +1,6 @@
 # LarryVelez.com Site Update - Session State
-**Last Updated:** 2026-01-21 09:18 AM EST
-**Latest Session:** 2026-01-21-workspace-runner-refactor
+**Last Updated:** 2026-01-30 02:42 PM EST
+**Latest Session:** 2026-01-30-bird-feed-plan
 
 ## Current Objective
 Transform larryvelez.com to contain ONLY Larry's 28 personal articles by adding recovered content and removing company blog posts. Canonical source: `docs/article-catalog.md`.
@@ -67,3 +67,6 @@ Total `_posts` files: 42
 - Mobile nav redesigned to match Entronic-style layout; homepage spacing tightened; press duplication removed; working-on page restored with clickable cards.
 ## Blockers
 None.
+
+## Bird Feed Plan
+- docs/bird-plan.md
