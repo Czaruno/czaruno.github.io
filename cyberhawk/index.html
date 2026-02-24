@@ -178,7 +178,7 @@
     background: rgba(42, 42, 53, 0.3);
     border: 1px solid rgba(250, 248, 245, 0.05);
     backdrop-filter: blur(16px);
-    transition: all 0.4s ease;
+    /* Transition is handled by tailwind classes to avoid GSAP conflicts */
   }
 
   .telemetry-cursor {
@@ -207,8 +207,11 @@
   .shuffler-card {
     position: absolute;
     width: 100%;
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     background: rgba(13, 13, 18, 0.8);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: auto;
     border: 1px solid rgba(212, 160, 23, 0.3);
     /* Gold border */
     padding: 1.5rem;
@@ -282,64 +285,76 @@
         </a>
       </div>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hero-el">
+      <span class="font-data text-[10px] uppercase tracking-widest text-[#D4A017]">Scroll</span>
+      <div
+        class="w-[1px] h-12 bg-gradient-to-b from-[#D4A017] to-transparent animate-[pulse_2s_ease-in-out_infinite] origin-top">
+      </div>
+    </div>
   </section>
 
   <!-- FEATURES / FUNCTIONAL ARTIFACTS -->
   <section class="py-32 px-6 md:px-12 bg-[#0D0D12] relative z-10" id="features">
     <div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
-      <!-- Card 1: Diagnostic Shuffler (Capital Not Labor) -->
-      <div class="feature-card rounded-premium p-8 h-96 flex flex-col justify-between group">
+      <!-- Card 1: Diagnostic Shuffler (Just a ride) -->
+      <div
+        class="feature-card rounded-premium p-8 h-96 flex flex-col justify-between border border-transparent hover:border-[#D4A017]/40 transition-colors duration-500 group">
         <div>
-          <h3 class="font-heading text-2xl font-bold mb-2">Capital, Not Labor</h3>
-          <p class="font-heading text-sm text-white/50">For 100+ years, transportation meant selling manual hours. We
-            deploy capital.</p>
+          <h3 class="font-heading text-2xl font-bold mb-2">Just a ride.</h3>
+          <p class="font-heading text-sm text-white/50">You need to get somewhere. You don't need to be tracked,
+            analyzed, or optimized. You just need a quiet, clean car that shows up when it's supposed to.</p>
         </div>
 
         <div class="shuffler-container mt-8" id="shuffler">
           <div class="shuffler-card" style="z-index: 3; bottom: 0; transform: scale(1); opacity: 1;">
-            <div class="font-data text-xs text-[#DC2626] mb-1">UNIT 01 - ACTIVE</div>
-            <div class="font-heading text-lg">Human Wage: $0.00/hr</div>
+            <div class="font-data text-xs text-[#DC2626] mb-1">NO SURGE PRICING</div>
+            <div class="font-heading text-lg">Same price, rain or shine.</div>
           </div>
           <div class="shuffler-card" style="z-index: 2; bottom: 15px; transform: scale(0.95); opacity: 0.7;">
-            <div class="font-data text-xs text-[#DC2626] mb-1">UNIT 02 - CHARGING</div>
-            <div class="font-heading text-lg">Uptime: 98.4%</div>
+            <div class="font-data text-xs text-[#DC2626] mb-1">NO CANCELLATIONS</div>
+            <div class="font-heading text-lg">The car won't cancel on you.</div>
           </div>
           <div class="shuffler-card" style="z-index: 1; bottom: 30px; transform: scale(0.9); opacity: 0.4;">
-            <div class="font-data text-xs text-[#D4A017] mb-1">FLEET METRIC</div>
-            <div class="font-heading text-lg">Yield Generation +22%</div>
+            <div class="font-data text-xs text-[#D4A017] mb-1">NO SMALL TALK</div>
+            <div class="font-heading text-lg">Just peace and quiet.</div>
           </div>
         </div>
       </div>
 
-      <!-- Card 2: Telemetry Typewriter ($30K Entry) -->
+      <!-- Card 2: Telemetry Typewriter (Respecting your time) -->
       <div
-        class="feature-card rounded-premium p-8 h-96 flex flex-col justify-between border-[#D4A017]/20 border group hover:border-[#D4A017]/60">
+        class="feature-card rounded-premium p-8 h-96 flex flex-col justify-between border border-transparent hover:border-[#D4A017]/40 transition-colors duration-500 group">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <h3 class="font-heading text-2xl font-bold">The $30K Entry</h3>
+            <h3 class="font-heading text-2xl font-bold">Respecting your time.</h3>
             <div class="w-2 h-2 rounded-full bg-[#DC2626] animate-pulse"></div>
           </div>
-          <p class="font-heading text-sm text-white/50 mb-8">Accessible robotic infrastructure.</p>
+          <p class="font-heading text-sm text-white/50 mb-8">You have kids to pick up, a shift to make, or a doctor to
+            see. We don't play games with arrival times.</p>
         </div>
 
         <div
           class="bg-[#0A0A0E] rounded-xl p-4 font-data text-sm h-full overflow-hidden relative border border-white/5">
           <div class="absolute top-2 right-4 text-xs text-[#D4A017] opacity-50">LIVE_FEED</div>
           <div id="typewriter" class="text-white/80 leading-relaxed mt-4">
-            > Initializing fleet node...<br>
-            > Cost basis: $30,000 USD<br>
-            > Real estate equivalent: N/A<br>
-            > Target utilization: 65%
+            > You request a car.<br>
+            > We tell you the price.<br>
+            > It arrives on time.<br>
+            > You get there safely.
           </div><span class="telemetry-cursor"></span>
         </div>
       </div>
 
-      <!-- Card 3: Protocol Scheduler (Compounding Returns) -->
-      <div class="feature-card rounded-premium p-8 h-96 flex flex-col justify-between group">
+      <!-- Card 3: Protocol Scheduler (Our neighbors) -->
+      <div
+        class="feature-card rounded-premium p-8 h-96 flex flex-col justify-between border border-transparent hover:border-[#D4A017]/40 transition-colors duration-500 group">
         <div>
-          <h3 class="font-heading text-2xl font-bold mb-2">Compounding ROI</h3>
-          <p class="font-heading text-sm text-white/50">One vehicle becomes two. Fleet returns compound passively.</p>
+          <h3 class="font-heading text-2xl font-bold mb-2">Our neighbors.</h3>
+          <p class="font-heading text-sm text-white/50">We aren't a faceless tech giant sitting in Silicon Valley. We
+            live here in FishHawk.</p>
         </div>
 
         <div class="mt-8 relative h-full flex flex-col items-center justify-center">
@@ -354,9 +369,9 @@
             </svg>
           </div>
           <div class="font-data text-xs text-white/50 w-full flex justify-between uppercase mt-2">
-            <span>Year 1</span>
-            <span>Year 2</span>
-            <span>Year 3</span>
+            <span>You talk.</span>
+            <span>We listen.</span>
+            <span>It improves.</span>
           </div>
         </div>
       </div>
@@ -368,11 +383,14 @@
   <section class="py-32 px-6 md:px-12 bg-[#0D0D12] relative flex items-center justify-center min-h-[70vh]">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0A0E] pointer-events-none"></div>
     <div class="max-w-4xl mx-auto relative z-10 text-center manifesto-container">
-      <p class="font-heading text-xl md:text-2xl text-white/40 mb-6 manifesto-line">
-        Most transit companies focus on: extracting margins from human drivers.
+      <p class="font-heading text-2xl md:text-3xl text-white/70 mb-8 manifesto-line leading-relaxed">
+        Most ride apps aren't really in the transportation business. <br>They're in the data business. You're the
+        product.
       </p>
-      <p class="font-drama italic text-5xl md:text-7xl leading-tight manifesto-line text-white">
-        We focus on: <span class="text-[#D4A017]">infrastructural yield</span>.
+      <p class="font-heading text-xl md:text-2xl text-white/50 manifesto-line leading-relaxed">
+        We sell rides. You pay us to get you from point A to point B safely. End of transaction. We don't sell your
+        data, we don't track you across the web, and we don't bother you with alerts. <span
+          class="text-[#D4A017] block mt-4 font-drama italic text-4xl">We just drive.</span>
       </p>
     </div>
   </section>
@@ -432,29 +450,59 @@
     let scales = [1, 0.95, 0.9];
     let opacities = [1, 0.7, 0.4];
 
-    setInterval(() => {
-      // Shift logic exactly as prompt requests
-      cards.unshift(cards.pop());
+    // The offset determining which card is currently at the front (index 0)
+    let currentOffset = 0;
 
+    function updateCards() {
       cards.forEach((card, i) => {
+        // Calculate where this card should visually sit in the stack based on offset
+        // We use (i - currentOffset + 3) % 3 to handle negative wrapping cleanly
+        let visualPosition = (i - currentOffset + 3) % 3;
+
         gsap.to(card, {
-          zIndex: zIndexes[i],
-          bottom: bottoms[i] + 'px',
-          scale: scales[i],
-          opacity: opacities[i],
+          zIndex: zIndexes[visualPosition],
+          bottom: bottoms[visualPosition] + 'px',
+          scale: scales[visualPosition],
+          opacity: opacities[visualPosition],
           duration: 0.6,
           ease: "back.out(1.2)"
         });
       });
-    }, 3000);
+    }
+
+    function shiftCards() {
+      // Shift the offset backwards to simulate the stack moving forward
+      currentOffset = (currentOffset - 1 + 3) % 3;
+      updateCards();
+    }
+
+    let shuffleInterval = setInterval(shiftCards, 3000);
+
+    // Initial explicit paint
+    updateCards();
+
+    // Allow user to select cards
+    cards.forEach((card, clickedIndex) => {
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        clearInterval(shuffleInterval);
+
+        // The user clicked a card. We set the offset so THIS card becomes visual position 0.
+        currentOffset = clickedIndex;
+        updateCards();
+
+        // Reset the automated interval
+        shuffleInterval = setInterval(shiftCards, 3000);
+      });
+    });
 
     // --- Typewriter Logic ---
     const texts = [
-      "> Initializing autonomous fleet node...",
-      "> Cost basis: $30,000 USD",
-      "> Operating Margin: High",
-      "> Target structural shift: Active",
-      "> System Ready."
+      "> You request a car.",
+      "> We tell you the price.",
+      "> It arrives on time.",
+      "> You get there safely.",
+      "> It's that simple."
     ];
     let twEl = document.getElementById("typewriter");
     let currentLine = 0;
