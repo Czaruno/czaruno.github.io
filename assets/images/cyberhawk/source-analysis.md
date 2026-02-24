@@ -171,3 +171,32 @@ At lower utilization rates, returns resemble a modest side business. At higher u
 11. Model #2 variations
 12. Model #3 variations
 13-18. Additional analysis charts and comparison tables
+
+---
+
+## Reply Scraping Research (Deferred)
+
+**Goal:** Pull replies (3 levels deep) from the CernBasher post to extract additional data points, counterarguments, and community sentiment for the business plan.
+
+**Post stats at time of research:** 356 replies | 521 reposts | 3.6K likes | 893K+ views
+
+### What was attempted
+- **oEmbed API** (free, no auth): Only returns embed HTML for single tweets. Cannot fetch replies.
+- **Browser scraping (no login)**: X gates all replies behind a login wall.
+- **Bird X tool**: X is blocking it.
+
+### Viable options when ready
+
+| Option | Cost | Effort | Notes |
+|--------|------|--------|-------|
+| **Browser scrape (logged in)** | Free | Medium | Log into X in Chrome, then use Chrome DevTools MCP to scroll and extract replies. Manual but no API cost. |
+| **TwitterAPI.io** | ~$0.15/1K tweets | Low | REST API, pay-as-you-go. Has dedicated replies endpoint. Best value. |
+| **Official X API Basic** | $200/mo | Low | 7-day search window only. Overkill for a one-time pull. |
+| **Apify Twitter Scraper** | ~$5 one-time | Low | Cloud-based scraper Actor. Good for one-off jobs. |
+
+### Recommended approach
+1. **Easiest**: Log into X in Chrome browser, then scrape via browser automation (Chrome DevTools MCP)
+2. **Most robust**: Sign up for TwitterAPI.io, pull replies via their API, save as JSON
+
+### Status
+Deferred — come back when X login or API access is available.
