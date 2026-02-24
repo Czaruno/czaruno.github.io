@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHawk Cab Company - Operations HQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    
+    
+    <link rel="alternate" type="text/markdown" href="https://larryvelez.com/cyberhawk/headquarters.md" title="Markdown">
+    
+</head>
+<body class="bg-white pt-16 md:pt-0 md:pl-56"> <!-- Default background, can be overridden by page content -->
+
+    <div class="fixed left-0 top-0 h-full w-56 bg-gray-900 hidden md:block z-40" aria-hidden="true"></div>
+    <nav class="fixed left-4 top-12 z-50 hidden md:block" aria-label="Site">
+        <div class="bg-teal-100/95 text-gray-900 backdrop-blur border border-black shadow-[6px_6px_0_rgba(0,0,0,0.2)] px-4 py-5 w-48 max-h-[80vh] overflow-y-auto">
+            <div class="text-xs uppercase tracking-widest text-gray-600 mb-3">Navigate</div>
+            <div class="space-y-2 text-sm">
+                <a href="/#home" class="block font-semibold hover:text-red-600 transition-colors">Home</a>
+                <a href="/#current-work" class="block hover:text-red-600 transition-colors">Current Focus</a>
+                <a href="/#functional-excellence" class="block hover:text-red-600 transition-colors">Functional Excellence</a>
+                <div class="border-t border-gray-300 my-2"></div>
+                <a href="/working-on" class="block hover:text-red-600 transition-colors">What I'm Working On</a>
+                <a href="/writing" class="block hover:text-red-600 transition-colors">My Writing</a>
+                <a href="/work" class="block hover:text-red-600 transition-colors">Timeline</a>
+                <a href="/press" class="block hover:text-red-600 transition-colors">Press Kit</a>
+                <div class="border-t border-gray-300 my-2"></div>
+                <a href="/cyberhawk" class="block hover:text-red-600 transition-colors font-semibold">CyberHawk Cab Co.</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="fixed top-0 inset-x-0 z-50 md:hidden" aria-label="Mobile">
+        <div class="bg-white/95 backdrop-blur border-b border-black px-4 py-3 flex items-center justify-between shadow-[0_6px_0_rgba(0,0,0,0.08)]">
+            <a href="/" class="text-lg font-bold tracking-tight" aria-label="Home">LV</a>
+            <button id="mobile-menu-toggle" class="text-xs uppercase tracking-[0.3em] font-semibold">Menu</button>
+        </div>
+        <div id="mobile-menu" class="hidden">
+            <div class="bg-black text-white px-6 py-8 shadow-[0_12px_0_rgba(0,0,0,0.15)]">
+                <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-6">Navigate</div>
+                <div class="space-y-4 text-lg font-semibold">
+                    <a href="/#home" class="block hover:text-red-600 transition-colors">Home</a>
+                    <a href="/#current-work" class="block hover:text-red-600 transition-colors">Current Focus</a>
+                    <a href="/#functional-excellence" class="block hover:text-red-600 transition-colors">Functional Excellence</a>
+                    <div class="border-t border-white/20 my-4"></div>
+                    <a href="/working-on" class="block hover:text-red-600 transition-colors">What I'm Working On</a>
+                    <a href="/writing" class="block hover:text-red-600 transition-colors">My Writing</a>
+                    <a href="/work" class="block hover:text-red-600 transition-colors">Timeline</a>
+                    <a href="/press" class="block hover:text-red-600 transition-colors">Press Kit</a>
+                    <div class="border-t border-white/20 my-4"></div>
+                    <a href="/cyberhawk" class="block hover:text-red-600 transition-colors font-semibold">CyberHawk Cab Co.</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    :root {
+        --ch-obsidian: #0D0D12;
+        --ch-crimson: #DC2626;
+        --ch-gold: #D4A017;
+        --ch-ivory: #FAF8F5;
+        --ch-slate: #2A2A35;
+
+        --font-heading: 'Inter', sans-serif;
+        --font-drama: 'Playfair Display', serif;
+        --font-data: 'JetBrains Mono', monospace;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--ch-obsidian);
+        color: var(--ch-ivory);
+        font-family: var(--font-heading);
+    }
+
+    .font-heading {
+        font-family: var(--font-heading);
+    }
+
+    .font-drama {
+        font-family: var(--font-drama);
+    }
+
+    .font-data {
+        font-family: var(--font-data);
+    }
+
+    .cinematic-wrapper {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Parallax Overlay */
+    .hq-parallax {
+        background-image: url('/assets/images/cyberhawk/cyberhawk_hq.png');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .gold-border {
+        border-color: rgba(212, 160, 23, 0.3);
+    }
+
+    .crimson-line {
+        width: 40px;
+        height: 2px;
+        background: var(--ch-crimson);
+        display: block;
+        margin: 1rem 0;
+    }
+
+    /* HUD Info Cards */
+    .hud-card {
+        background: rgba(13, 13, 18, 0.85);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-left: 2px solid var(--ch-crimson);
+        transition: all 0.4s ease;
+    }
+
+    .hud-card:hover {
+        border-left-color: var(--ch-gold);
+        transform: translateX(5px);
+        background: rgba(13, 13, 18, 0.95);
+    }
+</style>
+
+<!-- Floating Nav -->
+<nav class="fixed top-6 right-6 md:right-12 z-50 flex items-center justify-between pointer-events-none w-auto"
+    id="ch-nav">
+    <div class="bg-[rgba(13,13,18,0.7)] backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center gap-6 pointer-events-auto transition-colors duration-500"
+        id="ch-nav-inner">
+        <div class="font-data text-xs tracking-widest text-white/50 hidden md:block">CYBERHAWK / HQ</div>
+        <div class="flex gap-4 items-center">
+            <a href="/cyberhawk/index.html"
+                class="text-sm font-heading font-medium text-white/80 hover:text-white hover:-translate-y-[1px] transition-transform">Overview</a>
+            <a href="/cyberhawk/business-plan.html"
+                class="text-sm font-heading font-medium text-white/80 hover:text-white hover:-translate-y-[1px] transition-transform">Business
+                Plan</a>
+            <a href="/cyberhawk/contact.html"
+                class="text-sm font-heading font-semibold text-[#D4A017] hover:text-white transition-colors ml-4">Contact
+                Us</a>
+        </div>
+    </div>
+</nav>
+
+<div class="cinematic-wrapper">
+
+    <!-- HERO PARALLAX SECTION -->
+    <section class="min-h-screen relative flex items-end pb-24 hq-parallax">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D12] via-[#0D0D12]/60 to-transparent"></div>
+        <div class="absolute inset-0 bg-[#0D0D12]/30"></div> <!-- Darken the image slightly -->
+
+        <div class="max-w-6xl mx-auto px-6 md:px-12 w-full relative z-10 hero-reveal">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-3 h-3 rounded-full bg-[#D4A017] animate-pulse"></div>
+                <span class="font-data text-xs tracking-[0.2em] text-[#D4A017] uppercase">Central Command Node</span>
+            </div>
+
+            <h1 class="font-heading font-bold text-6xl md:text-8xl text-white mb-6">
+                Operations HQ
+            </h1>
+
+            <div class="font-heading text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+                The physical nexus mapping the digital fleet. A state-of-the-art diagnostic, charging, and telemetry hub
+                serving 30 autonomous Cybercab units simultaneously.
+            </div>
+        </div>
+    </section>
+
+    <!-- INFRASTRUCTURE SPECS -->
+    <section class="bg-[#0D0D12] py-32 border-t border-[#1C1C24]" id="specs">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div class="spec-scroll">
+                    <span class="font-data text-[#DC2626] tracking-widest text-xs uppercase mb-4 block">Facility
+                        Capabilities</span>
+                    <h2 class="font-heading text-4xl font-bold mb-6">Where Code Meets Concrete</h2>
+                    <p class="font-heading text-gray-400 text-lg leading-relaxed mb-8">
+                        The CyberHawk HQ isn't a traditional taxi depot. It's a high-throughput robotic servicing node.
+                        Located structurally to minimize grid transmission delay and maximize algorithmic positioning
+                        for surge zones.
+                    </p>
+
+                    <div class="flex flex-col gap-6">
+                        <div class="hud-card p-6 rounded-2xl">
+                            <h4 class="font-heading font-semibold text-lg mb-1">Hyper-Charging Bays</h4>
+                            <p class="font-heading text-sm text-gray-400">12 simultaneous Level 3+ induction pads
+                                capable of restoring 80% grid capacity in under 20 minutes between peak transit surges.
+                            </p>
+                        </div>
+
+                        <div class="hud-card p-6 rounded-2xl">
+                            <h4 class="font-heading font-semibold text-lg mb-1">Automated Detailing</h4>
+                            <p class="font-heading text-sm text-gray-400">UV-C sanitization and automated exterior
+                                detailing to ensure premium cabin conditions for high-yield Tier-1 passengers.</p>
+                        </div>
+
+                        <div class="hud-card p-6 rounded-2xl">
+                            <h4 class="font-heading font-semibold text-lg mb-1">Telemetry Command Center</h4>
+                            <p class="font-heading text-sm text-gray-400">Live grid monitoring, override permissions,
+                                and surge mapping orchestrated by dedicated human overseers ensuring 99.9% fleet uptime.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Render Focus -->
+                <div class="spec-scroll">
+                    <div class="relative rounded-3xl overflow-hidden border border-white/10 group">
+                        <img src="/assets/images/cyberhawk/cyberhawk_hq.png" alt="Facility Render"
+                            class="w-full h-auto transform transition-transform duration-1000 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-[#DC2626]/20 to-transparent mix-blend-overlay">
+                        </div>
+
+                        <!-- Tech overlays on the image -->
+                        <div
+                            class="absolute bottom-6 left-6 font-data text-xs text-white/50 bg-black/60 px-3 py-1 backdrop-blur-md rounded border border-white/10 uppercase tracking-widest">
+                            Location: 27.8483° N, 82.1706° W
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div> <!-- End Wrapper -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".hero-reveal", {
+            y: 60,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out",
+            delay: 0.2
+        });
+
+        const specScrolls = document.querySelectorAll(".spec-scroll");
+        specScrolls.forEach((el, index) => {
+            gsap.from(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                },
+                y: 40,
+                opacity: 0,
+                duration: 1.2,
+                delay: index * 0.2, // stagger columns
+                ease: "power2.out"
+            });
+        });
+
+        ScrollTrigger.create({
+            start: "top -100px",
+            onUpdate: (self) => {
+                const nav = document.getElementById("ch-nav-inner");
+                if (self.direction === 1) {
+                    nav.style.backgroundColor = "rgba(42, 42, 53, 0.9)";
+                    nav.style.borderColor = "rgba(212, 160, 23, 0.3)";
+                } else {
+                    nav.style.backgroundColor = "rgba(13, 13, 18, 0.7)";
+                    nav.style.borderColor = "rgba(255, 255, 255, 0.1)";
+                }
+            }
+        });
+    });
+</script>
+
+    <script>
+      const menuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuToggle.textContent = mobileMenu.classList.contains('hidden') ? 'Menu' : 'Close';
+        });
+      }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
+
+</body>
+</html>

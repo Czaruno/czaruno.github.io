@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHawk Cab Company - Business Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style type="text/tailwindcss">
+        /* Custom Tailwind styles can go here if needed */
+        /* For example, applying a default font if not using a theme that sets one */
+        body {
+            font-family: sans-serif; /* A generic sans-serif stack */
+        }
+        .prose { /* Basic prose styling for markdown content */
+            max-width: 65ch;
+        }
+        .prose h2 { @apply text-2xl font-bold mb-2; }
+        .prose p { @apply mb-4; }
+        /* Add other prose styles as needed */
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    
+    
+    <link rel="alternate" type="text/markdown" href="https://larryvelez.com/cyberhawk/business-plan.md" title="Markdown">
+    
+</head>
+<body class="bg-white pt-16 md:pt-0 md:pl-56"> <!-- Default background, can be overridden by page content -->
+
+    <div class="fixed left-0 top-0 h-full w-56 bg-gray-900 hidden md:block z-40" aria-hidden="true"></div>
+    <nav class="fixed left-4 top-12 z-50 hidden md:block" aria-label="Site">
+        <div class="bg-teal-100/95 text-gray-900 backdrop-blur border border-black shadow-[6px_6px_0_rgba(0,0,0,0.2)] px-4 py-5 w-48 max-h-[80vh] overflow-y-auto">
+            <div class="text-xs uppercase tracking-widest text-gray-600 mb-3">Navigate</div>
+            <div class="space-y-2 text-sm">
+                <a href="/#home" class="block font-semibold hover:text-red-600 transition-colors">Home</a>
+                <a href="/#current-work" class="block hover:text-red-600 transition-colors">Current Focus</a>
+                <a href="/#functional-excellence" class="block hover:text-red-600 transition-colors">Functional Excellence</a>
+                <div class="border-t border-gray-300 my-2"></div>
+                <a href="/working-on" class="block hover:text-red-600 transition-colors">What I'm Working On</a>
+                <a href="/writing" class="block hover:text-red-600 transition-colors">My Writing</a>
+                <a href="/work" class="block hover:text-red-600 transition-colors">Timeline</a>
+                <a href="/press" class="block hover:text-red-600 transition-colors">Press Kit</a>
+                <div class="border-t border-gray-300 my-2"></div>
+                <a href="/cyberhawk" class="block hover:text-red-600 transition-colors font-semibold">CyberHawk Cab Co.</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="fixed top-0 inset-x-0 z-50 md:hidden" aria-label="Mobile">
+        <div class="bg-white/95 backdrop-blur border-b border-black px-4 py-3 flex items-center justify-between shadow-[0_6px_0_rgba(0,0,0,0.08)]">
+            <a href="/" class="text-lg font-bold tracking-tight" aria-label="Home">LV</a>
+            <button id="mobile-menu-toggle" class="text-xs uppercase tracking-[0.3em] font-semibold">Menu</button>
+        </div>
+        <div id="mobile-menu" class="hidden">
+            <div class="bg-black text-white px-6 py-8 shadow-[0_12px_0_rgba(0,0,0,0.15)]">
+                <div class="mono text-xs uppercase tracking-widest text-gray-400 mb-6">Navigate</div>
+                <div class="space-y-4 text-lg font-semibold">
+                    <a href="/#home" class="block hover:text-red-600 transition-colors">Home</a>
+                    <a href="/#current-work" class="block hover:text-red-600 transition-colors">Current Focus</a>
+                    <a href="/#functional-excellence" class="block hover:text-red-600 transition-colors">Functional Excellence</a>
+                    <div class="border-t border-white/20 my-4"></div>
+                    <a href="/working-on" class="block hover:text-red-600 transition-colors">What I'm Working On</a>
+                    <a href="/writing" class="block hover:text-red-600 transition-colors">My Writing</a>
+                    <a href="/work" class="block hover:text-red-600 transition-colors">Timeline</a>
+                    <a href="/press" class="block hover:text-red-600 transition-colors">Press Kit</a>
+                    <div class="border-t border-white/20 my-4"></div>
+                    <a href="/cyberhawk" class="block hover:text-red-600 transition-colors font-semibold">CyberHawk Cab Co.</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Removed fixed header and footer to allow page content to control full layout -->
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=JetBrains+Mono:wght@400;700&display=swap');
+
+  :root {
+    --ch-obsidian: #0D0D12;
+    --ch-crimson: #DC2626;
+    --ch-gold: #D4A017;
+    --ch-ivory: #FAF8F5;
+    --ch-slate: #2A2A35;
+
+    --font-heading: 'Inter', sans-serif;
+    --font-drama: 'Playfair Display', serif;
+    --font-data: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: var(--ch-obsidian);
+    color: var(--ch-ivory);
+    font-family: var(--font-heading);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-drama {
+    font-family: var(--font-drama);
+  }
+
+  .font-data {
+    font-family: var(--font-data);
+  }
+
+  .cinematic-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Structural Shift from Old File */
+  .reveal-on-scroll {
+    visibility: hidden;
+    /* Handled by GSAP now */
+  }
+
+  .gold-text {
+    color: var(--ch-gold);
+  }
+
+  .crimson-text {
+    color: var(--ch-crimson);
+  }
+
+  .stat-card {
+    background: rgba(212, 160, 23, 0.03);
+    border: 1px solid rgba(212, 160, 23, 0.15);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+  }
+
+  .stat-card:hover {
+    background: rgba(212, 160, 23, 0.08);
+    border-color: var(--ch-crimson);
+    transform: translateY(-4px);
+  }
+
+  .model-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .model-table th {
+    font-family: var(--font-data);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--ch-crimson);
+  }
+
+  .model-table td {
+    font-family: var(--font-data);
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .model-table tr:hover td {
+    background: rgba(220, 38, 38, 0.05);
+  }
+
+  .section-label {
+    font-family: var(--font-data);
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .plan-section {
+    border-left: 2px solid var(--ch-crimson);
+    padding-left: 1.5rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .plan-section:hover {
+    border-color: var(--ch-gold);
+  }
+
+  .phase-badge {
+    font-family: var(--font-data);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--ch-crimson);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+
+  .kpi-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px dashed rgba(220, 38, 38, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+
+  .kpi-ring:hover {
+    border-style: solid;
+    border-color: var(--ch-gold);
+    transform: scale(1.05);
+  }
+</style>
+
+<!-- Floating Nav -->
+<nav class="fixed top-6 right-6 md:right-12 z-50 flex items-center justify-between pointer-events-none w-auto"
+  id="ch-nav">
+  <div
+    class="bg-[rgba(13,13,18,0.7)] backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center gap-6 pointer-events-auto transition-colors duration-500"
+    id="ch-nav-inner">
+    <div class="font-data text-xs tracking-widest text-white/50 hidden md:block">CYBERHAWK / PLAN</div>
+    <div class="flex gap-4 items-center">
+      <a href="/cyberhawk/index.html"
+        class="text-sm font-heading font-medium text-white/80 hover:text-white hover:-translate-y-[1px] transition-transform">Overview</a>
+      <a href="/cyberhawk/headquarters.html"
+        class="text-sm font-heading font-medium text-white/80 hover:text-white hover:-translate-y-[1px] transition-transform">Operations
+        HQ</a>
+      <a href="/cyberhawk/contact.html"
+        class="text-sm font-heading font-semibold text-[#D4A017] hover:text-white transition-colors ml-4">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="cinematic-wrapper">
+
+  <!-- HERO SECTION -->
+  <section class="min-h-screen flex items-center relative overflow-hidden bg-[#0D0D12]">
+    <!-- Blueprint grid background -->
+    <div class="absolute inset-0 opacity-5"
+      style="background-image: linear-gradient(rgba(212,160,23,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,160,23,0.3) 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 md:px-12 py-24 relative z-10 w-full">
+      <div class="hero-stagger">
+        <span class="section-label crimson-text block mb-6">Financial Blueprint / 2026</span>
+        <div class="flex flex-col md:flex-row items-center md:items-end gap-6 md:gap-10 mb-6">
+          <img src="/assets/images/cyberhawk/cyberhawk-logo.png" alt="CyberHawk Cab Company logo"
+            class="w-32 md:w-44 drop-shadow-[0_0_24px_rgba(212,160,23,0.4)] mix-blend-screen">
+          <div>
+            <h1 class="font-heading text-5xl md:text-7xl font-bold tracking-tight leading-[0.95]">
+              Cyber<span class="gold-text">Hawk</span><br>
+              <span class="font-drama italic text-3xl md:text-5xl text-gray-500 block mt-2">Cab Company</span>
+            </h1>
+          </div>
+        </div>
+        <div class="w-24 h-[2px] bg-[#DC2626] mb-8"></div>
+        <p class="font-heading text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-4">
+          A definitive model for an autonomous 30-vehicle localized fleet.
+          Converting depreciating consumer liabilities into high-yield infrastructural capital.
+        </p>
+        <p class="font-data text-xs text-gray-500 uppercase tracking-widest mt-4">
+          Origination: Larry Velez <span class="mx-2">|</span> Target Operation: 2027
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 hero-stagger">
+        <div class="stat-card rounded-[1.5rem] p-6 text-center">
+          <div class="font-heading text-4xl font-bold gold-text">30</div>
+          <div class="font-data text-[0.6rem] text-gray-400 mt-2 uppercase tracking-widest">Tesla Cybercabs</div>
+        </div>
+        <div class="stat-card rounded-[1.5rem] p-6 text-center">
+          <div class="font-heading text-4xl font-bold text-white">$900K</div>
+          <div class="font-data text-[0.6rem] text-gray-400 mt-2 uppercase tracking-widest">Fleet Initialization</div>
+        </div>
+        <div class="stat-card rounded-[1.5rem] p-6 text-center">
+          <div class="font-heading text-4xl font-bold crimson-text">$780K+</div>
+          <div class="font-data text-[0.6rem] text-gray-400 mt-2 uppercase tracking-widest">Annual Yield Est.</div>
+        </div>
+        <div class="stat-card rounded-[1.5rem] p-6 text-center">
+          <div class="font-heading text-4xl font-bold text-white">24/7</div>
+          <div class="font-data text-[0.6rem] text-gray-400 mt-2 uppercase tracking-widest">Autonomous Duty</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section class="bg-[#0A0A0E] py-32 relative border-t border-[#1C1C24]" id="executive-summary">
+    <div class="max-w-4xl mx-auto px-6 md:px-12">
+      <div class="gsap-fade-up">
+        <span class="section-label gold-text block mb-4">01 / Executive Summary</span>
+        <h2 class="font-drama italic text-4xl md:text-5xl mb-12">The Structural Shift</h2>
+
+        <div class="plan-section mb-12">
+          <p class="font-heading text-gray-300 text-lg leading-relaxed mb-6">
+            CyberHawk Cab Company will operate a localized autonomous fleet of 30 Tesla Cybercabs.
+            When Elon Musk positioned the Cybercab at a sub-$30,000 entry point, he unlocked a new asset class.
+          </p>
+          <p class="font-heading text-gray-300 text-lg leading-relaxed mb-6">
+            Historically, deploying capital in transportation yielded depreciating hardware while requiring expensive
+            human labor. Now, an individual layer can buy mechanical autonomy and generate passive network income.
+          </p>
+          <p
+            class="font-heading text-white text-xl leading-relaxed mt-8 bg-[#111] p-6 rounded-2xl border border-[#D4A017]/20">
+            The question is no longer <span class="font-drama italic text-[#D4A017]">"What does the car cost?"</span>
+            But rather: <span class="font-drama italic crimson-text">"How much does the node earn?"</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCIAL MODELS -->
+  <section class="bg-[#0D0D12] py-32 relative" id="financial-models">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+      <div class="gsap-fade-up">
+        <span class="section-label gold-text block mb-4">02 / Financial Models</span>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Revenue Projections</h2>
+        <p class="font-heading text-gray-400 mb-16 max-w-2xl text-lg">Detailed telemetry based on CernBasher's modeling,
+          algorithmically scaled to a 30-unit localized fleet under varying geographic and operational states.</p>
+      </div>
+
+      <!-- KEY ASSUMPTIONS -->
+      <div class="gsap-fade-up mb-24">
+        <h3 class="text-xl font-heading font-semibold mb-6 flex items-center gap-3 text-white">
+          <span class="phase-badge">System Assumptions</span>
+        </h3>
+        <div class="overflow-x-auto bg-[#13131A] rounded-[1.5rem] border border-white/5 p-2">
+          <table class="model-table w-full text-left text-white">
+            <thead>
+              <tr class="text-gray-400">
+                <th>Parameter</th>
+                <th class="text-right">Baseline Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-gray-300">Unit Acquisition Cost</td>
+                <td class="text-right font-bold text-white">$30,000</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">Total Fleet Investment (30x)</td>
+                <td class="text-right font-bold gold-text">$900,000</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">FSD Protocol Sub</td>
+                <td class="text-right crimson-text">$199/month</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">Network Revenue Share (Tesla)</td>
+                <td class="text-right crimson-text">35%</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">Hardware Lifecycle</td>
+                <td class="text-right">600,000 miles</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">Target Utilization</td>
+                <td class="text-right">30% – 65%</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">Fare Baseline</td>
+                <td class="text-right">$1.00 – $2.00 / mile</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 30-VEHICLE FLEET PROJECTIONS -->
+      <div class="gsap-fade-up">
+        <h3 class="text-xl font-heading font-semibold mb-6 flex items-center gap-3 text-white">
+          <span class="phase-badge bg-[#D4A017] text-black">Aggregate Fleet Yield (Annual)</span>
+        </h3>
+        <div class="overflow-x-auto bg-[#13131A] rounded-[1.5rem] border border-white/5 p-2">
+          <table class="model-table w-full text-left text-white">
+            <thead>
+              <tr class="text-gray-400">
+                <th>Telemetry Metric</th>
+                <th class="text-right">Model 1 (30%)<br><span class="text-[0.6rem] opacity-70">Conservative</span></th>
+                <th class="text-right">Model 2 (50%)<br><span class="text-[0.6rem] opacity-70">Urban Blend</span></th>
+                <th class="text-right">Model 3 (65%)<br><span class="text-[0.6rem] opacity-70">Premium Output</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-gray-300">Gross Revenue Envelope</td>
+                <td class="text-right">$960,000</td>
+                <td class="text-right">$1,575,000</td>
+                <td class="text-right">$2,100,000</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">Net Revenue (After 35%)</td>
+                <td class="text-right font-bold text-white">$624,000</td>
+                <td class="text-right font-bold text-white">$1,024,000</td>
+                <td class="text-right font-bold text-white">$1,365,000</td>
+              </tr>
+              <tr class="bg-[#D4A017]/5">
+                <td class="text-gold font-bold">Fleet Gross Profit</td>
+                <td class="text-right font-bold">$420,000</td>
+                <td class="text-right font-bold">$780,000</td>
+                <td class="text-right font-bold text-[#D4A017]">$1,650,000</td>
+              </tr>
+              <tr>
+                <td class="text-gray-300">Capital Payback Timeline</td>
+                <td class="text-right text-white">~3.7 years</td>
+                <td class="text-right text-white">~1.6 years</td>
+                <td class="text-right text-white">~0.8 years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS PLAN PHASES -->
+  <section class="bg-[#0A0A0E] py-32 border-t border-[#1C1C24]" id="business-plan">
+    <div class="max-w-4xl mx-auto px-6 md:px-12">
+      <div class="gsap-fade-up">
+        <span class="section-label gold-text block mb-4">03 / Implementation Protocol</span>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-16 text-white">Phased Deployment</h2>
+      </div>
+
+      <!-- Phase 1 -->
+      <div
+        class="gsap-fade-up mb-16 bg-[#13131A] p-8 rounded-[2rem] border border-white/5 hover:border-crimson/30 transition-colors">
+        <span class="phase-badge mb-4 bg-white text-black">Phase 1 — Initialization (Q1–Q2 2027)</span>
+        <h3 class="font-drama text-3xl mt-4 mb-3 text-white">5 Units &mdash; Genesis</h3>
+        <p class="font-heading text-gray-400 leading-relaxed mb-6">
+          Deploy 5 Cybercabs to validate spatial operations, secure infrastructure partnerships, and index local
+          charging paradigms. Mapping high-demand geographic loci.
+        </p>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-black/40 p-4 rounded-xl border border-white/5 font-data text-xs">
+          <div><span class="block text-gray-500 mb-1">CapEx:</span> <span class="text-white">$150,000</span></div>
+          <div><span class="block text-gray-500 mb-1">Target Util:</span> <span class="text-white">30–40%</span></div>
+          <div><span class="block text-gray-500 mb-1">Vector:</span> <span class="text-white">Validation</span></div>
+          <div><span class="block text-gray-500 mb-1">Yield/Mo:</span> <span class="gold-text">$5.8K+</span></div>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div
+        class="gsap-fade-up mb-16 bg-[#13131A] p-8 rounded-[2rem] border border-white/5 hover:border-crimson/30 transition-colors">
+        <span class="phase-badge mb-4">Phase 2 — Penetration (Q3–Q4 2027)</span>
+        <h3 class="font-drama text-3xl mt-4 mb-3 text-white">15 Units &mdash; Saturation</h3>
+        <p class="font-heading text-gray-400 leading-relaxed mb-6">
+          Scale fleet architecture to 15 nodes based on Genesis data. Optimize routing APIs, lock in B2B transit
+          contracts with hospitality partners.
+        </p>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-black/40 p-4 rounded-xl border border-white/5 font-data text-xs">
+          <div><span class="block text-gray-500 mb-1">CapEx:</span> <span class="text-white">$450,000</span></div>
+          <div><span class="block text-gray-500 mb-1">Target Util:</span> <span class="text-white">40–50%</span></div>
+          <div><span class="block text-gray-500 mb-1">Vector:</span> <span class="text-white">Optimization</span></div>
+          <div><span class="block text-gray-500 mb-1">Yield/Mo:</span> <span class="gold-text">$26.0K+</span></div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div
+        class="gsap-fade-up mb-16 bg-[#13131A] p-8 rounded-[2rem] border border-[#D4A017]/30 shadow-[0_0_40px_rgba(212,160,23,0.05)]">
+        <span class="phase-badge mb-4 bg-[#D4A017] text-black">Phase 3 — Apex (2028)</span>
+        <h3 class="font-drama text-3xl mt-4 mb-3 text-[#D4A017]">30 Units &mdash; Full Stack</h3>
+        <p class="font-heading text-gray-300 leading-relaxed mb-6">
+          Unleash the 30-vehicle swarm. Open proprietary dedicated charging depots via Operations HQ. Activate secondary
+          yields: curated in-cabin experiences and off-peak autonomous parcel logistics.
+        </p>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-black/40 p-4 rounded-xl border border-[#D4A017]/10 font-data text-xs">
+          <div><span class="block text-gray-500 mb-1">CapEx:</span> <span class="text-white">$900,000</span></div>
+          <div><span class="block text-gray-500 mb-1">Target Util:</span> <span class="text-white">50–65%</span></div>
+          <div><span class="block text-gray-500 mb-1">Vector:</span> <span class="text-white">Domination</span></div>
+          <div><span class="block text-gray-500 mb-1">Yield/Mo:</span> <span
+              class="crimson-text font-bold text-sm">$52.0K+</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div> <!-- End Wrapper -->
+
+<!-- Include GSAP and ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".hero-stagger", {
+      y: 40,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.2,
+      ease: "power3.out",
+      delay: 0.1
+    });
+
+    const fadeUps = document.querySelectorAll(".gsap-fade-up");
+    fadeUps.forEach((el) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power2.out"
+      });
+    });
+
+    ScrollTrigger.create({
+      start: "top -100px",
+      onUpdate: (self) => {
+        const nav = document.getElementById("ch-nav-inner");
+        if (self.direction === 1) {
+          nav.style.backgroundColor = "rgba(42, 42, 53, 0.9)";
+          nav.style.borderColor = "rgba(220, 38, 38, 0.4)";
+        } else {
+          nav.style.backgroundColor = "rgba(13, 13, 18, 0.7)";
+          nav.style.borderColor = "rgba(255, 255, 255, 0.1)";
+        }
+      }
+    });
+  });
+</script>
+
+    <script>
+      const menuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuToggle.textContent = mobileMenu.classList.contains('hidden') ? 'Menu' : 'Close';
+        });
+      }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
+
+</body>
+</html>
