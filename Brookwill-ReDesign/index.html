@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brookwill | Scale Your IT Support Today</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Urbanist:ital,wght@0,400;0,600;0,800;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN for flat files) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Urbanist', 'sans-serif'],
+                    },
+                    colors: {
+                        brookwill: {
+                            bg: '#020617',
+                            surface: '#1E293B',
+                            text: '#f8fafc',
+                            muted: '#94a3b8',
+                            accent: '#38bdf8',
+                            accent2: '#818cf8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-brookwill-bg text-brookwill-text font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 transition-all duration-300">
+        <div
+            class="px-8 py-4 bg-brookwill-surface/80 backdrop-blur-md rounded-full border border-white/5 flex items-center justify-between shadow-2xl">
+            <div class="text-2xl font-heading font-extrabold tracking-tight">Brookwill</div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-brookwill-muted">
+                <a href="#" class="hover:text-brookwill-text transition-colors">Platform</a>
+                <a href="#" class="hover:text-brookwill-text transition-colors">About</a>
+                <a href="#" class="hover:text-brookwill-text transition-colors">Contact</a>
+            </div>
+            <a href="#"
+                class="btn-primary px-6 py-2.5 rounded-full bg-brookwill-accent text-brookwill-bg font-bold text-sm hover:bg-sky-300 transition-all">Partner
+                with Brookwill</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-end pb-24 px-8 md:px-24">
+        <!-- Abstract Diagonal Split Background -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-brookwill-bg/90 to-transparent z-10"></div>
+            <!-- Diagonal Split Effect -->
+            <div class="absolute inset-0 w-full h-full"
+                style="background: linear-gradient(135deg, rgba(2,6,23,0.8) 0%, rgba(2,6,23,0.1) 49%, rgba(56,189,248,0.2) 51%, rgba(2,6,23,0.8) 100%), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop') center/cover; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl text-left">
+            <h1 class="text-5xl md:text-7xl font-heading font-extrabold leading-tight tracking-tight mb-2">
+                Lower Cost Per Ticket
+                <span class="block text-brookwill-accent italic font-light">Without Lowering Standards.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-brookwill-muted mt-6 max-w-2xl leading-relaxed">
+                Brookwill’s AI-augmented engineers resolve IT tickets faster and more consistently, priced per outcome.
+                Available white-label or direct.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <a href="#"
+                    class="px-8 py-4 rounded-full bg-brookwill-accent text-brookwill-bg font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(56,189,248,0.3)]">Partner
+                    with Brookwill</a>
+                <div class="text-sm text-brookwill-muted border-l border-white/10 pl-6 space-y-1">
+                    <p>Reduce support costs by up to <strong class="text-brookwill-text">40%</strong></p>
+                    <p>Improve resolution speed by <strong class="text-brookwill-text">60%</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Artifacts / Features -->
+    <section class="py-32 px-8 md:px-24 relative">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-heading font-extrabold mb-16">Interactive Functional Artifacts</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-brookwill-surface p-8 rounded-3xl border border-white/5 hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-heading font-bold mb-4">Measurable Cost Reduction</h3>
+                    <p class="text-sm text-brookwill-muted leading-relaxed mb-8">Outcome-based pricing aligned to ticket
+                        resolution — eliminating wasted labor and idle overhead.</p>
+                    <div
+                        class="h-48 bg-brookwill-bg rounded-xl flex items-center justify-center border border-white/5 relative overflow-hidden group">
+                        <!-- Simulated Shuffler -->
+                        <div
+                            class="absolute w-3/4 h-16 bg-brookwill-surface rounded border border-white/10 transform translate-y-4 group-hover:-translate-y-4 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute w-3/4 h-16 bg-brookwill-surface rounded border border-white/10 transform scale-95 translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-75">
+                        </div>
+                        <div
+                            class="absolute w-3/4 h-16 bg-brookwill-accent/20 rounded border border-brookwill-accent/50 transform scale-90 translate-y-12 group-hover:translate-y-4 transition-all duration-500 delay-150 backdrop-blur-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-brookwill-surface p-8 rounded-3xl border border-white/5 hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-heading font-bold mb-4">AI-Augmented Resolution</h3>
+                    <p class="text-sm text-brookwill-muted leading-relaxed mb-8">Every engineer operates with integrated
+                        AI agents that assist with diagnostics and knowledge retrieval.</p>
+                    <div
+                        class="h-48 bg-brookwill-bg rounded-xl p-4 border border-white/5 flex flex-col justify-start font-mono text-xs overflow-hidden">
+                        <div class="text-brookwill-accent mb-2">> DIAGNOSTICS_RUNNING</div>
+                        <div class="text-brookwill-muted opacity-70 mb-1">Analyzing log files...</div>
+                        <div class="text-brookwill-muted opacity-70 mb-1">Checking active directory...</div>
+                        <div class="text-brookwill-text mt-auto">> RESOLUTION_FOUND<span class="animate-pulse">_</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-brookwill-surface p-8 rounded-3xl border border-white/5 hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-heading font-bold mb-4">Quality at Scale</h3>
+                    <p class="text-sm text-brookwill-muted leading-relaxed mb-8">Structured workflows, trained technical
+                        professionals, and real-time AI support ensure repeatable outcomes.</p>
+                    <div
+                        class="h-48 bg-brookwill-bg rounded-xl border border-white/5 relative overflow-hidden flex items-center justify-center p-4">
+                        <div class="grid grid-cols-4 gap-2 w-full h-full opacity-50">
+                            <div class="bg-brookwill-surface rounded"></div>
+                            <div class="bg-brookwill-accent/30 rounded col-span-2"></div>
+                            <div class="bg-brookwill-surface rounded"></div>
+                            <div class="bg-brookwill-surface rounded col-span-3"></div>
+                            <div class="bg-brookwill-surface rounded"></div>
+                        </div>
+                        <i data-lucide="mouse-pointer-2"
+                            class="absolute text-brookwill-accent w-6 h-6 animate-[bounce_3s_infinite]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Delivery Model -->
+    <section class="py-24 px-8 md:px-24 bg-brookwill-surface/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-brookwill-accent font-mono text-sm font-bold tracking-widest mb-4 uppercase">The Delivery
+                Model</div>
+            <h2 class="text-4xl md:text-5xl font-heading font-extrabold mb-8">Scale Your Support Team Without Limits.
+            </h2>
+            <p class="text-xl text-brookwill-muted max-w-3xl leading-relaxed mb-16">
+                Founded and led by operators with 20+ years managing MSP and enterprise IT teams. We place vetted
+                technicians within your environment at a fixed, predictable cost, now supercharged by our AI-augmented
+                workflows.
+            </p>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-brookwill-bg p-8 rounded-2xl border border-white/5">
+                    <div class="w-10 h-10 bg-brookwill-surface rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="user-check" class="text-brookwill-accent w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-heading font-bold mb-3">Dedicated</h4>
+                    <p class="text-sm text-brookwill-muted">Technicians work only in your environment and supporting
+                        your clients. You are in control, but with added layers of oversight.</p>
+                </div>
+                <div class="bg-brookwill-bg p-8 rounded-2xl border border-white/5">
+                    <div class="w-10 h-10 bg-brookwill-surface rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="text-brookwill-accent w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-heading font-bold mb-3">Managed</h4>
+                    <p class="text-sm text-brookwill-muted">US-based oversight and a dedicated manager to your account.
+                        We handle recruiting, background checks, and performance management.</p>
+                </div>
+                <div class="bg-brookwill-bg p-8 rounded-2xl border border-white/5">
+                    <div class="w-10 h-10 bg-brookwill-surface rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="sliders-horizontal" class="text-brookwill-accent w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-heading font-bold mb-3">Flexible</h4>
+                    <p class="text-sm text-brookwill-muted">Start with one technician or build a full team. Adjust
+                        coverage, schedules, or upskill as needs change.</p>
+                </div>
+                <div class="bg-brookwill-bg p-8 rounded-2xl border border-white/5">
+                    <div class="w-10 h-10 bg-brookwill-surface rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="text-brookwill-accent w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-lg font-heading font-bold mb-3">Secure</h4>
+                    <p class="text-sm text-brookwill-muted">Technicians are vetted, background and reference checked.
+                        Enrolled in our Intune environment to protect your data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Human + AI Workflow -->
+    <section class="py-32 px-8 md:px-24">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-heading font-extrabold mb-16">Human + AI Workflow</h2>
+
+            <div class="space-y-4">
+                <div class="flex items-center gap-6 bg-brookwill-surface p-6 rounded-2xl border border-white/5">
+                    <div class="text-2xl font-heading font-extrabold text-brookwill-accent w-12 text-right">01.</div>
+                    <div class="text-base text-brookwill-text">Ticket received and triaged</div>
+                </div>
+                <div class="flex items-center gap-6 bg-brookwill-surface p-6 rounded-2xl border border-white/5">
+                    <div class="text-2xl font-heading font-extrabold text-brookwill-accent w-12 text-right">02.</div>
+                    <div class="text-base text-brookwill-text">AI agents analyze logs, history, and KBs</div>
+                </div>
+                <div class="flex items-center gap-6 bg-brookwill-surface p-6 rounded-2xl border border-white/5">
+                    <div class="text-2xl font-heading font-extrabold text-brookwill-accent w-12 text-right">03.</div>
+                    <div class="text-base text-brookwill-text">Engineer validates and executes resolution</div>
+                </div>
+                <div class="flex items-center gap-6 bg-brookwill-surface p-6 rounded-2xl border border-white/5">
+                    <div class="text-2xl font-heading font-extrabold text-brookwill-accent w-12 text-right">04.</div>
+                    <div class="text-base text-brookwill-text">AI drafts documentation and updates systems</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineered Workflows -->
+    <section class="py-24 px-8 md:px-24">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-heading font-extrabold mb-12 text-center">Engineered Workflows, Not Just Staffing
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Traditional BPO -->
+                <div class="bg-brookwill-surface p-10 rounded-3xl border border-white/5 opacity-70">
+                    <h3 class="text-xl font-heading font-bold text-brookwill-text mb-6">Traditional BPO</h3>
+                    <ul class="space-y-4 text-brookwill-muted">
+                        <li class="flex items-center gap-3"><i data-lucide="x" class="w-4 h-4 text-red-400"></i> Linear
+                            scaling</li>
+                        <li class="flex items-center gap-3"><i data-lucide="x" class="w-4 h-4 text-red-400"></i> Hourly
+                            billing</li>
+                        <li class="flex items-center gap-3"><i data-lucide="x" class="w-4 h-4 text-red-400"></i>
+                            Inconsistent documentation</li>
+                    </ul>
+                </div>
+
+                <!-- Brookwill -->
+                <div
+                    class="bg-[#0f172a] p-10 rounded-3xl border border-brookwill-accent/30 shadow-[0_0_40px_rgba(56,189,248,0.1)] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brookwill-accent/20 blur-3xl rounded-full"></div>
+                    <h3 class="text-xl font-heading font-bold text-brookwill-accent mb-6 relative z-10">Why Brookwill Is
+                        Different</h3>
+                    <ul class="space-y-4 text-brookwill-text relative z-10">
+                        <li class="flex items-center gap-3"><i data-lucide="check"
+                                class="w-4 h-4 text-brookwill-accent"></i> AI multiplies capacity</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check"
+                                class="w-4 h-4 text-brookwill-accent"></i> Priced per outcome</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check"
+                                class="w-4 h-4 text-brookwill-accent"></i> Engineered workflows</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-24 pb-12 px-8 md:px-24 mt-20 rounded-t-[4rem]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16 mb-24">
+            <div class="max-w-xs">
+                <div class="text-2xl font-heading font-extrabold tracking-tight mb-4">Brookwill</div>
+                <p class="text-sm text-brookwill-muted">AI-augmented IT support, priced per outcome. Delivering
+                    measurable cost reduction without compromising quality.</p>
+            </div>
+            <div class="flex gap-16">
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-heading font-bold text-brookwill-text uppercase tracking-wider text-sm mb-2">Product
+                    </h4>
+                    <a href="#" class="text-brookwill-muted hover:text-brookwill-text text-sm">Platform</a>
+                    <a href="#" class="text-brookwill-muted hover:text-brookwill-text text-sm">Learn more</a>
+                    <a href="#" class="text-brookwill-muted hover:text-brookwill-text text-sm">Contact</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="font-heading font-bold text-brookwill-text uppercase tracking-wider text-sm mb-2">Company
+                    </h4>
+                    <a href="#" class="text-brookwill-muted hover:text-brookwill-text text-sm">About</a>
+                    <a href="#" class="text-brookwill-muted hover:text-brookwill-text text-sm">Contact</a>
+                    <a href="#" class="text-brookwill-muted hover:text-brookwill-text text-sm">Careers</a>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10">
+            <div
+                class="flex items-center gap-3 mb-4 md:mb-0 bg-brookwill-surface/50 px-4 py-2 rounded-full border border-white/5">
+                <div class="w-2 h-2 rounded-full bg-brookwill-accent shadow-[0_0_8px_#38bdf8] animate-pulse"></div>
+                <span class="font-mono text-xs text-brookwill-muted uppercase tracking-widest">System Operational</span>
+            </div>
+            <div class="text-xs text-brookwill-muted font-mono">© 2026 Brookwill Inc.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
