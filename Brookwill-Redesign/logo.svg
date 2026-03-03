@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" fill="none">
+  <!-- Icon: Rounded square with S-curve -->
+  <g transform="translate(0,0)">
+    <!-- Dark navy rounded square background -->
+    <rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1D51"/>
+
+    <!-- Bright blue top-right curve -->
+    <path d="M78 20C78 9.5 69.5 2 59 2L40 2C40 2 55 2 62 9C69 16 72 28 65 40C58 52 44 54 38 54C32 54 24 50 24 40C24 30 32 24 40 28C48 32 48 42 42 48C36 54 26 52 22 48L16 60C22 68 34 76 48 72C62 68 72 54 74 46C76 38 78 30 78 20Z" fill="#00A3FF"/>
+
+    <!-- White inner S-curve -->
+    <path d="M2 60C2 70.5 10.5 78 20 78L38 78C38 78 24 78 17 71C10 64 8 52 15 40C22 28 34 26 40 26C46 26 54 30 54 40C54 50 46 56 38 52C30 48 30 38 36 32C42 26 52 28 56 32L62 20C56 12 44 4 30 8C16 12 8 26 6 34C4 42 2 50 2 60Z" fill="white"/>
+  </g>
+
+  <!-- Text: BROOKWILL -->
+  <text x="92" y="42" font-family="'Urbanist', 'Arial Black', sans-serif" font-weight="800" font-size="34" fill="#f8fafc" letter-spacing="2">BROOKWILL</text>
+
+  <!-- Text: TECHNOLOGY SOLUTIONS -->
+  <text x="93" y="66" font-family="'Urbanist', Arial, sans-serif" font-weight="600" font-size="18" fill="#38bdf8" letter-spacing="3.5">TECHNOLOGY SOLUTIONS</text>
+</svg>
