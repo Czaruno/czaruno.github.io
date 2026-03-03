@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brookwill Logo Themes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .checker-bg-light {
+            background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            background-color: #ffffff;
+        }
+
+        .checker-bg-dark {
+            background-image: linear-gradient(45deg, #1f2937 25%, transparent 25%), linear-gradient(-45deg, #1f2937 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #1f2937 75%), linear-gradient(-45deg, transparent 75%, #1f2937 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            background-color: #111827;
+        }
+
+        .checker-bg-alt {
+            background-image: linear-gradient(45deg, #0f172a 25%, transparent 25%), linear-gradient(-45deg, #0f172a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #0f172a 75%), linear-gradient(-45deg, transparent 75%, #0f172a 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            background-color: #020617;
+        }
+
+        .solid-bg-light {
+            background-color: #ffffff;
+        }
+
+        .solid-bg-dark {
+            background-color: #111827;
+        }
+
+        .solid-bg-alt {
+            background-color: #020617;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans p-8">
+
+    <div class="max-w-6xl mx-auto space-y-12">
+        <div class="flex flex-col md:flex-row justify-between md:items-end gap-4">
+            <div>
+                <h1 class="text-3xl font-bold mb-2">Brookwill Logo Theme Explorer</h1>
+                <p class="text-gray-600">Testing the specific light and dark combinations for the SVG logo.</p>
+            </div>
+            <div class="bg-white px-4 py-2 border border-gray-200 rounded-lg shadow-sm">
+                <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" id="bg-toggle" checked class="form-checkbox h-5 w-5 text-blue-600 rounded">
+                    <span class="text-sm font-medium text-gray-700">Show Transparency Grid</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+            <!-- Light Mode -->
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                <div class="p-4 bg-gray-50 border-b border-gray-200 flex flex-col justify-between h-32">
+                    <div>
+                        <h2 class="text-xl font-bold mb-1">Light Mode</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2 py-1 rounded bg-[#003A6C] text-white">#003A6C</span>
+                        <span class="px-2 py-1 rounded bg-[#0073CF] text-white">#0073CF</span>
+                        <span class="px-2 py-1 rounded bg-[#1E40AF] text-white">#1E40AF</span>
+                    </div>
+                </div>
+                <div id="container-light"
+                    class="p-8 checker-bg-light flex flex-col items-center justify-center min-h-[250px] transition-colors duration-300">
+                    <div id="svg-wrap-light" style="width:100%; max-width:400px; height:auto;"></div>
+                </div>
+            </div>
+
+            <!-- Dark Mode 1 -->
+            <div class="bg-gray-900 rounded-xl shadow-lg border border-gray-700 overflow-hidden text-gray-100">
+                <div class="p-4 bg-gray-800 border-b border-gray-700 flex flex-col justify-between h-32">
+                    <div>
+                        <h2 class="text-xl font-bold mb-1">Dark Mode</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2 py-1 rounded bg-[#60A5FA] text-black">#60A5FA</span>
+                        <span class="px-2 py-1 rounded bg-[#3B82F6] text-white">#3B82F6</span>
+                        <span class="px-2 py-1 rounded bg-[#93C5FD] text-black">#93C5FD</span>
+                    </div>
+                </div>
+                <div id="container-dark"
+                    class="p-8 checker-bg-dark flex flex-col items-center justify-center min-h-[250px] transition-colors duration-300">
+                    <div id="svg-wrap-dark" style="width:100%; max-width:400px; height:auto;"></div>
+                </div>
+            </div>
+
+            <!-- Dark Mode Alt (White) -->
+            <div class="bg-black rounded-xl shadow-lg border border-gray-800 overflow-hidden text-gray-100">
+                <div class="p-4 bg-gray-900 border-b border-gray-800 flex flex-col justify-between h-32">
+                    <div>
+                        <h2 class="text-xl font-bold mb-1">Alternative Dark Mode (Pure White)</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2 py-1 rounded bg-white text-black border border-gray-300">#FFFFFF</span>
+                    </div>
+                </div>
+                <div id="container-alt"
+                    class="p-8 checker-bg-alt flex flex-col items-center justify-center min-h-[250px] transition-colors duration-300">
+                    <div id="svg-wrap-alt" style="width:100%; max-width:400px; height:auto;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Toggle background styles
+        document.getElementById('bg-toggle').addEventListener('change', function (e) {
+            const isChecked = e.target.checked;
+            const cLight = document.getElementById('container-light');
+            const cDark = document.getElementById('container-dark');
+            const cAlt = document.getElementById('container-alt');
+
+            if (isChecked) {
+                cLight.classList.replace('solid-bg-light', 'checker-bg-light');
+                cDark.classList.replace('solid-bg-dark', 'checker-bg-dark');
+                cAlt.classList.replace('solid-bg-alt', 'checker-bg-alt');
+            } else {
+                cLight.classList.replace('checker-bg-light', 'solid-bg-light');
+                cDark.classList.replace('checker-bg-dark', 'solid-bg-dark');
+                cAlt.classList.replace('checker-bg-alt', 'solid-bg-alt');
+            }
+        });
+
+        // Use fetch instead of object tag so we can confidently modify the inline DOM
+        async function fetchAndStyleSvg() {
+            try {
+                // Fetch from the root directory on the live site
+                const response = await fetch('logo.svg');
+                let svgText = await response.text();
+
+                // Strip XML declarations
+                const svgStart = svgText.indexOf('<svg');
+                if (svgStart !== -1) svgText = svgText.substring(svgStart);
+
+                // Inject the raw SVG strings
+                document.getElementById('svg-wrap-light').innerHTML = svgText;
+                document.getElementById('svg-wrap-dark').innerHTML = svgText;
+                document.getElementById('svg-wrap-alt').innerHTML = svgText;
+
+                // Style Light
+                styleSvg('svg-wrap-light', '#003A6C', '#0073CF', '#003A6C', '#1E40AF');
+
+                // Style Dark
+                styleSvg('svg-wrap-dark', '#60A5FA', '#3B82F6', '#60A5FA', '#93C5FD');
+
+                // Style Alt Dark
+                styleSvg('svg-wrap-alt', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF');
+
+            } catch (err) {
+                console.error("Failed to load SVG over fetch:", err);
+            }
+        }
+
+        function styleSvg(wrapperId, primaryColor, sLightColor, sDarkColor, techSolColor) {
+            const wrapper = document.getElementById(wrapperId);
+            const svgDoc = wrapper.querySelector('svg');
+
+            if (!svgDoc) return;
+
+            // Allow the SVG to conform to constraints
+            svgDoc.style.width = '100%';
+            svgDoc.style.height = 'auto';
+
+            svgDoc.querySelectorAll('path').forEach(p => {
+                const id = p.getAttribute('id');
+                if (!id || !id.startsWith('path')) return;
+
+                let newColor = '';
+                const num = parseInt(id.replace('path', ''));
+
+                if (num === 3 || num === 4) {
+                    newColor = sLightColor; // Top of S
+                } else if (num === 5 || num === 6) {
+                    newColor = sDarkColor; // Bottom of S
+                } else if (num >= 7 && num <= 15) {
+                    newColor = primaryColor; // BROOKWILL
+                } else if (num >= 16 && num <= 34) {
+                    newColor = techSolColor; // TECHNOLOGY SOLUTIONS
+                }
+
+                if (newColor) {
+                    p.style.fill = newColor;
+                    p.style.transition = 'fill 0.3s ease';
+                }
+            });
+        }
+
+        fetchAndStyleSvg();
+    </script>
+
+</body>
+
+</html>
